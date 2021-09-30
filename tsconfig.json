@@ -4,13 +4,12 @@
     "module": "esnext",
     "moduleResolution": "node",
     "importHelpers": true,
-    "checkJs":true,
     "jsx": "react",
     "esModuleInterop": true,
     "sourceMap": true,
     "baseUrl": "./",
-    "suppressImplicitAnyIndexErrors":true,
     "strict": true,
+    "noImplicitAny": false,
     "paths": {
       "@/*": ["src/*"],
       "@@/*": ["src/.umi/*"]
@@ -24,8 +23,6 @@
     "dist",
     "typings",
     "**/__test__",
-    "test",
-    "docs",
-    "tests"
+    "test"
   ]
 }

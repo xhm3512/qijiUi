@@ -7,10 +7,10 @@
 /yarn.lock
 /package-lock.json
 
-
 # production
 /dist
 /docs-dist
+/docs
 
 # misc
 .DS_Store
@@ -20,7 +20,6 @@
 .umi-production
 .umi-test
 .env.local
-.history
 
 # ide
 /.vscode
