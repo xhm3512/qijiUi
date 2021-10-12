@@ -13,12 +13,55 @@ group:
 
 ```tsx
 import React from 'react';
-import { Icons } from 'dumi-oni';
-const { AccountExitCustom, CheckBoxCustom, CryingFace } = Icons;
+import { Icons } from 'qiji';
+import { Row, Col, Divider } from 'antd';
+import 'antd/dist/antd.less';
+const {
+  AccountExitCustom,
+  CheckBoxCustom,
+  CryingFace,
+  DataSvg,
+  NewsSvg,
+  Add,
+  Prve,
+  Next,
+  Salary,
+  Tips,
+  User,
+  Mangers,
+} = Icons;
 export default () => (
-  <div style={{ fontSize: '30px' }}>
-    <CheckBoxCustom />
-    <CryingFace />
-  </div>
+  <Row style={{ fontSize: '30px' }}>
+    <Col span={4}>
+      <CheckBoxCustom />
+    </Col>
+    <Col span={4}>
+      <CryingFace />
+    </Col>
+    <Col span={4}>
+      <NewsSvg />
+    </Col>
+    <Col span={4}>
+      <Add />
+    </Col>
+    <Col span={4}>
+      <Prve />
+    </Col>
+    <Col span={4}>
+      <Next />
+    </Col>
+    <Col span={4}>
+      <Salary />
+    </Col>
+    <Col span={4}>
+      <Tips />
+    </Col>
+    <Col span={4}>
+      <User />
+    </Col>
+    <Col span={4}>
+      <Mangers />
+    </Col>
+  </Row>
 );
 ```

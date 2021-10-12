@@ -1,5 +1,5 @@
 import React, { FC, useEffect } from 'react';
-import './index.less';
+import './style/index.less';
 
 interface ButtonProps {
   onClick?: React.MouseEventHandler<HTMLElement>;
@@ -17,7 +17,7 @@ const Button: FC<ButtonProps> = ({
   const className = `${prefixCls} ${prefixCls}-button ${prefixCls}-${type}`;
   return (
     <button className={className} onClick={onClick} disabled={disabled}>
-      {children}234
+      {children}
     </button>
   );
 };

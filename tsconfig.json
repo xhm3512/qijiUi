@@ -10,11 +10,12 @@
     "baseUrl": "./",
     "strict": true,
     "noImplicitAny": false,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
     "paths": {
       "@/*": ["src/*"],
       "@@/*": ["src/.umi/*"]
-    },
-    "allowSyntheticDefaultImports": true
+    }
   },
   "exclude": [
     "node_modules",

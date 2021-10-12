@@ -1,5 +1,5 @@
 {
-  "name": "dumi-oni",
+  "name": "qiji",
   "version": "0.0.2",
   "scripts": {
     "start": "dumi dev",
@@ -9,9 +9,9 @@
     "test": "umi-test",
     "test:coverage": "umi-test --coverage"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "typings": "dist/index.d.ts",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "typings": "lib/index.d.ts",
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
@@ -23,13 +23,54 @@
       "prettier --parser=typescript --write"
     ]
   },
+  "plugins": [
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "style": true
+      }
+    ]
+  ],
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not dead",
+    "IE 11",
+    "not IE 10"
+  ],
+  "keywords": [
+    "ant",
+    "component",
+    "components",
+    "design",
+    "framework",
+    "frontend",
+    "react",
+    "react-component",
+    "ui"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  },
   "dependencies": {
-    "react": "^16.12.0"
+    "@types/classnames": "^2.3.1",
+    "@ant-design/icons": "^4.6.2",
+    "antd": "^4.16.3",
+    "braft-editor": "^2.3.9",
+    "react": "^16.12.0",
+    "react-loadable": "^5.5.0",
+    "classnames": "^2.2.6"
   },
   "devDependencies": {
     "@umijs/preset-react": "1.x",
     "@umijs/test": "^3.0.5",
-    "dumi": "^1.0.5",
+    "dumi": "^1.1.30",
     "father-build": "^1.17.2",
     "lint-staged": "^10.0.7",
     "prettier": "^1.19.1",

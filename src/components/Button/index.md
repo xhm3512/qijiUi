@@ -2,6 +2,7 @@
 title: Button 按钮
 group:
   title: 通用
+  order: 1
 ---
 
 ## default
@@ -10,7 +11,7 @@ Demo:
 
 ```tsx
 import React from 'react';
-import { Button } from 'dumi-oni';
+import { Button } from 'qiji';
 
 export default () => <Button onClick={() => alert('onClick')}>default</Button>;
 ```
@@ -21,7 +22,7 @@ Demo:
 
 ```tsx
 import React from 'react';
-import { Button } from 'dumi-oni';
+import { Button } from 'qiji';
 
 export default () => <Button type="primary">primary</Button>;
 ```
@@ -32,7 +33,7 @@ Demo:
 
 ```tsx
 import React from 'react';
-import { Button } from 'dumi-oni';
+import { Button } from 'qiji';
 
 export default () => <Button type="secondary">secondary</Button>;
 ```
@@ -43,7 +44,7 @@ Demo:
 
 ```tsx
 import React from 'react';
-import { Button } from 'dumi-oni';
+import { Button } from 'qiji';
 
 export default () => <Button disabled>disabled</Button>;
 ```

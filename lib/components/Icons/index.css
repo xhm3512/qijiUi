@@ -1,0 +1,17 @@
+.dumi-oni-btn-button {
+  padding: 6px 16px;
+  font-size: 12px;
+  min-width: 64px;
+}
+.dumi-oni-btn-button[disabled] {
+  color: rgba(0, 0, 0, 0.26);
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.dumi-oni-btn-primary {
+  color: #fff;
+  background-color: #1976d2;
+}
+.dumi-oni-btn-secondary {
+  color: #fff;
+  background-color: #dc004e;
+}

@@ -1,8 +1,8 @@
 ---
 title: Remark 标注
 group:
-  title: 通用
-  order: 1
+  title: 其他
+  order: 10
 ---
 
 ## default
@@ -11,7 +11,7 @@ Demo:
 
 ```tsx
 import React from 'react';
-import { Remark } from 'dumi-oni';
+import { Remark } from 'qiji';
 
 export default () => (
   <Remark

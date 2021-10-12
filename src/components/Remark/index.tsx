@@ -188,28 +188,35 @@ const RemarkText = (props: PropsRoot) => {
 
   // 划线
   function strikeThrough() {
+    const { current } = highlighRef;
+    if (current) current.contentEditable = 'true'; // 禁止输入设置
     const tempOldDomHtml = highlighRef?.current?.innerHTML;
     document.execCommand('strikeThrough', false);
-    // document.execCommand('strikeThrough', false, null);
+    if (current) current.contentEditable = 'false';
     clearSelection();
     onHightChange(tempOldDomHtml);
   }
   // 清除样式
   function removeFormat() {
+    const { current } = highlighRef;
+    if (current) current.contentEditable = 'true'; // 禁止输入设置
     const tempOldDomHtml = highlighRef?.current?.innerHTML;
     // 执行两次
     document.execCommand('removeFormat', false);
     document.execCommand('removeFormat', false);
-
+    if (current) current.contentEditable = 'false';
     clearSelection();
     onHightChange(tempOldDomHtml);
   }
   // 设置颜色
   function setFontColor(value: string | undefined) {
+    const { current } = highlighRef;
+    if (current) current.contentEditable = 'true'; // 禁止输入设置
     const tempOldDomHtml = highlighRef?.current?.innerHTML;
     // document.execCommand("forecolor", false, value);
     document.execCommand('forecolor', false, '#ffffff');
     document.execCommand('backColor', false, value);
+    if (current) current.contentEditable = 'false';
     clearSelection();
     onHightChange(tempOldDomHtml);
   }
@@ -272,7 +279,7 @@ const RemarkText = (props: PropsRoot) => {
     // 禁止输入设置
     current.addEventListener('keydown', (e: { preventDefault: () => void }) => {
       setShortCutKeyFunc(e); // 高亮快捷键设置
-      e.preventDefault();
+      // e.preventDefault();
     });
     if (typeof onSubmitHtml === 'function') {
       onSubmitHtml({

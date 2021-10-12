@@ -2,6 +2,7 @@
 title: Griid 珊格
 group:
   title: 布局
+  order: 8
 ---
 
 ## Foo
@@ -10,7 +11,7 @@ Demo:
 
 ```tsx
 import React from 'react';
-import { Foo } from 'dumi-oni';
+import { Foo } from 'qiji';
 
 export default () => <Foo title="First Demo" />;
 ```

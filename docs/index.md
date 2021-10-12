@@ -1,7 +1,7 @@
 ---
 hero:
-  title: qijiUi
-  desc: qijiUi example
+  title: qiji
+  desc: qiji example
   actions:
     - text: Getting Started
       link: /components
@@ -22,7 +22,7 @@ footer: Open-source MIT Licensed | Copyright © 2020<br />Powered by [dumi](http
 
 ```js
 import React from 'react';
-import { Remark } from 'qijiui';
+import { Remark } from 'qiji';
 
 export default () => (
   <Remark
@@ -34,5 +34,3 @@ export default () => (
   />
 );
 ```
-
-## 轻松上手 2
