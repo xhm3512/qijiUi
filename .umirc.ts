@@ -14,7 +14,7 @@ export default defineConfig({
   mode: 'site',
   navs: [
     {
-      title: '文档',
+      title: '文档1',
       path: '/files',
     },
     {
