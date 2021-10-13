@@ -6,6 +6,7 @@
 - demo:https://github.com/qld-cf/dumi-tpl/blob/main/.fatherrc.ts
 - father:https://github.com/umijs/father
 - 热更新有点慢，试试新出的 MFSU 方案，让热更新回到 500ms 内，详见 https://github.com/umijs/umi/issues/6766
+- Invalid hook call. Hooks can only be called inside 解决方案：https://zhuanlan.zhihu.com/p/363288266
 
 在这个文章中，将会简单的介绍如何使用 dumi 和 father-build 来创建组件库和维护组件库。最终我们会演示如何组织组件库的代码。还有输出一个简单的组件。
 

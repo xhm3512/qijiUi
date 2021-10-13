@@ -1,33 +1,7 @@
 ---
-title: Qiji of React
-order: 1
+title: 快速上手
+order: 2
 ---
-
-## Qiji of React
-
-qiji 是基于 Ant Design 设计体系的 React UI 组件库，主要从业务中提取的组件，来提高日常开发效率。
-
-## 兼容性
-
-- 现代浏览器和 IE11（需要 polyfills）。
-
-## 版本
-
-- 最新版：npm V0.0.2
-
-## 安装
-
-#### 使用 npm 或 yarn 安装
-
-推荐使用 npm 或 yarn 的方式进行开发
-
-```
-$ npm install qiji --save
-```
-
-```
-yarn add qiji
-```
 
 ## 示例
 
@@ -44,8 +18,8 @@ export default () => (
     }}
   />
 );
+
+
+
+More skills for writing demo: https://d.umijs.org/guide/basic#write-component-demo
 ```
-
-## 按需加载
-
-`qiji`的 JS 代码默认支持基于 ES modules 的 tree shaking

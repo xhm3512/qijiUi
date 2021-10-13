@@ -6,9 +6,8 @@
 /yarn-error.log
 /yarn.lock
 /package-lock.json
-
+/src
 # production
-/dist
 /docs-dist
 /docs
 
@@ -20,7 +19,17 @@
 .umi-production
 .umi-test
 .env.local
-
+.history
+.editorconfig
+.fatherrc.ts
+.npmignore
+.prettierignore
+.prettierrc
+.umirc.ts
+demo.png
+tsconfig.json
+typings.d.ts
 # ide
 /.vscode
 /.idea
+/REMARK.md
