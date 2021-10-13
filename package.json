@@ -4,7 +4,7 @@
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
-    "build": "father-build ./.fatherrc-docs.ts",
+    "build": "father-build",
     "build:dist": "father-build ./.fatherrc-docs.ts",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
     "test": "umi-test",
