@@ -12,16 +12,16 @@ export default defineConfig({
     'https://gw.alipayobjects.com/zos/bmw-prod/881dc458-f20b-407b-947a-95104b5ec82b/k79dm8ih_w144_h144.png',
   outputPath: 'docs-dist',
   mode: 'site',
-  navs: [
-    {
-      title: '文档',
-      path: '/files',
-    },
-    {
-      title: '组件',
-      path: '/components',
-    },
-  ],
+  // navs: [
+  //   {
+  //     title: '文档',
+  //     path: '/files',
+  //   },
+  //   {
+  //     title: '组件',
+  //     path: '/components',
+  //   },
+  // ],
 
   // more config: https://d.umijs.org/config
 });
