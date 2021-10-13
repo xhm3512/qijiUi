@@ -1,8 +1,6 @@
 export default {
-  // esm: 'rollup',
-  // cjs: 'rollup',
-  esm: 'babel',
-  cjs: 'babel',
+  esm: 'rollup',
+  cjs: 'rollup',
   umd: {
     sourcemap: true,
   },
