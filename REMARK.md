@@ -2,7 +2,7 @@
 
 - 组件搭建参考文档：https://zhuanlan.zhihu.com/p/196758730
 - 可视化平台地址：https://qiji.netlify.app/
-- 静态网站部署平台：https://app.netlify.com/sites/qjiui/overview
+- 静态网站部署平台：https://app.netlify.com/teams/xhm3512/overview
 - demo:https://github.com/qld-cf/dumi-tpl/blob/main/.fatherrc.ts
 - father:https://github.com/umijs/father
 - 热更新有点慢，试试新出的 MFSU 方案，让热更新回到 500ms 内，详见 https://github.com/umijs/umi/issues/6766

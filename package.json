@@ -5,7 +5,7 @@
     "start": "dumi dev",
     "docs:build": "dumi build",
     "build": "father-build",
-    "build:dist": "father-build ./.fatherrc-docs.ts",
+    "build:dist": "father-build ./.fatherrc-component.ts",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
     "test": "umi-test",
     "test:coverage": "umi-test --coverage"
