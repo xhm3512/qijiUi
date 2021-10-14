@@ -4,6 +4,8 @@ import { CustomIconComponentProps } from '@ant-design/icons/lib/components/Icon'
 const CustomIcon = (
   Component: ComponentType<CustomIconComponentProps | SVGProps<SVGSVGElement>>,
 ) => (props: any) => {
+  console.log(34, props);
+
   return <Icon component={Component} {...props}></Icon>;
 };
 import AccountExitCustomTemp from './AccountExitCustom'; //img

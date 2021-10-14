@@ -65,3 +65,29 @@ export default () => (
   </Row>
 );
 ```
+
+代码演示
+
+```tsx
+import React from 'react';
+import { Icons } from 'qiji';
+import { Row, Col, Divider } from 'antd';
+import 'antd/dist/antd.less';
+const { AccountExitCustom, CheckBoxCustom, CryingFace } = Icons;
+export default () => (
+  <Row style={{ fontSize: '30px' }}>
+    <Col span={4}>
+      <CheckBoxCustom style={{ color: 'red' }} />
+    </Col>
+    <Col span={4}>
+      <CryingFace style={{ color: 'pink', fontSize: '36px' }} />
+    </Col>
+  </Row>
+);
+```
+
+## API
+
+| 属性  |                   说明                    |     类型      | 默认值 | 版本 |
+| ----- | :---------------------------------------: | :-----------: | :----: | ---: |
+| style | 设置图标的样式，例如`fontSize` 和 `color` | CSSProperties |   \_   |      |

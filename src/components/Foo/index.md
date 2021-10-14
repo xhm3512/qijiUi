@@ -1,11 +1,11 @@
 ---
-title: Griid 珊格
+title: Grid 珊格
 group:
   title: 布局
   order: 8
 ---
 
-## Foo
+## Grid 珊格
 
 Demo:
 
