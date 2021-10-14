@@ -3,7 +3,7 @@ import BraftEditor from 'braft-editor';
 import classNames from 'classnames';
 import 'braft-editor/dist/index.css';
 // import text from './text';
-import './index.less';
+import './style/index.less';
 // const words = '毛泽东,共产党'.split(',')
 interface PropsInterface {
   type?: 'input' | 'textArea';

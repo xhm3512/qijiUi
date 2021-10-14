@@ -6,8 +6,8 @@ export default {
   // umd: {
   //   sourcemap: true,
   // },
-  // extractCSS: true,
-  // lessInBabelMode: true,
-  // cssModules: true,
+  extractCSS: true,
+  lessInBabelMode: true,
+  cssModules: true,
   // lessInRollupMode: {},
 };

@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import shortCutKeySet from './shortCutKeySet';
 import { colorHight, colorHight16, colorRgbHight } from './constants';
-import './index.less';
+import './style/index.less';
 import {
   clearSelection,
   getMouseLOcal,

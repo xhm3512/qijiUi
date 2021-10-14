@@ -22,6 +22,18 @@ export default defineConfig({
       path: '/components',
     },
   ],
-
+  extraBabelPlugins: [
+    [
+      'import',
+      {
+        libraryName: 'lean',
+        camel2DashComponentName: false,
+        customStyleName: name => {
+          return `./style/index.less`; // 注意：这里 ./ 不可省略
+        },
+      },
+      'lean',
+    ],
+  ],
   // more config: https://d.umijs.org/config
 });
