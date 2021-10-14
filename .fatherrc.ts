@@ -9,6 +9,5 @@ export default {
   extractCSS: true,
   lessInBabelMode: true,
   cssModules: true,
-  sideEffects: ['.less', '.css', './src//style/'],
   // lessInRollupMode: {},
 };
