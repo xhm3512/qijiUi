@@ -9,6 +9,9 @@
 - 配置多个按需引入：https://github.com/ElementUI/babel-plugin-component/pull/52/files
 - Invalid hook call. Hooks can only be called inside 解决方案：https://zhuanlan.zhihu.com/p/363288266
 - 打包后组建没有引入组件自己的样式解决办法：https://github.com/umijs/dumi/issues/225
+- jest:https://www.jestjs.cn/docs/getting-started
+- umi-test:https://gitee.com/wxialexiatian/umi-test-demo/blob/master/src/components/Header/index.test.tsx
+- enzyme:https://madewith.cn/566 https://enzymejs.github.io/enzyme/ api:https://blog.csdn.net/qq_21895821/article/details/106768635
 
 在这个文章中，将会简单的介绍如何使用 dumi 和 father-build 来创建组件库和维护组件库。最终我们会演示如何组织组件库的代码。还有输出一个简单的组件。
 

@@ -13,7 +13,7 @@
 /docs-dist
 # misc
 .DS_Store
-
+/coverage
 # umi
 .umi
 .umi-production

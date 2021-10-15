@@ -6,7 +6,6 @@ import {
   clearSelection,
   getMouseLOcal,
   filterDomFunc,
-  getStyle,
   selectDetail,
   isContainSpecial,
 } from './tools';
@@ -41,7 +40,7 @@ const RemarkText = (props: PropsRoot) => {
     if (!manSpamWords) return tempText;
     Object.keys(manSpamWords).map((key: string) => {
       const words = manSpamWords[key];
-      if (words && words.length > 0) {
+      if (words?.length > 0) {
         words.forEach((item: string | RegExp) => {
           if (!isContainSpecial(key, item)) return;
           const reg = new RegExp(item, 'g');
@@ -65,7 +64,7 @@ const RemarkText = (props: PropsRoot) => {
     if (machineWords) {
       Object.keys(machineWords).map(key => {
         const words = machineWords[key];
-        if (words && words.length > 0) {
+        if (words?.length > 0) {
           words.forEach((item: string | RegExp) => {
             if (!isContainSpecial(key, item)) return;
             const reg = new RegExp(item, 'g');
@@ -123,46 +122,44 @@ const RemarkText = (props: PropsRoot) => {
     const { current } = highlighRef;
     const dom = current && current.getElementsByTagName('*');
     const filterDom = filterDomFunc(dom);
-
     const tempWordsArr: any[] = [];
-    // {
-    //   offsetLeft: 0, // 文本开始位置
-    //   offsetWidth: 0, // 文本长度
-    //   offsetEnd: 0, // 文本结束位置
-    //   type: '', // 是高亮还是划线
-    //   text: '', // 标注文本
-    // }
     filterDom.forEach((item: HTMLElement) => {
-      const { nodeName, innerText: text1, offsetLeft, offsetWidth } = item;
-      const styleBack = item.getAttribute('style');
-      const backColor = styleBack && getStyle(item, 'background-color');
-      const tempLength = tempWordsArr.length;
-      const colorType = colorRgbHight[backColor];
+      const {
+        innerText: text1,
+        offsetLeft,
+        offsetWidth,
+        type,
+        offsetTop,
+      } = item;
+
       let flag = true;
       tempWordsArr.forEach((tempWords, i) => {
         if (
           offsetLeft === tempWords.offsetEnd &&
-          ((tempWords.type === nodeName && nodeName === 'STRIKE') ||
-            tempWords.type === colorType)
+          offsetTop === tempWords.offsetTop &&
+          tempWords.type === type
         ) {
           // 表示是相邻两个统一类型的标志
           tempWordsArr[i] = {
             text: tempWords.text += text1,
-            offsetLeft,
-            offsetWidth,
+            offsetLeft: tempWords?.offsetLeft,
+            offsetWidth: offsetWidth + tempWords?.offsetWidth,
             offsetEnd: offsetLeft + offsetWidth,
-            type: colorType || nodeName,
+            offsetTop,
+            type,
           };
           flag = false;
         }
       });
       if (flag) {
-        tempWordsArr[tempLength] = {
+        tempWordsArr[tempWordsArr.length] = {
           text: text1,
           offsetLeft,
           offsetWidth,
           offsetEnd: offsetLeft + offsetWidth,
-          type: colorType || nodeName,
+          type,
+          offsetTop,
+          qqq: 'STRIKE',
         };
       }
     });
@@ -183,7 +180,6 @@ const RemarkText = (props: PropsRoot) => {
       onSubmitHtml({ newDomHtml, highwordsArr, machineWords });
     }
     _oldDomHtml = newDomHtml;
-    console.log(_oldDomHtml);
   };
 
   // 划线
@@ -248,7 +244,6 @@ const RemarkText = (props: PropsRoot) => {
       setopacity('0');
     }, 400);
   };
-  console.log(onMouseOutHandle);
 
   // 快捷键设置
   const setShortCutKeyFunc = (e: any) => {
@@ -274,8 +269,9 @@ const RemarkText = (props: PropsRoot) => {
   useEffect(() => {
     const { current } = highlighRef;
     if (!current) return;
+    const detailHtml = machineWordsDetail(poppleWordsDetail());
     // 初始化内容
-    current.innerHTML = manSpamHtml || machineWordsDetail(poppleWordsDetail());
+    current.innerHTML = manSpamHtml || detailHtml;
     // 禁止输入设置
     current.addEventListener('keydown', (e: { preventDefault: () => void }) => {
       setShortCutKeyFunc(e); // 高亮快捷键设置
@@ -365,10 +361,10 @@ const RemarkText = (props: PropsRoot) => {
         tabIndex={0}
         // outline={0}
         // hidefocus="true"
-        contentEditable="true"
+        contentEditable="false"
         suppressContentEditableWarning
+        data-test="box"
       ></div>
-      <div id="dddss"></div>
     </>
   );
 };

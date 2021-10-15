@@ -1,3 +1,4 @@
+import { colorRgbHight } from './constants';
 const clearSelection = () => {
   document.getSelection()?.empty();
 };
@@ -25,21 +26,77 @@ function getStyle(obj: any, attr: any) {
 }
 
 /**
+ * 获得style样式
+ * @param {*} item  dom
+ * @returns  样式
+ */
+const getDomBgColor = item => {
+  const styleBack =
+    item.nodeName &&
+    item.nodeName !== '#text' &&
+    (item.getAttribute('style') || item.nodeName === 'STRIKE');
+  if (styleBack) {
+    return {
+      backColor: colorRgbHight[getStyle(item, 'background-color')],
+      styleLineThrough:
+        getStyle(item, 'text-decoration-line') === 'line-through' ||
+        item.nodeName === 'STRIKE'
+          ? 'STRIKE'
+          : '',
+    };
+  }
+  return {};
+};
+
+const domRecursion = (item, tempArr) => {
+  const { backColor, styleLineThrough } = getDomBgColor(item);
+  const { offsetLeft, offsetWidth, innerText, offsetTop } = item;
+  const tempPush = {
+    offsetLeft,
+    offsetWidth,
+    innerText,
+    offsetTop,
+  };
+  if (backColor) {
+    tempArr.push({
+      ...tempPush,
+      type: backColor,
+    });
+  }
+  if (styleLineThrough) {
+    tempArr.push({
+      ...tempPush,
+      type: styleLineThrough,
+    });
+  }
+};
+/**
  *  // 过滤数据，活得人审数据
  * @param {*} dom :获取到的所有标签
  * @returns
  */
-const filterDomFunc = (dom: any) =>
-  [].slice.call(dom).filter((item: any) => {
-    const dataCheck = item.getAttribute('data-check');
-    const styleBack = item.getAttribute('style');
-    const backColor = styleBack && getStyle(item, 'background-color');
-    return (
-      item.nodeName !== 'P' &&
-      dataCheck !== '1' &&
-      (backColor || item.nodeName === 'STRIKE')
-    );
-  });
+const filterDomFunc = (dom: any) => {
+  const tempArr = [];
+  try {
+    [].slice.call(dom).forEach((item: any) => {
+      const dataCheck = item.getAttribute('data-check');
+      const { backColor, styleLineThrough } = getDomBgColor(item);
+      // 过滤标注节点
+      if (
+        item.nodeName !== 'P' &&
+        dataCheck !== '1' &&
+        (backColor ||
+          item.nodeName === 'STRIKE' ||
+          styleLineThrough === 'line-through')
+      ) {
+        domRecursion(item, tempArr);
+      }
+    });
+  } catch (error) {
+    console.log('filterDomFunc异常', error);
+  }
+  return tempArr;
+};
 // 兼容性处理
 function selectDetail() {
   if (window.getSelection) {
@@ -55,7 +112,7 @@ function selectDetail() {
 }
 
 /**
- * // 是否包含特殊字符
+ * // 是否包含特殊字符,有特殊字符的敏感词就不会展示高亮
  * @param {*} i  当前操作的标注类型
  * @param {*} string  当前需要匹配的字符串
  * @returns
@@ -86,37 +143,6 @@ const isContainSpecial = (i: string, string: string | RegExp) => {
   }
   return true;
 };
-
-/**
- * 替换选择的文本，不支持textarea和input
- * @param {string} text
- */
-function boldSelection(text: string) {
-  // @ts-ignore
-  if (document.selection) {
-    // 老IE
-    // @ts-ignore
-    const selecterIe = document.selection.createRange();
-    selecterIe.select();
-    selecterIe.pasteHTML(text); // 替换为HTML元素，替换完会失去选取，如果选择的是textarea里的内容这里会报错
-  } else {
-    // 非老IE
-    let selecter;
-    if (window.getSelection()) {
-      selecter = window.getSelection();
-    } else {
-      selecter = document.getSelection();
-    }
-    selecter = document.getSelection();
-    const rang = selecter && selecter.getRangeAt(0);
-    // 先删除再插入达到替换的效果，
-    if (!rang) return;
-    rang.deleteContents(); // 删除选中内容
-    rang.insertNode(document.createRange().createContextualFragment(text)); // 在选中内容的起始位置插入一个节点
-    // rang.insertNode(text); // 在选中内容的起始位置插入一个节点
-    // chrome中的bug，如果选中的是textarea中的内容，就会在textarea前面插入节点
-  }
-}
 export {
   clearSelection,
   getMouseLOcal,
@@ -124,5 +150,4 @@ export {
   getStyle,
   selectDetail,
   isContainSpecial,
-  boldSelection,
 };
