@@ -13,6 +13,8 @@
 - umi-test:https://gitee.com/wxialexiatian/umi-test-demo/blob/master/src/components/Header/index.test.tsx
 - enzyme:https://madewith.cn/566 https://enzymejs.github.io/enzyme/ api:https://blog.csdn.net/qq_21895821/article/details/106768635
 
+- 组件开发，设置 ts 规范：https://blog.csdn.net/sinat_36146776/article/details/105734353
+
 在这个文章中，将会简单的介绍如何使用 dumi 和 father-build 来创建组件库和维护组件库。最终我们会演示如何组织组件库的代码。还有输出一个简单的组件。
 
 ## 脚手架初始化

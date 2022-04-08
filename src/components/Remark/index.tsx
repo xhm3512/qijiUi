@@ -123,7 +123,7 @@ const RemarkText = (props: PropsRoot) => {
     const dom = current && current.getElementsByTagName('*');
     const filterDom = filterDomFunc(dom);
     const tempWordsArr: any[] = [];
-    filterDom.forEach((item: HTMLElement) => {
+    filterDom.forEach((item: any) => {
       const {
         innerText: text1,
         offsetLeft,
