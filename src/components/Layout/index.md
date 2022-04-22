@@ -25,7 +25,7 @@ export default () => (
       </Sider>
       <Content className="content-box">Content</Content>
     </Layout>
-    <Footer class="footer">Footer</Footer>
+    <Footer className="footer">Footer</Footer>
   </Layout>
 );
 ```

@@ -5,7 +5,13 @@ import { defineConfig } from 'dumi';
 //   // more config: https://d.umijs.org/config
 // });
 export default defineConfig({
+  mfsu: {},
+  webpack5: {},
+  dynamicImport: {},
   title: 'qiji',
+  theme: {
+    'primary-color': '#F95A58',
+  },
   favicon:
     'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
   logo:
@@ -18,8 +24,12 @@ export default defineConfig({
       path: '/files',
     },
     {
-      title: '组件',
+      title: 'ui组件',
       path: '/components',
+    },
+    {
+      title: '逻辑组件',
+      path: '/script',
     },
   ],
   extraBabelPlugins: [

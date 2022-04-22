@@ -16,78 +16,56 @@ import React from 'react';
 import { Icons } from 'qiji';
 import { Row, Col, Divider } from 'antd';
 import 'antd/dist/antd.less';
+import './md.less';
 const {
-  AccountExitCustom,
-  CheckBoxCustom,
-  CryingFace,
-  DataSvg,
-  NewsSvg,
-  Add,
-  Prve,
-  Next,
-  Salary,
-  Tips,
-  User,
-  Mangers,
+  WorksManagerCustom,
+  DataCustom,
+  SalaryCustom,
+  UserCustom,
+  NewsCustom,
 } = Icons;
+const arr = [
+  {
+    id: 'WorksManagerCustom',
+    components: <WorksManagerCustom />,
+  },
+  {
+    id: 'DataCustom',
+    components: <DataCustom className="ert" />,
+  },
+  {
+    id: 'SalaryCustom',
+    components: <SalaryCustom />,
+  },
+  {
+    id: 'UserCustom',
+    components: <UserCustom />,
+  },
+  {
+    id: 'NewsCustom',
+    components: <NewsCustom />,
+  },
+];
 export default () => (
   <Row style={{ fontSize: '30px' }}>
-    <Col span={4}>
-      <CheckBoxCustom />
-    </Col>
-    <Col span={4}>
-      <CryingFace />
-    </Col>
-    <Col span={4}>
-      <NewsSvg />
-    </Col>
-    <Col span={4}>
-      <Add />
-    </Col>
-    <Col span={4}>
-      <Prve />
-    </Col>
-    <Col span={4}>
-      <Next />
-    </Col>
-    <Col span={4}>
-      <Salary />
-    </Col>
-    <Col span={4}>
-      <Tips />
-    </Col>
-    <Col span={4}>
-      <User />
-    </Col>
-    <Col span={4}>
-      <Mangers />
-    </Col>
-  </Row>
-);
-```
-
-代码演示
-
-```tsx
-import React from 'react';
-import { Icons } from 'qiji';
-import { Row, Col, Divider } from 'antd';
-import 'antd/dist/antd.less';
-const { AccountExitCustom, CheckBoxCustom, CryingFace } = Icons;
-export default () => (
-  <Row style={{ fontSize: '30px' }}>
-    <Col span={4}>
-      <CheckBoxCustom style={{ color: 'red' }} />
-    </Col>
-    <Col span={4}>
-      <CryingFace style={{ color: 'pink', fontSize: '36px' }} />
-    </Col>
+    {arr.map(item => (
+      <div className="item-box" key={item.id}>
+        <div className="icon">{item.components}</div>
+        <div className="icon-name">{item.id}</div>
+      </div>
+    ))}
   </Row>
 );
 ```
 
 ## API
 
-| 属性  |                   说明                    |     类型      | 默认值 | 版本 |
-| ----- | :---------------------------------------: | :-----------: | :----: | ---: |
-| style | 设置图标的样式，例如`fontSize` 和 `color` | CSSProperties |   \_   |      |
+`Icon` 中的 `component` 组件的接受的属性如下：
+
+| 字段      | 说明                    | 类型             | 只读值         | 版本 |
+| --------- | ----------------------- | ---------------- | -------------- | ---- |
+| className | 计算后的 `svg` 类名     | string           | -              |      |
+| fill      | `svg` 元素填充的颜色    | string           | `currentColor` |      |
+| height    | `svg` 元素高度          | string \| number | `1em`          |      |
+| style     | 计算后的 `svg` 元素样式 | CSSProperties    | -              |      |
+| width     | `svg` 元素宽度          | string \| number | `1em`          |      |

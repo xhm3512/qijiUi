@@ -17,6 +17,14 @@
 
 在这个文章中，将会简单的介绍如何使用 dumi 和 father-build 来创建组件库和维护组件库。最终我们会演示如何组织组件库的代码。还有输出一个简单的组件。
 
+# 可视化
+
+- demo:https://codesandbox.io/search?refinementList%5Btemplate%5D=&refinementList%5Bnpm_dependencies.dependency%5D%5B0%5D=%40ant-design%2Fcharts&page=17&configure%5BhitsPerPage%5D=12&query=
+
+# 组件
+
+- 日历：https://www.figma.com/file/Kdh4q6P5v9A6GcGIwhLoD0/%E6%9B%B4%E6%96%B0%EF%BD%9C%E5%88%9B%E4%BD%9C%E4%B8%AD%E5%BF%83-3.0?node-id=569%3A4666
+
 ## 脚手架初始化
 
 新建一个空文件夹，然后使用脚手架初始化项目。

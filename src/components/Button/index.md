@@ -11,61 +11,63 @@ Demo:
 
 ```tsx
 import React from 'react';
-import { Button } from 'qiji';
+import { QuiButton } from 'qiji';
 const Icon = () => {
   return <span type="primary">+</span>;
 };
 export default () => (
   <>
-    <Button type="primary" size="large">
+    <QuiButton type="primary" size="large">
       text
-    </Button>
+    </QuiButton>
     &nbsp;
-    <Button type="primary" size="middle">
+    <QuiButton type="primary" size="middle">
       text
-    </Button>&nbsp;
-    <Button type="primary" size="small">
-      text
-    </Button>
+    </QuiButton>
     &nbsp;
-    <Button type="primary" size="small" disabled>
+    <QuiButton type="primary" size="small">
+      text
+    </QuiButton>
+    &nbsp;
+    <QuiButton type="primary" size="small" disabled>
       disable
-    </Button>
+    </QuiButton>
     <br />
     <br />
-    <Button type="primary" size="large" icon={<Icon />}>
+    <QuiButton type="primary" size="large" icon={<Icon />}>
       icon
-    </Button>{' '}
+    </QuiButton>{' '}
     &nbsp;
-    <Button type="primary" size="middle" icon={<Icon />}>
+    <QuiButton type="primary" size="middle" icon={<Icon />}>
       icon
-    </Button> &nbsp;
-    <Button type="primary" size="small" icon={<Icon />}>
+    </QuiButton> &nbsp;
+    <QuiButton type="primary" size="small" icon={<Icon />}>
       icon
-    </Button>{' '}
+    </QuiButton>{' '}
     &nbsp;
-    <Button type="primary" size="small" disabled icon={<Icon />}>
+    <QuiButton type="primary" size="small" disabled icon={<Icon />}>
       icon
-    </Button> &nbsp;
+    </QuiButton> &nbsp;
     <br />
     <br />
-    <Button type="primary" size="large" icon={<Icon />} loading>
+    <QuiButton type="primary" size="large" icon={<Icon />} loading>
       text
-    </Button>
+    </QuiButton>
     &nbsp;
-    <Button type="primary" size="middle" icon={<Icon />} loading>
+    <QuiButton type="primary" size="middle" icon={<Icon />} loading>
       text
-    </Button>&nbsp;
-    <Button type="primary" size="small" icon={<Icon />} loading>
-      text
-    </Button>
+    </QuiButton>
     &nbsp;
-    <Button type="primary" size="small" icon={<Icon />} loading>
+    <QuiButton type="primary" size="small" icon={<Icon />} loading>
       text
-    </Button>&nbsp;
-    <Button type="primary" size="small" icon={<Icon />} loading disabled>
+    </QuiButton>
+    &nbsp;
+    <QuiButton type="primary" size="small" icon={<Icon />} loading>
       text
-    </Button>
+    </QuiButton>&nbsp;
+    <QuiButton type="primary" size="small" icon={<Icon />} loading disabled>
+      text
+    </QuiButton>
     &nbsp;
   </>
 );
@@ -77,42 +79,43 @@ Demo:
 
 ```tsx
 import React from 'react';
-import { Button } from 'qiji';
+import { QuiButton } from 'qiji';
 const Icon = () => {
   return <span type="primary">+</span>;
 };
 export default () => (
   <>
-    <Button type="outline" size="large">
+    <QuiButton type="outline" size="large">
       text
-    </Button>
+    </QuiButton>
     &nbsp;
-    <Button type="outline" size="middle">
+    <QuiButton type="outline" size="middle">
       text
-    </Button>&nbsp;
-    <Button type="outline" size="small">
-      text
-    </Button>
+    </QuiButton>
     &nbsp;
-    <Button type="outline" size="small" disabled>
+    <QuiButton type="outline" size="small">
+      text
+    </QuiButton>
+    &nbsp;
+    <QuiButton type="outline" size="small" disabled>
       disable
-    </Button>
+    </QuiButton>
     <br />
     <br />
-    <Button type="outline" size="large" icon={<Icon />}>
+    <QuiButton type="outline" size="large" icon={<Icon />}>
       icon
-    </Button>{' '}
+    </QuiButton>{' '}
     &nbsp;
-    <Button type="outline" size="middle" icon={<Icon />}>
+    <QuiButton type="outline" size="middle" icon={<Icon />}>
       icon
-    </Button> &nbsp;
-    <Button type="outline" size="small" icon={<Icon />}>
+    </QuiButton> &nbsp;
+    <QuiButton type="outline" size="small" icon={<Icon />}>
       icon
-    </Button>{' '}
+    </QuiButton>{' '}
     &nbsp;
-    <Button type="outline" size="small" disabled icon={<Icon />}>
+    <QuiButton type="outline" size="small" disabled icon={<Icon />}>
       icon
-    </Button> &nbsp;
+    </QuiButton> &nbsp;
     <br />
     <br />
   </>
@@ -125,42 +128,43 @@ Demo:
 
 ```tsx
 import React from 'react';
-import { Button } from 'qiji';
+import { QuiButton } from 'qiji';
 const Icon = () => {
   return <span type="primary">+</span>;
 };
 export default () => (
   <>
-    <Button type="secondary" size="large">
+    <QuiButton type="secondary" size="large">
       text
-    </Button>
+    </QuiButton>
     &nbsp;
-    <Button type="secondary" size="middle">
+    <QuiButton type="secondary" size="middle">
       text
-    </Button>&nbsp;
-    <Button type="secondary" size="small">
-      text
-    </Button>
+    </QuiButton>
     &nbsp;
-    <Button type="secondary" size="small" disabled>
+    <QuiButton type="secondary" size="small">
+      text
+    </QuiButton>
+    &nbsp;
+    <QuiButton type="secondary" size="small" disabled>
       disable
-    </Button>
+    </QuiButton>
     <br />
     <br />
-    <Button type="secondary" size="large" icon={<Icon />}>
+    <QuiButton type="secondary" size="large" icon={<Icon />}>
       icon
-    </Button>{' '}
+    </QuiButton>{' '}
     &nbsp;
-    <Button type="secondary" size="middle" icon={<Icon />}>
+    <QuiButton type="secondary" size="middle" icon={<Icon />}>
       icon
-    </Button> &nbsp;
-    <Button type="secondary" size="small" icon={<Icon />}>
+    </QuiButton> &nbsp;
+    <QuiButton type="secondary" size="small" icon={<Icon />}>
       icon
-    </Button>{' '}
+    </QuiButton>{' '}
     &nbsp;
-    <Button type="secondary" size="small" disabled icon={<Icon />}>
+    <QuiButton type="secondary" size="small" disabled icon={<Icon />}>
       icon
-    </Button> &nbsp;
+    </QuiButton> &nbsp;
     <br />
     <br />
   </>
