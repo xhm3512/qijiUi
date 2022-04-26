@@ -14,6 +14,7 @@ interface ButtonProps {
   loading?: boolean;
   htmlType?: ButtonHTMLType;
   className?: string;
+  hover?: boolean;
 }
 const prefixCls = 'qiji-oni-btn';
 const Button: FC<ButtonProps> = ({
@@ -26,6 +27,7 @@ const Button: FC<ButtonProps> = ({
   size = 'middle',
   htmlType = 'button' as ButtonProps['htmlType'],
   className,
+  hover = false,
 }) => {
   const iconNode =
     icon && !loading ? (
@@ -42,6 +44,9 @@ const Button: FC<ButtonProps> = ({
     `${prefixCls}-${type}`,
     `${prefixCls}-${type}-${size}`,
     className,
+    {
+      [`${prefixCls}-${type}-hover`]: hover,
+    },
   );
   return (
     <button

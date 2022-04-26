@@ -36,18 +36,18 @@ export default () => (
     <br />
     <QuiButton type="primary" size="large" icon={<Icon />}>
       icon
-    </QuiButton>{' '}
-    &nbsp;
+    </QuiButton> &nbsp;
     <QuiButton type="primary" size="middle" icon={<Icon />}>
       icon
-    </QuiButton> &nbsp;
+    </QuiButton>{' '}
+    &nbsp;
     <QuiButton type="primary" size="small" icon={<Icon />}>
+      icon
+    </QuiButton> &nbsp;
+    <QuiButton type="primary" size="small" disabled icon={<Icon />}>
       icon
     </QuiButton>{' '}
     &nbsp;
-    <QuiButton type="primary" size="small" disabled icon={<Icon />}>
-      icon
-    </QuiButton> &nbsp;
     <br />
     <br />
     <QuiButton type="primary" size="large" icon={<Icon />} loading>
@@ -104,18 +104,18 @@ export default () => (
     <br />
     <QuiButton type="outline" size="large" icon={<Icon />}>
       icon
-    </QuiButton>{' '}
-    &nbsp;
+    </QuiButton> &nbsp;
     <QuiButton type="outline" size="middle" icon={<Icon />}>
       icon
-    </QuiButton> &nbsp;
+    </QuiButton>{' '}
+    &nbsp;
     <QuiButton type="outline" size="small" icon={<Icon />}>
+      icon
+    </QuiButton> &nbsp;
+    <QuiButton type="outline" size="small" disabled icon={<Icon />}>
       icon
     </QuiButton>{' '}
     &nbsp;
-    <QuiButton type="outline" size="small" disabled icon={<Icon />}>
-      icon
-    </QuiButton> &nbsp;
     <br />
     <br />
   </>
@@ -153,18 +153,18 @@ export default () => (
     <br />
     <QuiButton type="secondary" size="large" icon={<Icon />}>
       icon
-    </QuiButton>{' '}
-    &nbsp;
+    </QuiButton> &nbsp;
     <QuiButton type="secondary" size="middle" icon={<Icon />}>
       icon
-    </QuiButton> &nbsp;
+    </QuiButton>{' '}
+    &nbsp;
     <QuiButton type="secondary" size="small" icon={<Icon />}>
+      icon
+    </QuiButton> &nbsp;
+    <QuiButton type="secondary" size="small" disabled icon={<Icon />}>
       icon
     </QuiButton>{' '}
     &nbsp;
-    <QuiButton type="secondary" size="small" disabled icon={<Icon />}>
-      icon
-    </QuiButton> &nbsp;
     <br />
     <br />
   </>
@@ -185,5 +185,6 @@ export default () => (
 | icon      |                                                          设置按钮的图标组件                                                          |               ReactNode               |    -     |      |
 | size      |                                                             设置按钮大小                                                             |    `large` \| `middle` \| `small`     | `middle` |      |  | - |  |
 | loading   |                                                           设置按钮载入状态                                                           |                boolean                |  false   |      |
+| hover     |                                                       是否直接展示 hover 效果                                                        |                boolean                |  false   |      |
 | htmlType  | 设置 `button` 原生的 `type` 值，可选值请参考 [HTML 标准](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attr-type) |                string                 | `button` |      |
 | className |                                                           自定义 className                                                           |                string                 |    -     |      |

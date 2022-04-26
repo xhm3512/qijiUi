@@ -7,8 +7,6 @@ interface PropsState {
 }
 const tabs: FC<PropsState> = ({ children }) => {
   const callback = () => {};
-  console.log(12, children);
-
   return (
     <Tabs
       defaultActiveKey="0"

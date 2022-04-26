@@ -2,32 +2,11 @@ import React, { useState, useEffect, FC } from 'react';
 // import { Line } from '@ant-design/plots';
 import { Line } from '@ant-design/charts';
 import './style/index.less';
-const QuiLine: FC = () => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    asyncFetch();
-  }, []);
-
-  const asyncFetch = () => {
-    fetch(
-      'https://gw.alipayobjects.com/os/bmw-prod/1d565782-dde4-4bb6-8946-ea6a38ccf184.json',
-    )
-      .then(response => response.json())
-      .then(json => {
-        const temp = json.slice(0, 30);
-        console.log(111, temp);
-
-        temp.forEach(item => {
-          item.type = '增加数';
-        });
-        setData(json.slice(0, 30));
-      })
-      .catch(error => {
-        console.log('fetch data failed', error);
-      });
-  };
-
+interface PropsState {
+  data: Array<{ Date: string; scales: string }>;
+  type?: string;
+}
+const QuiLine: FC<PropsState> = ({ data, type = '' }) => {
   const config = {
     data,
     seriesField: 'type',
@@ -36,7 +15,7 @@ const QuiLine: FC = () => {
       custom: true,
       items: [
         {
-          name: '增加数',
+          name: type,
           marker: {
             // 是否为方块
             symbol: 'square',
@@ -68,14 +47,16 @@ const QuiLine: FC = () => {
         return (
           <div className="tooltip-box" key={title}>
             <div className="data-item-title">{data.Date}</div>
-            <div className="data-value">{data.type}</div>
+            <div className="data-value">
+              {type}：{data.scales}
+            </div>
           </div>
         );
       },
     },
     yAxis: {
       title: {
-        text: ' 增加数',
+        text: type,
       },
     },
     xAxis: {

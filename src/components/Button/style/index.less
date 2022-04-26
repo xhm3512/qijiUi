@@ -21,6 +21,9 @@
       background: #db4f4d;
     }
   }
+  &-primary-hover {
+    background: #ea5553;
+  }
   &-primary[disabled] {
     background: rgba(167, 170, 177, 0.64);
     border-radius: 4px;
@@ -34,6 +37,12 @@
       background: rgba(167, 170, 177, 0.4);
     }
     &:active {
+      background: rgba(167, 170, 177, 0.64);
+    }
+  }
+  &-secondary-hover {
+    background: rgba(167, 170, 177, 0.4);
+    &:hover {
       background: rgba(167, 170, 177, 0.64);
     }
   }
@@ -55,7 +64,10 @@
       border: 0.7px solid rgba(249, 90, 88, 0.5);
     }
   }
-
+  &-outline-hover {
+    background: rgba(249, 90, 88, 0.2);
+    border: 0.7px solid rgba(249, 90, 88, 0.4);
+  }
   &-outline[disabled] {
     background: rgba(249, 90, 88, 0.1);
     opacity: 0.5;

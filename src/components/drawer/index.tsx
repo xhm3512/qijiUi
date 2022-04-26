@@ -1,23 +1,25 @@
-import React, { useState, FC } from 'react';
-import { Row } from 'antd';
+import React, { useState, FC, useEffect } from 'react';
 import classNames from 'classnames';
-import Ddd from './DD';
 import './style/index.less';
 interface PropsState {
   maskClosable?: boolean;
+  visible?: boolean;
+  onClose?: () => {};
 }
-const Drawer: FC<PropsState> = ({ maskClosable = false }) => {
+const Drawer: FC<PropsState> = ({
+  maskClosable = false,
+  children,
+  visible = false,
+  onClose,
+}) => {
   const prefixCls = 'qiu-drawer-box';
-  const [visible, setVisible] = useState(false); // 弹窗是否可见,默认不可见,点击按钮后弹窗出现
   // 打开
   const onDialogOpen = () => {
     document.body.style.overflow = 'hidden';
     document.body.style.touchAction = 'none';
-    setVisible(true);
   };
   // 关闭
   const onDialogClose = () => {
-    setVisible(false);
     document.body.style.overflow = 'auto';
     document.body.style.touchAction = 'auto';
   };
@@ -30,19 +32,20 @@ const Drawer: FC<PropsState> = ({ maskClosable = false }) => {
     [`${prefixCls}-mask-show`]: visible,
     [`${prefixCls}-mask-hidden`]: !visible,
   });
+  useEffect(() => {
+    if (visible) {
+      onDialogOpen();
+    } else {
+      onDialogClose();
+    }
+  }, [visible]);
   return (
     <div className={prefixCls}>
-      <div className={`${prefixCls}-btn`} onClick={onDialogOpen}>
-        点击弹窗从左侧滑出2
-      </div>
       <div
         className={classessMask}
-        onClick={() => maskClosable && onDialogClose()}
+        onClick={() => maskClosable && onClose && onClose()}
       ></div>
-      <div className={classessDialog}>
-        <Ddd onDialogClose={onDialogClose} />
-        {/* <div className={`${prefixCls}-btn`} onClick={onDialogClose}>点击弹窗向左侧滑入</div> */}
-      </div>
+      <div className={classessDialog}>{children}</div>
     </div>
   );
 };

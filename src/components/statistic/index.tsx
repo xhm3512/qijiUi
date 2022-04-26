@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import './style/index.less';
 interface PropsState {
   active: boolean;
-  onClick?: (inder: number) => void;
+  onClick?: (type: string) => void;
   wrapClassName?: string;
   children: Array<ReactNode>;
   currentActive?: number;
@@ -14,7 +14,7 @@ const Foo: FC<PropsState> = ({
   onClick,
   active = false,
   wrapClassName,
-  currentActive = -1,
+  currentActive = '',
 }) => {
   const prefixCls = 'qiji-oni-statistic';
   const [activeIndex, setActiveIndex] = useState(currentActive);
@@ -25,9 +25,9 @@ const Foo: FC<PropsState> = ({
     });
   };
   // 点击item高亮
-  const onHandleClick = (i: number) => {
+  const onHandleClick = (i: number, type) => {
     setActiveIndex(i);
-    typeof onClick === 'function' && onClick(i);
+    typeof onClick === 'function' && onClick(type);
   };
 
   return (
@@ -36,7 +36,7 @@ const Foo: FC<PropsState> = ({
         return (
           <Col key={i}>
             <div
-              onClick={() => onHandleClick(i + 1)}
+              onClick={() => onHandleClick(i + 1, item.key)}
               className={classesItem(i + 1)}
             >
               {item}

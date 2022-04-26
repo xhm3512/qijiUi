@@ -7,6 +7,9 @@ import DataSvg from './DataSvg';
 import SalarySvg from './SalarySvg';
 import UserSvg from './UserSvg';
 import NewsSvg from './NewsSvg';
+import ToolTipCustom from './ToolTip';
+
+import ArrowSvg from './Arrow';
 
 const CustomIcon = (
   Component: ComponentType<CustomIconComponentProps | SVGProps<SVGSVGElement>>,
@@ -20,6 +23,9 @@ const DataCustom = CustomIcon(DataSvg);
 const SalaryCustom = CustomIcon(SalarySvg);
 const UserCustom = CustomIcon(UserSvg);
 const NewsCustom = CustomIcon(NewsSvg);
+const ArrowCustom = CustomIcon(ArrowSvg);
+
+// const ToolTipCustom = CustomIcon(ToolTipDiv);
 
 export default {
   HomeCustom,
@@ -28,4 +34,6 @@ export default {
   SalaryCustom,
   UserCustom,
   NewsCustom,
+  ArrowCustom,
+  ToolTipCustom,
 };
