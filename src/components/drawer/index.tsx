@@ -1,5 +1,7 @@
-import React, { useState, FC, useEffect } from 'react';
+import React, { FC, useEffect } from 'react';
 import classNames from 'classnames';
+import ReactDOM from 'react-dom';
+import 'antd/es/date-picker/style/index.less';
 import './style/index.less';
 interface PropsState {
   maskClosable?: boolean;
@@ -12,21 +14,21 @@ const Drawer: FC<PropsState> = ({
   visible = false,
   onClose,
 }) => {
-  const prefixCls = 'qiu-drawer-box';
+  const prefixCls = 'qiu-drawer-box1';
   // 打开
   const onDialogOpen = () => {
-    document.body.style.overflow = 'hidden';
+    // document.body.style.overflow = 'hidden';
     document.body.style.touchAction = 'none';
   };
   // 关闭
   const onDialogClose = () => {
-    document.body.style.overflow = 'auto';
+    // document.body.style.overflow = 'auto';
     document.body.style.touchAction = 'auto';
   };
 
   const classessDialog = classNames(`${prefixCls}-dialog`, {
     [`${prefixCls}-dialog_show`]: visible,
-    [`${prefixCls}-hidden`]: !visible,
+    [`${prefixCls}-dialog_hidden`]: !visible,
   });
   const classessMask = classNames(`${prefixCls}-mask`, {
     [`${prefixCls}-mask-show`]: visible,
@@ -39,13 +41,19 @@ const Drawer: FC<PropsState> = ({
       onDialogClose();
     }
   }, [visible]);
+
   return (
-    <div className={prefixCls}>
-      <div
-        className={classessMask}
-        onClick={() => maskClosable && onClose && onClose()}
-      ></div>
-      <div className={classessDialog}>{children}</div>
+    <div>
+      {ReactDOM.createPortal(
+        <div className={prefixCls}>
+          <div
+            className={classessMask}
+            onClick={() => maskClosable && onClose && onClose()}
+          ></div>
+          <div className={classessDialog}>{children}</div>
+        </div>,
+        document.body,
+      )}
     </div>
   );
 };

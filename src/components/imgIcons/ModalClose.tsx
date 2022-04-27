@@ -1,6 +1,6 @@
 import React, { FC, CSSProperties } from 'react';
 import classNames from 'classnames';
-interface CloseProps {
+export interface CloseProps {
   className?: string;
   style?: CSSProperties;
   width?: string | number;

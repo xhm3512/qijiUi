@@ -9,7 +9,7 @@ Demo:
 
 ```tsx
 import React, { useState } from 'react';
-import { QuiDrawer, Listen } from 'qiji';
+import { QuiDrawer } from 'qiji';
 export default () => {
   const [visible, setVisible] = useState(true); // 弹窗是否可见,默认不可见,点击按钮后弹窗出现
   const onClick = () => {
@@ -19,7 +19,7 @@ export default () => {
     <>
       <div onClick={onClick}>qwqw</div>
       <QuiDrawer maskClosable={true} visible={visible} onClose={onClick}>
-        <Listen onCloseClick={onClick} />
+        <div>44</div>
       </QuiDrawer>
     </>
   );

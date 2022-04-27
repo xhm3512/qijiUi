@@ -5,7 +5,7 @@ import { defineConfig } from 'dumi';
 //   // more config: https://d.umijs.org/config
 // });
 export default defineConfig({
-  mfsu: {},
+  // mfsu: {},
   webpack5: {},
   dynamicImport: {},
   title: 'qiji',

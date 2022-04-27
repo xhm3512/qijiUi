@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { FC } from 'react';
 import classNames from 'classnames';
 import './style/index.less';
 import { Row } from 'antd';
-export default ({ active = false }: { active: boolean }) => {
+const ToolTip: FC<{ active: boolean }> = ({ active = false }) => {
   console.log(222, active);
 
   const prefixCls = 'qiu-tooltip';
@@ -16,3 +16,4 @@ export default ({ active = false }: { active: boolean }) => {
     </Row>
   );
 };
+export default ToolTip;

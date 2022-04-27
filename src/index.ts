@@ -17,6 +17,3 @@ export { default as QuiStatistic } from './components/statistic';
 export { default as CatchErr } from './script/CatchErr';
 export { default as Loadable } from './script/Loadable';
 export { default as QuiImage } from './script/image';
-
-//demo
-export { default as Listen } from './components/Listen';
