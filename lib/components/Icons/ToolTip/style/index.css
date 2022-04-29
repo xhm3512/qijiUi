@@ -1,0 +1,22 @@
+.qiu-tooltip-box {
+  width: 16px;
+  height: 16px;
+  background: #d2d4d9;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 12px;
+  display: inline-block;
+  line-height: 18px;
+  text-align: center;
+}
+.qiu-tooltip-active-box {
+  width: 16px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 12px;
+  display: inline-block;
+  line-height: 18px;
+  text-align: center;
+}

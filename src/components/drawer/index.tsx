@@ -6,7 +6,7 @@ import './style/index.less';
 interface PropsState {
   maskClosable?: boolean;
   visible?: boolean;
-  onClose?: () => {};
+  onClose?: () => void;
 }
 const Drawer: FC<PropsState> = ({
   maskClosable = false,
@@ -14,7 +14,7 @@ const Drawer: FC<PropsState> = ({
   visible = false,
   onClose,
 }) => {
-  const prefixCls = 'qiu-drawer-box1';
+  const prefixCls = 'qiu-drawer-box';
   // 打开
   const onDialogOpen = () => {
     // document.body.style.overflow = 'hidden';
@@ -41,7 +41,6 @@ const Drawer: FC<PropsState> = ({
       onDialogClose();
     }
   }, [visible]);
-
   return (
     <div>
       {ReactDOM.createPortal(
@@ -50,7 +49,7 @@ const Drawer: FC<PropsState> = ({
             className={classessMask}
             onClick={() => maskClosable && onClose && onClose()}
           ></div>
-          <div className={classessDialog}>{children}</div>
+          <div className={classessDialog}>{visible && children}</div>
         </div>,
         document.body,
       )}

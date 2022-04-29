@@ -1,0 +1,79 @@
+.raftEditor-box-normal {
+  border: 1px solid #ddd;
+}
+.raftEditor-box-normal:hover {
+  border: 1px solid #fa2800;
+}
+.raftEditor-box-normal .bf-content * {
+  line-height: 120% !important;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+}
+.raftEditor-box-err {
+  border: 1px solid #fa2800 !important;
+}
+.raftEditor-box-err .bf-content * {
+  line-height: 120% !important;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+}
+.raftEditor-box-input .bf-container .public-DraftEditor-content {
+  padding: 0 0 0 8px !important;
+}
+.raftEditor-box-input .bf-container .public-DraftEditorPlaceholder-root {
+  top: 0 !important;
+  left: 8px !important;
+}
+.raftEditor-box-input .bf-content * {
+  line-height: 32px !important;
+}
+.prohibiti-words-top-box {
+  font-size: 14px;
+  pointer-events: none;
+  color: #fa2800;
+  text-align: left;
+  margin: 10px 0;
+}
+.place-color .public-DraftEditorPlaceholder-inner {
+  color: #fa2800;
+}
+.raftEditor-box {
+  background: #fff;
+  border-radius: 2px;
+  position: relative;
+}
+.raftEditor-box span[data-text='true'] {
+  font-size: 14px !important;
+}
+.raftEditor-box .data-count-box {
+  float: right;
+  white-space: nowrap;
+  font-size: 14px;
+  color: #222;
+  pointer-events: none;
+  position: absolute;
+  top: -24px;
+  right: 0;
+}
+.raftEditor-box .my-button {
+  color: red;
+}
+.raftEditor-box .bf-controlbar {
+  display: none;
+}
+.raftEditor-box .public-DraftEditorPlaceholder-root {
+  font-size: 14px !important;
+  color: #c7c7c7;
+}
+.raftEditor-box .bf-container .public-DraftEditor-content > div {
+  height: 100%;
+  padding-bottom: 0;
+}
+.raftEditor-box .bf-content {
+  padding-bottom: 0;
+}
+.raftEditor-box .bf-content * {
+  line-height: 100%;
+}

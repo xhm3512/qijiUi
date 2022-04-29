@@ -1,0 +1,38 @@
+.item-box {
+  text-align: center;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  position: relative;
+  padding: 6px;
+}
+.item-box .icon {
+  font-size: 30px;
+  transition: font-size 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  height: 50px;
+}
+.item-box .icon-name {
+  font-size: 16px;
+}
+.item-box:hover {
+  background: #096dd9;
+  color: #fff;
+  border-radius: 4px;
+}
+.item-box:hover .icon {
+  font-size: 40px;
+  transition: font-size 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.item-box:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  line-height: 110px;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  content: 'Copied!';
+}

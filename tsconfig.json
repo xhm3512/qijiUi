@@ -12,6 +12,7 @@
     "noImplicitAny": false,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
+    "declaration": true,
     "paths": {
       "@/*": ["src/*"],
       "@@/*": ["src/.umi/*"]
