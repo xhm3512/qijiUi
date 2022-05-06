@@ -4,7 +4,7 @@ import './style/index.less';
 interface PropsState {
   maskClosable?: boolean;
   visible?: boolean;
-  onClose?: () => {};
+  onClose?: () => void;
 }
 declare const Drawer: FC<PropsState>;
 export default Drawer;
