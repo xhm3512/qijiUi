@@ -26,7 +26,8 @@ export default () => (
   <QuiToolTip
     placement="bottom"
     title="First Demo"
-    // trigger={['click']}
+    trigger={['click']}
+    overlayClassName="tip-demo-box"
     title={<GG />}
   >
     <a>hover</a>

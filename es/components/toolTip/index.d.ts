@@ -14,7 +14,13 @@ export declare type TooltipPlacement =
   | 'rightTop'
   | 'rightBottom';
 declare const QuiTooltip: {
-  ({ children, title, placement, trigger }: TooltipProps): JSX.Element;
+  ({
+    children,
+    title,
+    placement,
+    trigger,
+    ...elseParams
+  }: TooltipProps): JSX.Element;
   defaultProps: {
     placement: TooltipPlacement;
     mouseEnterDelay: number;

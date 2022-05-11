@@ -20,6 +20,7 @@ const QuiTooltip = ({
   title,
   placement,
   trigger = 'hover',
+  ...elseParams
 }: TooltipProps) => {
   const prefixCls = 'qiji-oni-tooltip';
   return (
@@ -28,6 +29,7 @@ const QuiTooltip = ({
       overlayClassName={prefixCls}
       title={title}
       trigger={trigger}
+      {...elseParams}
     >
       {children}
     </Tooltip>

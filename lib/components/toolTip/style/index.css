@@ -27,3 +27,8 @@
   border-radius: 4px;
   color: #000;
 }
+.qiji-oni-tooltip .ant-tooltip-placement-bottom,
+.qiji-oni-tooltip .ant-tooltip-placement-bottomLeft,
+.qiji-oni-tooltip .ant-tooltip-placement-bottomRight {
+  padding-top: 15px;
+}
