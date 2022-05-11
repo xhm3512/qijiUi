@@ -31,7 +31,7 @@ const Foo: FC<PropsState> = ({
   };
 
   return (
-    <Row className={wrapClassName} gutter={[24, 24]}>
+    <Row className={wrapClassName} gutter={[16, 16]}>
       {children?.map((item: any, i) => {
         return (
           <Col key={i}>

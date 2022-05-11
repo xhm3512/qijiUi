@@ -1,5 +1,6 @@
 import React from 'react';
 import { Tooltip } from 'antd';
+import classNames from 'classnames';
 import { TooltipProps } from 'antd/es/tooltip';
 import './style/index.less';
 export type TooltipPlacement =
@@ -20,16 +21,17 @@ const QuiTooltip = ({
   title,
   placement,
   trigger = 'hover',
+  overlayClassName,
   ...elseParams
 }: TooltipProps) => {
   const prefixCls = 'qiji-oni-tooltip';
   return (
     <Tooltip
       placement={placement}
-      overlayClassName={prefixCls}
+      overlayClassName={classNames(prefixCls, overlayClassName)}
       title={title}
       trigger={trigger}
-      {...elseParams}
+      // {...elseParams}
     >
       {children}
     </Tooltip>

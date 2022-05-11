@@ -19,6 +19,7 @@ declare const QuiTooltip: {
     title,
     placement,
     trigger,
+    overlayClassName,
     ...elseParams
   }: TooltipProps): JSX.Element;
   defaultProps: {

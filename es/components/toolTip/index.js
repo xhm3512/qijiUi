@@ -1,54 +1,10 @@
-var _excluded = ['children', 'title', 'placement', 'trigger'];
-
-function ownKeys(object, enumerableOnly) {
-  var keys = Object.keys(object);
-  if (Object.getOwnPropertySymbols) {
-    var symbols = Object.getOwnPropertySymbols(object);
-    enumerableOnly &&
-      (symbols = symbols.filter(function(sym) {
-        return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-      })),
-      keys.push.apply(keys, symbols);
-  }
-  return keys;
-}
-
-function _objectSpread(target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = null != arguments[i] ? arguments[i] : {};
-    i % 2
-      ? ownKeys(Object(source), !0).forEach(function(key) {
-          _defineProperty(target, key, source[key]);
-        })
-      : Object.getOwnPropertyDescriptors
-      ? Object.defineProperties(
-          target,
-          Object.getOwnPropertyDescriptors(source),
-        )
-      : ownKeys(Object(source)).forEach(function(key) {
-          Object.defineProperty(
-            target,
-            key,
-            Object.getOwnPropertyDescriptor(source, key),
-          );
-        });
-  }
-  return target;
-}
-
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true,
-    });
-  } else {
-    obj[key] = value;
-  }
-  return obj;
-}
+var _excluded = [
+  'children',
+  'title',
+  'placement',
+  'trigger',
+  'overlayClassName',
+];
 
 function _objectWithoutProperties(source, excluded) {
   if (source == null) return {};
@@ -81,6 +37,7 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 
 import React from 'react';
 import { Tooltip } from 'antd';
+import classNames from 'classnames';
 import './style/index.css';
 
 var QuiTooltip = function QuiTooltip(_ref) {
@@ -89,20 +46,18 @@ var QuiTooltip = function QuiTooltip(_ref) {
     placement = _ref.placement,
     _ref$trigger = _ref.trigger,
     trigger = _ref$trigger === void 0 ? 'hover' : _ref$trigger,
+    overlayClassName = _ref.overlayClassName,
     elseParams = _objectWithoutProperties(_ref, _excluded);
 
   var prefixCls = 'qiji-oni-tooltip';
   return /*#__PURE__*/ React.createElement(
     Tooltip,
-    _objectSpread(
-      {
-        placement: placement,
-        overlayClassName: prefixCls,
-        title: title,
-        trigger: trigger,
-      },
-      elseParams,
-    ),
+    {
+      placement: placement,
+      overlayClassName: classNames(prefixCls, overlayClassName),
+      title: title,
+      trigger: trigger,
+    },
     children,
   );
 };

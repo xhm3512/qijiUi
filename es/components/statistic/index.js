@@ -118,7 +118,7 @@ var Foo = function Foo(_ref) {
     Row,
     {
       className: wrapClassName,
-      gutter: [24, 24],
+      gutter: [16, 16],
     },
     children === null || children === void 0
       ? void 0
