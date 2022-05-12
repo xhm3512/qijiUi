@@ -54,3 +54,48 @@
 .custom-data-picker-pop.ant-picker-range .ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner {
   background: #f95a58;
 }
+.custom-data-picker-pop .ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner,
+.custom-data-picker-pop .ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner,
+.custom-data-picker-pop .ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner {
+  background-color: #F95A58;
+}
+.custom-data-picker-pop tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover:last-child::after,
+.custom-data-picker-pop tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::after,
+.custom-data-picker-pop .ant-picker-cell-in-view.ant-picker-cell-end.ant-picker-cell-range-hover-edge-end.ant-picker-cell-range-hover-edge-end-near-range::after,
+.custom-data-picker-pop .ant-picker-cell-in-view.ant-picker-cell-range-hover-edge-end:not(.ant-picker-cell-range-hover-edge-end-near-range)::after,
+.custom-data-picker-pop .ant-picker-cell-in-view.ant-picker-cell-range-hover-end::after {
+  right: 6px;
+  border-right: 1px dashed #fdbbba;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.custom-data-picker-pop .ant-picker-cell-in-view.ant-picker-cell-range-hover-end.ant-picker-cell-range-end-single::after,
+.custom-data-picker-pop .ant-picker-cell-in-view.ant-picker-cell-range-hover-end.ant-picker-cell-range-start.ant-picker-cell-range-end.ant-picker-cell-range-start-near-hover::after,
+.custom-data-picker-pop .ant-picker-cell-in-view.ant-picker-cell-range-hover-end:not(.ant-picker-cell-in-range):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end)::after,
+.custom-data-picker-pop .ant-picker-cell-in-view.ant-picker-cell-range-hover-start.ant-picker-cell-range-start-single::after,
+.custom-data-picker-pop .ant-picker-cell-in-view.ant-picker-cell-range-hover-start.ant-picker-cell-range-start.ant-picker-cell-range-end.ant-picker-cell-range-end-near-hover::after,
+.custom-data-picker-pop .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:not(.ant-picker-cell-in-range):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end)::after,
+.custom-data-picker-pop .ant-picker-cell-in-view.ant-picker-cell-range-hover:not(.ant-picker-cell-in-range)::after {
+  border-bottom: 1px dashed #fdbbba;
+  border-top: 1px dashed #fdbbba;
+}
+.custom-data-picker-pop .ant-picker-cell-in-view.ant-picker-cell-range-hover-end.ant-picker-cell-range-end-single:after,
+.custom-data-picker-pop .ant-picker-cell-in-view.ant-picker-cell-range-hover-end.ant-picker-cell-range-start.ant-picker-cell-range-end.ant-picker-cell-range-start-near-hover:after,
+.custom-data-picker-pop .ant-picker-cell-in-view.ant-picker-cell-range-hover-end:not(.ant-picker-cell-in-range):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end):after,
+.custom-data-picker-pop .ant-picker-cell-in-view.ant-picker-cell-range-hover-start.ant-picker-cell-range-start-single:after,
+.custom-data-picker-pop .ant-picker-cell-in-view.ant-picker-cell-range-hover-start.ant-picker-cell-range-start.ant-picker-cell-range-end.ant-picker-cell-range-end-near-hover:after,
+.custom-data-picker-pop .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:not(.ant-picker-cell-in-range):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end):after,
+.custom-data-picker-pop .ant-picker-cell-in-view.ant-picker-cell-range-hover:not(.ant-picker-cell-in-range):after {
+  border-bottom: 1px dashed #fdbbba;
+  border-top: 1px dashed #fdbbba;
+}
+.custom-data-picker-pop .ant-picker-cell-in-view.ant-picker-cell-range-hover-edge-start:not(.ant-picker-cell-range-hover-edge-start-near-range):after,
+.custom-data-picker-pop .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:after,
+.custom-data-picker-pop .ant-picker-cell-in-view.ant-picker-cell-start.ant-picker-cell-range-hover-edge-start.ant-picker-cell-range-hover-edge-start-near-range:after,
+.custom-data-picker-pop tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-end:first-child:after,
+.custom-data-picker-pop tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover:first-child:after {
+  border-left: 1px dashed #fdbbba;
+}
+.custom-data-picker {
+  padding: 2px 11px;
+}

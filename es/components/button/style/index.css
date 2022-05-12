@@ -2,6 +2,9 @@
   border: none;
   font-size: 15px;
   text-align: center;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-user-modify: read-write-plaintext-only;
 }
 .qiji-oni-btn-primary {
   border-radius: 4px;
@@ -24,7 +27,7 @@
 }
 .qiji-oni-btn-secondary {
   color: #1c1d20;
-  background-color: #a7aab1;
+  background-color: rgba(167, 170, 177, 0.24);
 }
 .qiji-oni-btn-secondary:hover {
   background: rgba(167, 170, 177, 0.4);

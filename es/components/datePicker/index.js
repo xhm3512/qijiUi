@@ -1,3 +1,5 @@
+var _excluded = ['className', 'dropdownClassName'];
+
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
   if (Object.getOwnPropertySymbols) {
@@ -48,23 +50,60 @@ function _defineProperty(obj, key, value) {
   return obj;
 }
 
+function _objectWithoutProperties(source, excluded) {
+  if (source == null) return {};
+  var target = _objectWithoutPropertiesLoose(source, excluded);
+  var key, i;
+  if (Object.getOwnPropertySymbols) {
+    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+    for (i = 0; i < sourceSymbolKeys.length; i++) {
+      key = sourceSymbolKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+      target[key] = source[key];
+    }
+  }
+  return target;
+}
+
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+  return target;
+}
+
 import React from 'react';
 import { DatePicker } from 'antd';
+import classNames from 'classnames';
 var RangePicker = DatePicker.RangePicker;
 import 'moment/locale/zh-cn';
 import locale from 'antd/es/date-picker/locale/zh_CN';
 import './style/index.css';
 
-var Foo = function Foo(props) {
+var Foo = function Foo(_ref) {
+  var className = _ref.className,
+    dropdownClassName = _ref.dropdownClassName,
+    elseProps = _objectWithoutProperties(_ref, _excluded);
+
   return /*#__PURE__*/ React.createElement(
     RangePicker,
     _objectSpread(
       _objectSpread(
         {
-          className: 'custom-data-picker',
-          dropdownClassName: 'custom-data-picker-pop',
+          className: classNames('custom-data-picker', className),
+          dropdownClassName: classNames(
+            'custom-data-picker-pop',
+            dropdownClassName,
+          ),
         },
-        props,
+        elseProps,
       ),
       {},
       {
