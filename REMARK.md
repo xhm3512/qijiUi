@@ -12,10 +12,15 @@
 - jest:https://www.jestjs.cn/docs/getting-started
 - umi-test:https://gitee.com/wxialexiatian/umi-test-demo/blob/master/src/components/Header/index.test.tsx
 - enzyme:https://madewith.cn/566 https://enzymejs.github.io/enzyme/ api:https://blog.csdn.net/qq_21895821/article/details/106768635
+- 地址信息使用：https://codesandbox.io/s/m4ljw91j0j?file=/index.js:68-74 https://www.npmjs.com/package/china-division https://www.jianshu.com/p/5db5fe9da5b6
 
 - 组件开发，设置 ts 规范：https://blog.csdn.net/sinat_36146776/article/details/105734353
 
 在这个文章中，将会简单的介绍如何使用 dumi 和 father-build 来创建组件库和维护组件库。最终我们会演示如何组织组件库的代码。还有输出一个简单的组件。
+
+# 常见问题解决办法
+
+- msfu 启动失败解决办法：https://www.cnblogs.com/ifnk/p/16011434.html
 
 # 可视化
 
