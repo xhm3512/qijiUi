@@ -213,4 +213,4 @@ import { Button } from 'qiji';
 export default () => <Button type="secondary">secondary</Button>;
 ```
 
-不难发现，其实在项目中使用，和我们 demo 中编写的方式是一致的，这也是我们前面提到的 dumi 的 demo 理念。
+不难发现，其实在项目中使用，和我们 demo 中编写的方式是一致的，这也是我们前面提到的 dumi 的 demo2 理念。
