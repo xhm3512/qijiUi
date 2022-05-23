@@ -7,12 +7,14 @@ interface PropsState {
   maskClosable?: boolean;
   visible?: boolean;
   onClose?: () => void;
+  className?: string;
 }
 const Drawer: FC<PropsState> = ({
   maskClosable = false,
   children,
   visible = false,
   onClose,
+  className,
 }) => {
   const prefixCls = 'qiu-drawer-box';
   // 打开
@@ -44,7 +46,7 @@ const Drawer: FC<PropsState> = ({
   return (
     <div>
       {ReactDOM.createPortal(
-        <div className={prefixCls}>
+        <div className={classNames(prefixCls, className)}>
           <div
             className={classessMask}
             onClick={() => maskClosable && onClose && onClose()}

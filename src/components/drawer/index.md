@@ -17,8 +17,13 @@ export default () => {
   };
   return (
     <>
-      <div onClick={onClick}>qwqw</div>
-      <QuiDrawer maskClosable={true} visible={visible} onClose={onClick}>
+      <div onClick={onClick}>qwqw11</div>
+      <QuiDrawer
+        maskClosable={true}
+        visible={visible}
+        onClose={onClick}
+        className="demo-box"
+      >
         <div>44</div>
       </QuiDrawer>
     </>

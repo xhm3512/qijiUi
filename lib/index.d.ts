@@ -13,6 +13,7 @@ export { default as QuiDrawer } from './components/drawer';
 export { default as QuiTabs } from './components/tabs';
 export { default as QuiStatistic } from './components/statistic';
 export { default as QuiToolTip } from './components/toolTip';
+export { default as QuiCascaderAddress } from './components/CascaderAddress';
 export { default as CatchErr } from './script/CatchErr';
 export { default as Loadable } from './script/Loadable';
 export { default as QuiImage } from './script/image';

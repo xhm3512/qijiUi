@@ -5,6 +5,7 @@ interface PropsState {
   maskClosable?: boolean;
   visible?: boolean;
   onClose?: () => void;
+  className?: string;
 }
 declare const Drawer: FC<PropsState>;
 export default Drawer;

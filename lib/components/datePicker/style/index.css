@@ -57,7 +57,7 @@
 .custom-data-picker-pop .ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner,
 .custom-data-picker-pop .ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner,
 .custom-data-picker-pop .ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner {
-  background-color: #F95A58;
+  background-color: #f95a58;
 }
 .custom-data-picker-pop tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover:last-child::after,
 .custom-data-picker-pop tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::after,

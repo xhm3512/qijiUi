@@ -5,9 +5,9 @@ import { Cascader, version } from 'antd';
 import 'antd/dist/antd.css';
 // import "antd/es/cascader/style/index.css"
 
-import provinces from 'china-division/dist/provinces.json';
-import cities from 'china-division/dist/cities.json';
-import areas from 'china-division/dist/areas.json';
+const provinces = require('china-division/dist/provinces.json');
+const cities = require('china-division/dist/cities.json');
+const areas = require('china-division/dist/areas.json');
 // import {  cities, areas } from 'china-division'
 console.log(provinces, cities, areas);
 const Foo: FC<any> = () => {

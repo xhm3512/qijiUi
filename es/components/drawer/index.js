@@ -26,7 +26,8 @@ var Drawer = function Drawer(_ref) {
     children = _ref.children,
     _ref$visible = _ref.visible,
     visible = _ref$visible === void 0 ? false : _ref$visible,
-    onClose = _ref.onClose;
+    onClose = _ref.onClose,
+    className = _ref.className;
   var prefixCls = 'qiu-drawer-box'; // 打开
 
   var onDialogOpen = function onDialogOpen() {
@@ -78,7 +79,7 @@ var Drawer = function Drawer(_ref) {
       /*#__PURE__*/ React.createElement(
         'div',
         {
-          className: prefixCls,
+          className: classNames(prefixCls, className),
         },
         /*#__PURE__*/ React.createElement('div', {
           className: classessMask,
