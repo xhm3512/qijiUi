@@ -10,5 +10,6 @@ declare const _default: {
   ToolTipCustom: React.FC<{
     active: boolean;
   }>;
+  SwitchCustom: (props: any) => JSX.Element;
 };
 export default _default;

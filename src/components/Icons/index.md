@@ -25,6 +25,7 @@ const {
   NewsCustom,
   ArrowCustom,
   ToolTipCustom,
+  SwitchCustom,
 } = Icons;
 const arr = [
   {
@@ -54,6 +55,10 @@ const arr = [
   {
     id: 'ToolTipCustom',
     components: <ToolTipCustom active />,
+  },
+  {
+    id: 'SwitchCustom',
+    components: <SwitchCustom />,
   },
 ];
 export default () => (

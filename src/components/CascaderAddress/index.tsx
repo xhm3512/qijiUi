@@ -9,7 +9,6 @@ const provinces = require('china-division/dist/provinces.json');
 const cities = require('china-division/dist/cities.json');
 const areas = require('china-division/dist/areas.json');
 // import {  cities, areas } from 'china-division'
-console.log(provinces, cities, areas);
 const Foo: FC<any> = () => {
   areas.forEach(area => {
     const matchCity = cities.filter(city => city.code === area.cityCode)[0];

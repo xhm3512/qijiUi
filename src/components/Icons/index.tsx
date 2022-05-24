@@ -8,6 +8,7 @@ import SalarySvg from './SalarySvg';
 import UserSvg from './UserSvg';
 import NewsSvg from './NewsSvg';
 import ToolTipCustom from './ToolTip';
+import SwitchSvg from './Switch';
 
 import ArrowSvg from './Arrow';
 
@@ -24,6 +25,7 @@ const SalaryCustom = CustomIcon(SalarySvg);
 const UserCustom = CustomIcon(UserSvg);
 const NewsCustom = CustomIcon(NewsSvg);
 const ArrowCustom = CustomIcon(ArrowSvg);
+const SwitchCustom = CustomIcon(SwitchSvg);
 
 // const ToolTipCustom = CustomIcon(ToolTipDiv);
 
@@ -36,4 +38,5 @@ export default {
   NewsCustom,
   ArrowCustom,
   ToolTipCustom,
+  SwitchCustom,
 };

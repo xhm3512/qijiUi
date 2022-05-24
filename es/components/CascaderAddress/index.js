@@ -8,8 +8,6 @@ var cities = require('china-division/dist/cities.json');
 
 var areas = require('china-division/dist/areas.json'); // import {  cities, areas } from 'china-division'
 
-console.log(provinces, cities, areas);
-
 var Foo = function Foo() {
   areas.forEach(function(area) {
     var matchCity = cities.filter(function(city) {

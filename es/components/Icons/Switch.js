@@ -49,48 +49,21 @@ function _defineProperty(obj, key, value) {
 }
 
 import React from 'react';
-import Icon from '@ant-design/icons';
-import HomeSvg from './HomeSvg';
-import WorksManagerSvg from './WorksManagerSvg';
-import DataSvg from './DataSvg';
-import SalarySvg from './SalarySvg';
-import UserSvg from './UserSvg';
-import NewsSvg from './NewsSvg';
-import ToolTipCustom from './ToolTip';
-import SwitchSvg from './Switch';
-import ArrowSvg from './Arrow';
-
-var CustomIcon = function CustomIcon(Component) {
-  return function(props) {
-    return /*#__PURE__*/ React.createElement(
-      Icon,
-      _objectSpread(
-        {
-          component: Component,
-        },
-        props,
-      ),
-    );
-  };
-};
-
-var HomeCustom = CustomIcon(HomeSvg);
-var WorksManagerCustom = CustomIcon(WorksManagerSvg);
-var DataCustom = CustomIcon(DataSvg);
-var SalaryCustom = CustomIcon(SalarySvg);
-var UserCustom = CustomIcon(UserSvg);
-var NewsCustom = CustomIcon(NewsSvg);
-var ArrowCustom = CustomIcon(ArrowSvg);
-var SwitchCustom = CustomIcon(SwitchSvg); // const ToolTipCustom = CustomIcon(ToolTipDiv);
-
-export default {
-  HomeCustom: HomeCustom,
-  WorksManagerCustom: WorksManagerCustom,
-  DataCustom: DataCustom,
-  SalaryCustom: SalaryCustom,
-  UserCustom: UserCustom,
-  NewsCustom: NewsCustom,
-  ArrowCustom: ArrowCustom,
-  ToolTipCustom: ToolTipCustom,
-  SwitchCustom: SwitchCustom,
-};
+import { homeMenuIcon } from './params';
+export default (function() {
+  return /*#__PURE__*/ React.createElement(
+    'svg',
+    _objectSpread(
+      {
+        viewBox: '0 0 1024 1024',
+      },
+      homeMenuIcon,
+    ),
+    /*#__PURE__*/ React.createElement('path', {
+      fill: 'currentColor',
+      d:
+        'M19.370667 292.096L225.28 81.749333A59.477333 59.477333 0 0 1 309.76 81.152a59.050667 59.050667 0 0 1 0 84.053333L220.330667 253.781333c-3.413333 3.413333-4.437333 8.533333-2.56 12.970667a11.946667 11.946667 0 0 0 11.093333 7.253333h702.122667a59.733333 59.733333 0 0 1 60.074666 59.477334 59.733333 59.733333 0 0 1-60.074666 59.477333H62.464a60.074667 60.074667 0 0 1-55.296-36.352 59.050667 59.050667 0 0 1 12.202667-64.512z m691.968 650.496a59.050667 59.050667 0 0 1 0-84.053333l89.344-88.490667c3.413333-3.413333 4.437333-8.533333 2.56-12.970667a11.946667 11.946667 0 0 0-11.093334-7.338666H90.026667a59.733333 59.733333 0 0 1-60.074667-59.477334 59.733333 59.733333 0 0 1 60.074667-59.477333h876.373333c24.234667 0 46.08 14.506667 55.466667 36.693333 9.301333 22.186667 4.181333 47.786667-13.056 64.853334l-212.565334 210.261333a60.501333 60.501333 0 0 1-84.906666 0z',
+      'p-id': '1403',
+    }),
+  );
+});
