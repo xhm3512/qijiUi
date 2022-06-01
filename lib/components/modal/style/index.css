@@ -1,0 +1,35 @@
+.qiji-modal-box .ant-modal {
+  width: 424px !important;
+  background: #fff;
+  border-radius: 8px;
+  padding: 0;
+}
+.qiji-modal-box .ant-modal-content {
+  border-radius: 8px;
+}
+.qiji-modal-box .ant-modal-body {
+  border-radius: 8px;
+}
+.qiji-modal-box .tip {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+.qiji-modal-box .content {
+  font-size: 14px;
+  color: #6666;
+}
+.qiji-modal-box .close-img {
+  width: 24px;
+  height: 24px;
+}
+.qiji-modal-box .button {
+  width: 76px;
+  height: 32px;
+  line-height: 32px;
+  border: none;
+  padding: 0;
+}
+.qiji-modal-box .button:nth-child(1) {
+  margin-right: 12px;
+}
