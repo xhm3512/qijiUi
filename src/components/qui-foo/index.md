@@ -1,8 +1,8 @@
 ---
-title: demo 统计数值
+title: Grid 珊格
 group:
-  title: 反馈
-  order: 9
+  title: 布局
+  order: 8
 ---
 
 ## Grid 珊格

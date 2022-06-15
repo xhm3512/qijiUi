@@ -27,10 +27,6 @@ export default defineConfig({
       title: 'ui组件',
       path: '/components',
     },
-    {
-      title: '逻辑组件',
-      path: '/script',
-    },
   ],
   extraBabelPlugins: [
     [

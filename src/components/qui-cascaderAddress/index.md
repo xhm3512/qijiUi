@@ -1,7 +1,7 @@
 ---
-title: demo 统计数值
+title: CascaderAddress 地址录入
 group:
-  title: 反馈
+  title: 数据录入
   order: 9
 ---
 
@@ -11,9 +11,9 @@ Demo:
 
 ```tsx
 import React from 'react';
-import { QuiFoo } from 'qiji';
+import { QuiCascaderAddress } from 'qiji';
 
-export default () => <QuiFoo title="First Demo" />;
+export default () => <QuiCascaderAddress title="First Demo" />;
 ```
 
 More skills for writing demo: https://d.umijs.org/guide/basic#write-component-demo
