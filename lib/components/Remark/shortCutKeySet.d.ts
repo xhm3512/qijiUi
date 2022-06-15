@@ -1,9 +1,6 @@
-declare const shortCutKeySet: (
-  e: {
+declare const shortCutKeySet: (e: {
     ctrlKey: any;
     shiftKey: any;
     keyCode: any;
-  },
-  callback: any,
-) => void;
+}, callback: any) => void;
 export default shortCutKeySet;

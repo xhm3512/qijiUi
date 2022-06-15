@@ -1,9 +1,7 @@
 declare const clearSelection: () => void;
-declare const getMouseLOcal: (
-  _e: any,
-) => {
-  x: any;
-  y: any;
+declare const getMouseLOcal: (_e: any) => {
+    x: any;
+    y: any;
 };
 /**
  *
@@ -26,11 +24,4 @@ declare function selectDetail(): any;
  * @returns
  */
 declare const isContainSpecial: (i: string, string: string | RegExp) => boolean;
-export {
-  clearSelection,
-  getMouseLOcal,
-  filterDomFunc,
-  getStyle,
-  selectDetail,
-  isContainSpecial,
-};
+export { clearSelection, getMouseLOcal, filterDomFunc, getStyle, selectDetail, isContainSpecial, };

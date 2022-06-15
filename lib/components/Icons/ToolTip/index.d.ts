@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import './style/index.less';
 declare const ToolTip: FC<{
-  active: boolean;
+    active: boolean;
 }>;
 export default ToolTip;

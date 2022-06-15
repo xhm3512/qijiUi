@@ -5,5 +5,5 @@ export function isReactMemo(Component) {
   return typeof Component !== 'function' && !!Component['$$typeof'];
 }
 export default {
-  isComponentClass: isComponentClass,
+  isComponentClass: isComponentClass
 };

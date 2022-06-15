@@ -1,7 +1,7 @@
 import React, { FC, useEffect } from 'react';
 import classNames from 'classnames';
 import ReactDOM from 'react-dom';
-import 'antd/es/date-picker/style/index.less';
+// import 'antd/es/date-picker/style/index.less';
 import './style/index.less';
 interface PropsState {
   maskClosable?: boolean;
@@ -44,7 +44,7 @@ const Drawer: FC<PropsState> = ({
     }
   }, [visible]);
   return (
-    <div>
+    <>
       {ReactDOM.createPortal(
         <div className={classNames(prefixCls, className)}>
           <div
@@ -55,7 +55,7 @@ const Drawer: FC<PropsState> = ({
         </div>,
         document.body,
       )}
-    </div>
+    </>
   );
 };
 

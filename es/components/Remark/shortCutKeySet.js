@@ -10,36 +10,36 @@ var shortCutKeySet = function shortCutKeySet(e, callback) {
         // h
         type: 'high',
         func: 'setFontColor',
-        color: '#D9001B',
+        color: '#D9001B'
       },
       83: {
         // s
         type: 'middle',
         func: 'setFontColor',
-        color: '#F59A23',
+        color: '#F59A23'
       },
       76: {
         // l
         type: 'low',
         func: 'setFontColor',
-        color: '#70B603',
+        color: '#70B603'
       },
       68: {
         // d
         type: 'risk',
         func: 'setFontColor',
-        color: '#8400FF',
+        color: '#8400FF'
       },
       78: {
         // n
         type: 'line',
-        func: 'strikeThrough',
+        func: 'strikeThrough'
       },
       88: {
         // x
         type: 'clear',
-        func: 'removeFormat',
-      },
+        func: 'removeFormat'
+      }
     };
     if (keyType[+keycode]) callback(keyType[+keycode]);
   }

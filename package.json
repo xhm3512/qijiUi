@@ -1,6 +1,6 @@
 {
   "name": "qiji",
-  "version": "0.2.5",
+  "version": "0.2.7",
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
@@ -13,9 +13,7 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "typings": "lib/index.d.ts",
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
+ 
   "lint-staged": {
     "*.{js,jsx,less,md,json}": [
       "prettier --write"
@@ -69,6 +67,7 @@
     "china-division": "^2.5.0",
     "classnames": "^2.2.6",
     "rc-motion": "^2.4.9",
+    "rc-select": "^14.1.5",
     "react-loadable": "^5.5.0"
   },
   "devDependencies": {

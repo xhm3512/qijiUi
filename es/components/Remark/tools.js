@@ -1,69 +1,23 @@
-function ownKeys(object, enumerableOnly) {
-  var keys = Object.keys(object);
-  if (Object.getOwnPropertySymbols) {
-    var symbols = Object.getOwnPropertySymbols(object);
-    enumerableOnly &&
-      (symbols = symbols.filter(function(sym) {
-        return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-      })),
-      keys.push.apply(keys, symbols);
-  }
-  return keys;
-}
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = null != arguments[i] ? arguments[i] : {};
-    i % 2
-      ? ownKeys(Object(source), !0).forEach(function(key) {
-          _defineProperty(target, key, source[key]);
-        })
-      : Object.getOwnPropertyDescriptors
-      ? Object.defineProperties(
-          target,
-          Object.getOwnPropertyDescriptors(source),
-        )
-      : ownKeys(Object(source)).forEach(function(key) {
-          Object.defineProperty(
-            target,
-            key,
-            Object.getOwnPropertyDescriptor(source, key),
-          );
-        });
-  }
-  return target;
-}
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true,
-    });
-  } else {
-    obj[key] = value;
-  }
-  return obj;
-}
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 import { colorRgbHight } from './constants';
 
 var clearSelection = function clearSelection() {
   var _document$getSelectio;
 
-  (_document$getSelectio = document.getSelection()) === null ||
-  _document$getSelectio === void 0
-    ? void 0
-    : _document$getSelectio.empty();
+  (_document$getSelectio = document.getSelection()) === null || _document$getSelectio === void 0 ? void 0 : _document$getSelectio.empty();
 }; // 获取鼠标在页面的位置
+
 
 var getMouseLOcal = function getMouseLOcal(_e) {
   var e = _e || window.event;
   return {
     x: e.clientX,
-    y: e.clientY,
+    y: e.clientY
   };
 };
 /**
@@ -72,6 +26,7 @@ var getMouseLOcal = function getMouseLOcal(_e) {
  * @param {*} attr  当前后去属性
  * @returns
  */
+
 
 function getStyle(obj, attr) {
   if (obj.currentStyle) {
@@ -87,20 +42,14 @@ function getStyle(obj, attr) {
  * @returns  样式
  */
 
+
 var getDomBgColor = function getDomBgColor(item) {
-  var styleBack =
-    item.nodeName &&
-    item.nodeName !== '#text' &&
-    (item.getAttribute('style') || item.nodeName === 'STRIKE');
+  var styleBack = item.nodeName && item.nodeName !== '#text' && (item.getAttribute('style') || item.nodeName === 'STRIKE');
 
   if (styleBack) {
     return {
       backColor: colorRgbHight[getStyle(item, 'background-color')],
-      styleLineThrough:
-        getStyle(item, 'text-decoration-line') === 'line-through' ||
-        item.nodeName === 'STRIKE'
-          ? 'STRIKE'
-          : '',
+      styleLineThrough: getStyle(item, 'text-decoration-line') === 'line-through' || item.nodeName === 'STRIKE' ? 'STRIKE' : ''
     };
   }
 
@@ -109,42 +58,30 @@ var getDomBgColor = function getDomBgColor(item) {
 
 var domRecursion = function domRecursion(item, tempArr) {
   var _getDomBgColor = getDomBgColor(item),
-    backColor = _getDomBgColor.backColor,
-    styleLineThrough = _getDomBgColor.styleLineThrough;
+      backColor = _getDomBgColor.backColor,
+      styleLineThrough = _getDomBgColor.styleLineThrough;
 
   var offsetLeft = item.offsetLeft,
-    offsetWidth = item.offsetWidth,
-    innerText = item.innerText,
-    offsetTop = item.offsetTop;
+      offsetWidth = item.offsetWidth,
+      innerText = item.innerText,
+      offsetTop = item.offsetTop;
   var tempPush = {
     offsetLeft: offsetLeft,
     offsetWidth: offsetWidth,
     innerText: innerText,
-    offsetTop: offsetTop,
+    offsetTop: offsetTop
   };
 
   if (backColor) {
-    tempArr.push(
-      _objectSpread(
-        _objectSpread({}, tempPush),
-        {},
-        {
-          type: backColor,
-        },
-      ),
-    );
+    tempArr.push(_objectSpread(_objectSpread({}, tempPush), {}, {
+      type: backColor
+    }));
   }
 
   if (styleLineThrough) {
-    tempArr.push(
-      _objectSpread(
-        _objectSpread({}, tempPush),
-        {},
-        {
-          type: styleLineThrough,
-        },
-      ),
-    );
+    tempArr.push(_objectSpread(_objectSpread({}, tempPush), {}, {
+      type: styleLineThrough
+    }));
   }
 };
 /**
@@ -153,24 +90,20 @@ var domRecursion = function domRecursion(item, tempArr) {
  * @returns
  */
 
+
 var filterDomFunc = function filterDomFunc(dom) {
   var tempArr = [];
 
   try {
-    [].slice.call(dom).forEach(function(item) {
+    [].slice.call(dom).forEach(function (item) {
       var dataCheck = item.getAttribute('data-check');
 
       var _getDomBgColor2 = getDomBgColor(item),
-        backColor = _getDomBgColor2.backColor,
-        styleLineThrough = _getDomBgColor2.styleLineThrough; // 过滤标注节点
+          backColor = _getDomBgColor2.backColor,
+          styleLineThrough = _getDomBgColor2.styleLineThrough; // 过滤标注节点
 
-      if (
-        item.nodeName !== 'P' &&
-        dataCheck !== '1' &&
-        (backColor ||
-          item.nodeName === 'STRIKE' ||
-          styleLineThrough === 'line-through')
-      ) {
+
+      if (item.nodeName !== 'P' && dataCheck !== '1' && (backColor || item.nodeName === 'STRIKE' || styleLineThrough === 'line-through')) {
         domRecursion(item, tempArr);
       }
     });
@@ -180,6 +113,7 @@ var filterDomFunc = function filterDomFunc(dom) {
 
   return tempArr;
 }; // 兼容性处理
+
 
 function selectDetail() {
   if (window.getSelection) {
@@ -203,52 +137,27 @@ function selectDetail() {
  * @returns
  */
 
+
 var isContainSpecial = function isContainSpecial(i, string) {
   var colorAll = {
     high: 'rgb(217, 0, 27)',
     middle: 'rgb(245, 154, 35)',
     low: 'rgb(112, 182, 3)',
-    risk: 'rgb(132, 0, 255)',
+    risk: 'rgb(132, 0, 255)'
   };
   var color = colorAll[i];
-  var regOne = '<font color="#ffffff" style=""><span style="background-color: '.concat(
-    color,
-    ';"></span></font>',
-  );
-  var regTwo = '<span style="background-color: '.concat(
-    color,
-    ';"><font color="#ffffff">.*<\\/font></span>',
-  );
-  var regThree = '<font color="#ffffff" style="background-color: '.concat(
-    color,
-    ';"><font</font>|<span</span></font>',
-  );
-  var regFour = '<font style="background-color: '.concat(
-    color,
-    ';" color="#ffffff"><font</font>|<span</span></font>',
-  );
+  var regOne = "<font color=\"#ffffff\" style=\"\"><span style=\"background-color: ".concat(color, ";\"></span></font>");
+  var regTwo = "<span style=\"background-color: ".concat(color, ";\"><font color=\"#ffffff\">.*<\\/font></span>");
+  var regThree = "<font color=\"#ffffff\" style=\"background-color: ".concat(color, ";\"><font</font>|<span</span></font>");
+  var regFour = "<font style=\"background-color: ".concat(color, ";\" color=\"#ffffff\"><font</font>|<span</span></font>");
   var regFive = '<p></p>';
   var regSix = '<strike></strike>';
 
-  if (
-    regOne.match(string) ||
-    regTwo.match(string) ||
-    regThree.match(string) ||
-    regFour.match(string) ||
-    regFive.match(string) ||
-    regSix.match(string)
-  ) {
+  if (regOne.match(string) || regTwo.match(string) || regThree.match(string) || regFour.match(string) || regFive.match(string) || regSix.match(string)) {
     return false;
   }
 
   return true;
 };
 
-export {
-  clearSelection,
-  getMouseLOcal,
-  filterDomFunc,
-  getStyle,
-  selectDetail,
-  isContainSpecial,
-};
+export { clearSelection, getMouseLOcal, filterDomFunc, getStyle, selectDetail, isContainSpecial };
