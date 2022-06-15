@@ -1,25 +1,6 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _antd = require("antd");
-
-var _classnames = _interopRequireDefault(require("classnames"));
-
-require("moment/locale/zh-cn");
-
-var _zh_CN = _interopRequireDefault(require("antd/es/date-picker/locale/zh_CN"));
-
-require("./style/index.css");
-
+import "antd/es/date-picker/style";
+import _DatePicker from "antd/es/date-picker";
 var _excluded = ["className", "dropdownClassName"];
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
@@ -31,20 +12,24 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var RangePicker = _antd.DatePicker.RangePicker;
+import React from 'react';
+import classNames from 'classnames';
+var RangePicker = _DatePicker.RangePicker;
+import 'moment/locale/zh-cn';
+import locale from 'antd/es/date-picker/locale/zh_CN';
+import "./style/index.css";
 
 var Foo = function Foo(_ref) {
   var className = _ref.className,
       dropdownClassName = _ref.dropdownClassName,
       elseProps = _objectWithoutProperties(_ref, _excluded);
 
-  return /*#__PURE__*/_react.default.createElement(RangePicker, _objectSpread(_objectSpread({
-    className: (0, _classnames.default)('custom-data-picker', className),
-    dropdownClassName: (0, _classnames.default)('custom-data-picker-pop', dropdownClassName)
+  return /*#__PURE__*/React.createElement(RangePicker, _objectSpread(_objectSpread({
+    className: classNames('custom-data-picker', className),
+    dropdownClassName: classNames('custom-data-picker-pop', dropdownClassName)
   }, elseProps), {}, {
-    locale: _zh_CN.default
+    locale: locale
   }));
 };
 
-var _default = Foo;
-exports.default = _default;
+export default Foo;

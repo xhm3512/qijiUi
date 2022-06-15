@@ -2,7 +2,7 @@
 title: Editor 富文本编辑器
 group:
   title: 其他
-  order: 9
+  order: 19
 ---
 
 ## BraftEditorCustom 富文本编辑框

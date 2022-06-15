@@ -1,6 +1,7 @@
+import "antd/es/tabs/style";
+import _Tabs from "antd/es/tabs";
 import React from 'react';
-import { Tabs } from 'antd';
-var TabPane = Tabs.TabPane;
+var TabPane = _Tabs.TabPane;
 import "./style/index.css";
 
 var tabs = function tabs(_ref) {
@@ -8,7 +9,7 @@ var tabs = function tabs(_ref) {
 
   var callback = function callback() {};
 
-  return /*#__PURE__*/React.createElement(Tabs, {
+  return /*#__PURE__*/React.createElement(_Tabs, {
     defaultActiveKey: "0",
     onChange: callback,
     tabBarGutter: 42,

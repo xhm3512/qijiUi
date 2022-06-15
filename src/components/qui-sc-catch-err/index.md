@@ -2,6 +2,7 @@
 title: CatchErr 异常捕获
 group:
   title: 其他
+  order: 19
 ---
 
 ## hook

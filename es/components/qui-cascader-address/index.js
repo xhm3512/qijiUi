@@ -1,5 +1,8 @@
+import "antd/es/cascader/style";
+import _Cascader from "antd/es/cascader";
+import "antd/es/version/style";
+import _version from "antd/es/version";
 import React from 'react';
-import { Cascader, version } from 'antd';
 
 var provinces = require('china-division/dist/provinces.json');
 
@@ -51,7 +54,7 @@ var Foo = function Foo() {
     style: {
       marginBottom: 24
     }
-  }, "Current antd version: ", version, " ", /*#__PURE__*/React.createElement("br", null), "You can change antd version on the left panel (Dependencies section)."), /*#__PURE__*/React.createElement(Cascader, {
+  }, "Current antd version: ", _version, " ", /*#__PURE__*/React.createElement("br", null), "You can change antd version on the left panel (Dependencies section)."), /*#__PURE__*/React.createElement(_Cascader, {
     options: options,
     showSearch: true,
     placeholder: "\u8BF7\u9009\u62E9\u5730\u5740",
