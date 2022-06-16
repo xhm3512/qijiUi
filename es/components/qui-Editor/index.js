@@ -27,7 +27,7 @@ import BraftEditor from 'braft-editor';
 import classNames from 'classnames';
 import 'braft-editor/dist/index.css'; // import text from './text';
 
-import "./style/index.css";
+import './style/index.less';
 
 var dislodgeEmpty = function dislodgeEmpty(str) {
   return str.replace(/\s+/g, '').replace(/[\n|\r|\r\n]/g, '');

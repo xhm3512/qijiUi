@@ -24,7 +24,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 import React, { useState, useRef, useEffect } from 'react';
 import classNames from 'classnames';
-import "./style/index.css";
+import './style/index.less';
 
 var PuiImage = function PuiImage(props) {
   var className = props.className,

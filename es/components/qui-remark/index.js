@@ -13,7 +13,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 import React, { useEffect, useState, useRef } from 'react';
 import shortCutKeySet from './shortCutKeySet';
 import { colorHight, colorHight16 } from './constants';
-import "./style/index.css";
+import './style/index.less';
 import { clearSelection, getMouseLOcal, filterDomFunc, selectDetail, isContainSpecial } from './tools';
 
 var RemarkText = function RemarkText(props) {

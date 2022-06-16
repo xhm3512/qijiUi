@@ -4,7 +4,7 @@ import React from 'react';
 import classNames from 'classnames';
 import LoadingIcon from './LoadingIcon';
 import { tuple } from '../_util/type';
-import "./style/index.css";
+import './style/index.less';
 var ButtonHTMLTypes = tuple('submit', 'button', 'reset');
 var prefixCls = 'qiji-oni-btn';
 

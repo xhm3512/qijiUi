@@ -12,7 +12,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 import React from 'react';
 import RcSelect from 'rc-select';
-import "./style/index.css";
+import './style/index.less';
 
 var InternalSelect = function InternalSelect(_ref) {
   var getPopupContainer = _ref.getPopupContainer,

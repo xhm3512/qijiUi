@@ -1,7 +1,3 @@
-import "antd/es/row/style";
-import _Row from "antd/es/row";
-import "antd/es/modal/style";
-import _Modal from "antd/es/modal";
 var _excluded = ["children", "footer", "okText", "wrapClassName", "cancelText", "visible", "onOk", "onCancel", "closeIcon", "loading", "isCancelBtn", "isOklBtn"];
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
@@ -15,9 +11,10 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 import React from 'react';
+import { Modal, Row } from 'antd';
 import classNames from 'classnames';
 import QuiButton from '../qui-button';
-import "./style/index.css";
+import './style/index.less';
 
 var CloseInt = function CloseInt() {
   return /*#__PURE__*/React.createElement("img", {
@@ -49,7 +46,7 @@ var QuiModal = function QuiModal(_ref) {
       elseProps = _objectWithoutProperties(_ref, _excluded);
 
   var prefixCls = 'qiji-modal-box';
-  return /*#__PURE__*/React.createElement(_Modal, _objectSpread({
+  return /*#__PURE__*/React.createElement(Modal, _objectSpread({
     visible: visible,
     onOk: onOk,
     onCancel: onCancel,
@@ -58,7 +55,7 @@ var QuiModal = function QuiModal(_ref) {
     wrapClassName: classNames(prefixCls, wrapClassName),
     footer: footer,
     closeIcon: closeIcon
-  }, elseProps), children, /*#__PURE__*/React.createElement(_Row, {
+  }, elseProps), children, /*#__PURE__*/React.createElement(Row, {
     align: "middle",
     justify: "end"
   }, isCancelBtn && /*#__PURE__*/React.createElement(QuiButton, {

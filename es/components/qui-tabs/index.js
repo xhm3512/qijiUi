@@ -1,15 +1,14 @@
-import "antd/es/tabs/style";
-import _Tabs from "antd/es/tabs";
 import React from 'react';
-var TabPane = _Tabs.TabPane;
-import "./style/index.css";
+import { Tabs } from 'antd';
+var TabPane = Tabs.TabPane;
+import './style/index.less';
 
 var tabs = function tabs(_ref) {
   var children = _ref.children;
 
   var callback = function callback() {};
 
-  return /*#__PURE__*/React.createElement(_Tabs, {
+  return /*#__PURE__*/React.createElement(Tabs, {
     defaultActiveKey: "0",
     onChange: callback,
     tabBarGutter: 42,

@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import classNames from 'classnames';
 import ReactDOM from 'react-dom'; // import 'antd/es/date-picker/style/index.less';
 
-import "./style/index.css";
+import './style/index.less';
 
 var Drawer = function Drawer(_ref) {
   var _classNames, _classNames2;

@@ -1,8 +1,3 @@
-import "antd/es/col/style";
-import _Col from "antd/es/col";
-import "antd/es/row/style";
-import _Row from "antd/es/row";
-
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
@@ -18,8 +13,9 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 import React, { useState } from 'react';
+import { Row, Col } from 'antd';
 import classNames from 'classnames';
-import "./style/index.css";
+import './style/index.less';
 
 var Foo = function Foo(_ref) {
   var children = _ref.children,
@@ -47,11 +43,11 @@ var Foo = function Foo(_ref) {
     typeof onClick === 'function' && onClick(type);
   };
 
-  return /*#__PURE__*/React.createElement(_Row, {
+  return /*#__PURE__*/React.createElement(Row, {
     className: wrapClassName,
     gutter: [16, 16]
   }, children === null || children === void 0 ? void 0 : children.map(function (item, i) {
-    return /*#__PURE__*/React.createElement(_Col, {
+    return /*#__PURE__*/React.createElement(Col, {
       key: i
     }, /*#__PURE__*/React.createElement("div", {
       onClick: function onClick() {

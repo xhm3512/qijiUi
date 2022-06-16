@@ -1,5 +1,3 @@
-import "antd/es/date-picker/style";
-import _DatePicker from "antd/es/date-picker";
 var _excluded = ["className", "dropdownClassName"];
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
@@ -13,11 +11,12 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 import React from 'react';
+import { DatePicker } from 'antd';
 import classNames from 'classnames';
-var RangePicker = _DatePicker.RangePicker;
+var RangePicker = DatePicker.RangePicker;
 import 'moment/locale/zh-cn';
 import locale from 'antd/es/date-picker/locale/zh_CN';
-import "./style/index.css";
+import './style/index.less';
 
 var Foo = function Foo(_ref) {
   var className = _ref.className,

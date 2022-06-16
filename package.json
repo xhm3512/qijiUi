@@ -1,15 +1,15 @@
 {
   "name": "qiji",
-  "version": "0.2.9",
-  "author":{
-    "name":"红99",
-    "email":"xhm3512@163.com",
-    "url":"https://qiji.netlify.app/"
+  "version": "0.3.1",
+  "author": {
+    "name": "红99",
+    "email": "xhm3512@163.com",
+    "url": "https://qiji.netlify.app/"
   },
-  "homepage":"https://qiji.netlify.app/",
-  "repository":"https://github.com/xhm3512/qijiUi",
-  "bugs":{
-    "email":"xhm3512@163.com"
+  "homepage": "https://qiji.netlify.app/",
+  "repository": "https://github.com/xhm3512/qijiUi",
+  "bugs": {
+    "email": "xhm3512@163.com"
   },
   "scripts": {
     "start": "dumi dev",
