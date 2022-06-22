@@ -7,7 +7,6 @@ export { default as QuiSelect } from './components/qui-select';
 export { default as QuiIcons } from './components/qui-Icons';
 export { default as QuiImgIcons } from './components/qui-img-icons';
 export { default as QuiDrawer } from './components/qui-drawer';
-export { default as QuiTabs } from './components/qui-tabs';
 export { default as QuiStatistic } from './components/qui-statistic';
 export { default as QuiInput } from './components/qui-input';
 export { default as QuiNoBorderSelect } from './components/qui-no-border-select';
