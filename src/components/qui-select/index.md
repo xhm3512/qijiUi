@@ -1,11 +1,11 @@
 ---
-title: Select选择器
+title: Select 选择器
 group:
   title: 数据录入
   order: 8
 ---
 
-## Grid 珊格
+## Select 选择器
 
 Demo:
 

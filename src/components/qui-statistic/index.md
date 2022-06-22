@@ -5,7 +5,7 @@ group:
   order: 9
 ---
 
-## Grid 珊格
+## Statistic 统计数值
 
 Demo:
 

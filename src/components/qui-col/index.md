@@ -5,7 +5,7 @@ group:
   order: 7
 ---
 
-## Grid 珊格
+## Col 珊格
 
 Demo:
 

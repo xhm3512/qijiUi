@@ -5,7 +5,7 @@ group:
   order: 9
 ---
 
-## Grid 珊格
+##  Radio 单选框
 
 Demo:
 

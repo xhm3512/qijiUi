@@ -1,13 +1,11 @@
 ---
 title: ImgIcon 图标
-description: 图片icon
+description: ImgIcon
 group:
   title: 通用
 ---
 
-## Icon 图标
 
-语义化的矢量图形，基于 antd 图标组件开发
 
 ### 图标列表
 
