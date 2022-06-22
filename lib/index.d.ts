@@ -13,6 +13,8 @@ export { default as QuiStatistic } from './components/qui-statistic';
 export { default as QuiToolTip } from './components/qui-tool-tip';
 export { default as QuiCascaderAddress } from './components/qui-cascader-address';
 export { default as QuiInput } from './components/qui-input';
+export { default as QuiNoBorderSelect } from './components/qui-no-border-select';
+export { default as QuiRadio } from './components/qui-radio';
 export { default as QuiScCatchErr } from './components/qui-sc-catch-err';
 export { default as QuiScLoadable } from './components/qui-sc-loadable';
 export { default as QuiScImage } from './components/qui-sc-image';

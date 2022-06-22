@@ -1,5 +1,9 @@
-import MoDalClose, { CloseProps } from './ModalClose';
-type defaultProps = CloseProps;
+import MoDalClose  from './ModalClose';
+import SearchInput from './SearchInput'
+import CloseInput from './CloseInput'
+// type defaultProps = CloseProps;
 export default {
   MoDalClose,
-} as defaultProps;
+  SearchInput,
+  CloseInput,
+};

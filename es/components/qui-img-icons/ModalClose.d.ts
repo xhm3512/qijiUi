@@ -1,9 +1,4 @@
-import { FC, CSSProperties } from 'react';
-export interface CloseProps {
-    className?: string;
-    style?: CSSProperties;
-    width?: string | number;
-    height?: string | number;
-}
-declare const ModalClose: FC<CloseProps>;
+import { FC } from 'react';
+import { IconImgProps } from './_utils/interface';
+declare const ModalClose: FC<IconImgProps>;
 export default ModalClose;

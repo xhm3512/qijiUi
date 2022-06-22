@@ -1,0 +1,135 @@
+@radio-prefix: ~'qui-radio';
+.@{radio-prefix}-wrapper:not(.@{radio-prefix}-wrapper-disabled){
+  height: 30px;
+  min-width: 80px;
+  line-height: 30px;
+  padding:0 12px;
+  margin-right: 14px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  input[type='radio'] {
+    width: 16px;
+    height: 16px;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .@{radio-prefix}-text{
+    font-size: 14px;
+    letter-spacing: -0.856px;
+    margin-left: 7px;
+  }
+}
+.@{radio-prefix}{
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  &-input{
+    position: absolute;
+  }
+}
+
+.@{radio-prefix}{
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  &-input{
+    position: absolute;
+  }
+ 
+}
+
+.@{radio-prefix}-wrapper:not(.@{radio-prefix}-wrapper-checked):not(.@{radio-prefix}-wrapper-disabled){
+  background: #FBFBFB;
+
+  .@{radio-prefix}-inner{
+    width: 16px;
+    height: 16px;
+    display: block;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #D2D4D9;
+    border-radius: 50%;
+  }
+  .@{radio-prefix}-text{
+    color: #161823;
+  }
+}
+// 已选中
+.@{radio-prefix}-wrapper-checked{
+  background: rgba(249, 90, 88, 0.1);
+  .@{radio-prefix}-inner{
+    width: 16px;
+    height: 16px;
+    display: block;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border: 5px solid #F95A58;
+    display: inline-block;
+    border-radius: 50%;
+   
+  }
+  .@{radio-prefix}-text{
+    color: #F95A58;
+  }
+}
+  
+// 禁止点击状态-已选中
+.@{radio-prefix}-wrapper-disabled{
+  height: 30px;
+  min-width: 80px;
+  line-height: 30px;
+  padding:0 12px;
+  margin-right: 14px;
+  display: inline-block;
+  position: relative;
+  background: #FBFBFB;
+  cursor:not-allowed;
+  input[type='radio'] {
+    width: 16px;
+    height: 16px;
+    opacity: 0;
+    pointer-events: none;
+  }
+ 
+  .@{radio-prefix}-text{
+    font-size: 14px;
+    letter-spacing: -0.856px;
+    margin-left: 7px;
+  }
+  .@{radio-prefix}-inner{
+    width: 16px;
+    height: 16px;
+    display: block;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border: 5px solid #D2D4D9;
+    display: inline-block;
+    border-radius: 50%;
+   
+  }
+  .@{radio-prefix}-text{
+    color: #D2D4D9;
+  }
+
+}
+// 禁止点击状态-未选中
+.@{radio-prefix}-wrapper-disabled:not(.@{radio-prefix}-wrapper-checked){
+  cursor:not-allowed;
+  .@{radio-prefix}-text{
+    color: #D2D4D9;
+  }
+  .@{radio-prefix}-inner{
+    width: 16px;
+    height: 16px;
+    display: block;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #D2D4D9;
+    border-radius: 50%;
+  }
+}

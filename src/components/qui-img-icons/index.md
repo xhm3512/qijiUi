@@ -17,11 +17,19 @@ import { QuiImgIcons } from 'qiji';
 import { Row, Col, Divider } from 'antd';
 import 'antd/dist/antd.less';
 import './md.less';
-const { MoDalClose } = QuiImgIcons;
+const { MoDalClose, SearchInput, CloseInput } = QuiImgIcons;
 const arr = [
   {
     id: 'MoDalClose',
     components: <MoDalClose className="qw" />,
+  },
+  {
+    id: 'SearchInput',
+    components: <SearchInput className="qw" />,
+  },
+  {
+    id: 'CloseInput',
+    components: <CloseInput className="qw" />,
   },
 ];
 export default () => (

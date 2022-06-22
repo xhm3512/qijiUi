@@ -12,7 +12,9 @@ export { default as QuiTabs } from './components/qui-tabs';
 export { default as QuiStatistic } from './components/qui-statistic';
 export { default as QuiToolTip } from './components/qui-tool-tip';
 export { default as QuiCascaderAddress } from './components/qui-cascader-address';
-export { default as QuiInput } from './components/qui-input'; // script
+export { default as QuiInput } from './components/qui-input';
+export { default as QuiNoBorderSelect } from './components/qui-no-border-select';
+export { default as QuiRadio } from './components/qui-radio'; // script
 
 export { default as QuiScCatchErr } from './components/qui-sc-catch-err';
 export { default as QuiScLoadable } from './components/qui-sc-loadable';

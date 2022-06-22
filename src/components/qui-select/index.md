@@ -12,6 +12,7 @@ Demo:
 ```tsx
 import React from 'react';
 import { QuiSelect } from 'qiji';
+import { Button, Checkbox, Form, Input } from 'antd';
 const { Option }=QuiSelect;
 
 export default () => {
@@ -24,9 +25,10 @@ virtual={false}
 defaultValue='jack'
 className='box'
 dropdownClassName='dropdown-wrap'
-// showSearch={true}
+showSearch={true}
+   style={ {width: 300 }}
 // labelInValue
-allowClear={true}
+// allowClear={true}
 // defaultOpen={true}
 optionLabelProp="label"
 onChange={onChange}
