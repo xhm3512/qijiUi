@@ -16,7 +16,7 @@ import React, { forwardRef, useRef } from 'react';
 import RcInput from 'rc-input';
 import classNames from 'classnames';
 import { composeRef } from 'rc-util/lib/ref';
-import QuiImgIcons from '@/components/qui-img-icons';
+import QuiImgIcons from '../qui-img-icons';
 var CloseInput = QuiImgIcons.CloseInput;
 import './style/index.less';
 var InternalInput = /*#__PURE__*/forwardRef(function (props, ref) {

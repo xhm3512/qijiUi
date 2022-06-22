@@ -2,7 +2,7 @@ import React, { FC, ReactNode, forwardRef,useRef } from 'react';
 import RcInput, { InputProps as RcInputProps, InputRef } from 'rc-input';
 import classNames from 'classnames';
 import { composeRef } from 'rc-util/lib/ref';
-import QuiImgIcons from '@/components/qui-img-icons'
+import QuiImgIcons from '../qui-img-icons'
 const { CloseInput } = QuiImgIcons;
 import './style/index.less'
 export interface PropsState extends RcInputProps {

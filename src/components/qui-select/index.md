@@ -12,7 +12,6 @@ Demo:
 ```tsx
 import React from 'react';
 import { QuiSelect } from 'qiji';
-import { Button, Checkbox, Form, Input } from 'antd';
 const { Option }=QuiSelect;
 
 export default () => {

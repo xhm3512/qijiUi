@@ -15,7 +15,6 @@ group:
 import React from 'react';
 import { QuiIcons } from 'qiji';
 import { Row, Col, Divider } from 'antd';
-import 'antd/dist/antd.less';
 import './md.less';
 const {
   WorksManagerCustom,

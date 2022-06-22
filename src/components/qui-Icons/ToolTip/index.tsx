@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
 import './style/index.less';
-import { Row } from 'antd';
+import QuiRow from '../../qui-row';
 const ToolTip: FC<{ active: boolean }> = ({ active = false }) => {
   const prefixCls = 'qiu-tooltip';
   const classes = classNames({
@@ -9,9 +9,9 @@ const ToolTip: FC<{ active: boolean }> = ({ active = false }) => {
     [`${prefixCls}-active-box`]: !active,
   });
   return (
-    <Row justify="center" align="middle" className={classes}>
+    <QuiRow justify="center" align="middle" className={classes}>
       ?
-    </Row>
+    </QuiRow>
   );
 };
 export default ToolTip;

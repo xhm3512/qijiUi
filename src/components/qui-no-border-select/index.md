@@ -12,7 +12,6 @@ Demo:
 ```tsx
 import React from 'react';
 import { QuiNoBorderSelect } from 'qiji';
-import { Button, Checkbox, Form, Input } from 'antd';
 const { Option }=QuiNoBorderSelect;
 
 export default () => {

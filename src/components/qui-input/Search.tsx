@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { InputProps as RcInputProps } from 'rc-input';
 import { composeRef } from 'rc-util/lib/ref';
-import QuiImgIcons from '@/components/qui-img-icons'
+import QuiImgIcons from '../qui-img-icons'
 import Input, { InputRef } from './Input';
 const { CloseInput, SearchInput } = QuiImgIcons;
 import './style/index.less'

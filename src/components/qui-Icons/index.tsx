@@ -1,6 +1,5 @@
 import React, { ComponentType, SVGProps } from 'react';
 import Icon from '@ant-design/icons';
-import { CustomIconComponentProps } from '@ant-design/icons/lib/components/Icon';
 import HomeSvg from './HomeSvg';
 import WorksManagerSvg from './WorksManagerSvg';
 import DataSvg from './DataSvg';
@@ -11,7 +10,14 @@ import ToolTipCustom from './ToolTip';
 import SwitchSvg from './Switch';
 
 import ArrowSvg from './Arrow';
-
+export interface CustomIconComponentProps {
+  width: string | number;
+  height: string | number;
+  fill: string;
+  viewBox?: string;
+  className?: string;
+  style?: React.CSSProperties;
+}
 const CustomIcon = (
   Component: ComponentType<CustomIconComponentProps | SVGProps<SVGSVGElement>>,
 ) => (props: any) => {

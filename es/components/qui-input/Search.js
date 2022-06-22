@@ -13,7 +13,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 import React from 'react';
 import classNames from 'classnames';
 import { composeRef } from 'rc-util/lib/ref';
-import QuiImgIcons from '@/components/qui-img-icons';
+import QuiImgIcons from '../qui-img-icons';
 import Input from './Input';
 var CloseInput = QuiImgIcons.CloseInput,
     SearchInput = QuiImgIcons.SearchInput;

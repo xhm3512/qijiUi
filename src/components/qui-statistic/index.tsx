@@ -1,5 +1,6 @@
 import React, { FC, useState, ReactNode } from 'react';
-import { Row, Col } from 'antd';
+import QuiCol from '../qui-col';
+import QuiRow from '../qui-row'
 import classNames from 'classnames';
 import './style/index.less';
 interface PropsState {
@@ -31,20 +32,20 @@ const Foo: FC<PropsState> = ({
   };
 
   return (
-    <Row className={wrapClassName} gutter={[16, 16]}>
+    <QuiRow className={wrapClassName}>
       {children?.map((item: any, i) => {
         return (
-          <Col key={i}>
+          <QuiCol key={i}  style={{padding:'0 8px'}}>
             <div
               onClick={() => onHandleClick(i + 1, item.key)}
               className={classesItem(i + 1)}
             >
               {item}
             </div>
-          </Col>
+          </QuiCol>
         );
       })}
-    </Row>
+    </QuiRow>
   );
 };
 
