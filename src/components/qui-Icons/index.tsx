@@ -8,8 +8,8 @@ import UserSvg from './UserSvg';
 import NewsSvg from './NewsSvg';
 import ToolTipCustom from './ToolTip';
 import SwitchSvg from './Switch';
-
 import ArrowSvg from './Arrow';
+import './style/index.less'
 export interface CustomIconComponentProps {
   width: string | number;
   height: string | number;

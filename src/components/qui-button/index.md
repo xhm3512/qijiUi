@@ -179,12 +179,12 @@ export default () => (
 
 | 属性      |                                                                 说明                                                                 |                 类型                  |  默认值  | 版本 |
 | --------- | :----------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------: | :------: | ---: |
-| type      |                                                             设置按钮类型                                                             | `primary` \| `secondary` \| `outline` | default  |      |
-| onClick   |                                                           点击按钮时的回调                                                           |           `(event) => void`           |    -     |      |
-| disabled  |                                                             按钮失效状态                                                             |                boolean                |  false   |      |
-| icon      |                                                          设置按钮的图标组件                                                          |               ReactNode               |    -     |      |
-| size      |                                                             设置按钮大小                                                             |    `large` \| `middle` \| `small`     | `middle` |      |  | - |  |
-| loading   |                                                           设置按钮载入状态                                                           |                boolean                |  false   |      |
-| hover     |                                                       是否直接展示 hover 效果                                                        |                boolean                |  false   |      |
-| htmlType  | 设置 `button` 原生的 `type` 值，可选值请参考 [HTML 标准](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attr-type) |                string                 | `button` |      |
-| className |                                                           自定义 className                                                           |                string                 |    -     |      |
+| type      |     设置按钮类型     | `primary` \| `secondary` \| `outline` | default  |      |
+| onClick   |  点击按钮时的回调   |           `(event) => void`           |    -     |      |
+| disabled  |     按钮失效状态    |                boolean                |  false   |      |
+| icon      |    设置按钮的图标组件    |               ReactNode               |    -     |      |
+| size      |   设置按钮大小  |    `large` \| `middle` \| `small`     | `middle` |      |  | - |  |
+| loading   |   设置按钮载入状态   |                boolean                |  false   |      |
+| hover     |    是否直接展示 hover 效果  |                boolean                |  false   |      |
+| htmlType  | 设置 `button` 原生的 `type` 值，可选值请参考 [HTML 标准](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attr-type) |              string                 | `button` |      |
+| className |     自定义 className   |     string   |    -     |      |

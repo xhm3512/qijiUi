@@ -55,5 +55,15 @@ export default () =>{
   </>
 };
 ```
+## API
+
+属性说明如下：
+
+| 属性      |                                                                 说明                                                                 |                 类型                  |  默认值  | 版本 |
+| --------- | :----------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------: | :------: | ---: |
+| align      |    栅格占位格数，为 0 时相当于 display: none              | `top` \| `middle` \|`bottom` \|  |  top    |
+| justify    |   flex 布局属性  | `start` \| `end` \|`center` \| `space-around` \| `space-between` \|    |    start  |
+| style      |      style                                                       | `CSSProperties` \|   | -  | 
+
 
 More skills for writing demo: https://d.umijs.org/guide/basic#write-component-demo

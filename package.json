@@ -1,6 +1,6 @@
 {
   "name": "qiji",
-  "version": "0.3.4",
+  "version": "0.3.6",
   "author": {
     "name": "红99",
     "email": "xhm3512@163.com",
@@ -72,13 +72,9 @@
     "react-dom": ">=16.9.0"
   },
   "dependencies": {
-    "@ant-design/charts": "^1.3.6",
     "@ant-design/icons": "^4.6.2",
-    "@ant-design/plots": "^1.0.9",
     "@types/classnames": "^2.3.1",
-    "antd": "^4.16.3",
     "braft-editor": "^2.3.9",
-    "china-division": "^2.5.0",
     "classnames": "^2.2.6",
     "rc-checkbox": "^2.3.2",
     "rc-input": "0.0.1-alpha.7",
@@ -89,6 +85,7 @@
   },
   "devDependencies": {
     "@testing-library/react": "^12.1.2",
+    "antd": "^4.16.3",
     "@types/jest": "^26.0.24",
     "@types/react": "^17.0.0",
     "@umijs/preset-react": "1.x",

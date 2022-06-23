@@ -18,6 +18,7 @@ const {QuiSearch}=QuiInput
 export default () => {
    const inputRef = useRef<InputRef>(null);
    const onFinish=(val)=>{
+     console.log(val)
    }
   return  <QuiSearch
     ref={inputRef}

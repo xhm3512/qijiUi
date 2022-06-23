@@ -1,4 +1,5 @@
 import React from 'react';
+import './style/index.less';
 export interface CustomIconComponentProps {
     width: string | number;
     height: string | number;

@@ -64,4 +64,15 @@ export default () =>{
 }
 ```
 
+## API
+
+属性说明如下：
+
+| 属性      |                                                                 说明                                                                 |                 类型                  |  默认值  | 版本 |
+| --------- | :----------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------: | :------: | ---: |
+| span      |       栅格占位格数，为 0 时相当于 display: none    | `number` \| `string` | -  |      |
+| flex      |            flex 布局属性    | `number` \| `string` | -  |      |
+| style      |                    style   | `CSSProperties` |  -    |
+
+
 More skills for writing demo: https://d.umijs.org/guide/basic#write-component-demo

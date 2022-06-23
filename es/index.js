@@ -4,7 +4,7 @@ export { default as QuiCol } from './components/qui-col';
 export { default as QuiRow } from './components/qui-row';
 export { default as QuiEditor } from './components/qui-editor';
 export { default as QuiSelect } from './components/qui-select';
-export { default as QuiIcons } from './components/qui-Icons';
+export { default as QuiIcons } from './components/qui-icons';
 export { default as QuiImgIcons } from './components/qui-img-icons';
 export { default as QuiDrawer } from './components/qui-drawer';
 export { default as QuiStatistic } from './components/qui-statistic';

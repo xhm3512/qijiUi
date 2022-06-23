@@ -15,6 +15,7 @@ import NewsSvg from './NewsSvg';
 import ToolTipCustom from './ToolTip';
 import SwitchSvg from './Switch';
 import ArrowSvg from './Arrow';
+import './style/index.less';
 
 var CustomIcon = function CustomIcon(Component) {
   return function (props) {
