@@ -2,7 +2,7 @@
 title: Tabs 标签页
 group:
   title: 数据展示
-  order: 10
+  order: 4
 ---
 
 ## Input 输入框

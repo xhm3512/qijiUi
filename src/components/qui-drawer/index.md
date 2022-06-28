@@ -2,7 +2,7 @@
 title: Drawer 抽屉
 group:
   title: 反馈
-  order: 11
+  order: 5
 ---
 ## Drawer 抽屉
 Demo:

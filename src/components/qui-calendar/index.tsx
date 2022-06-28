@@ -1,6 +1,7 @@
-import React, { FC, useEffect } from 'react';
-const Foo = () => {
-  return <div>foo</div>;
-};
+import { Moment } from 'moment';
+import momentGenerateConfig from 'rc-picker/lib/generate/moment';
+import generateCalendar, { CalendarProps } from './generateCalendar';
+const Calendar = generateCalendar<Moment>(momentGenerateConfig);
 
-export default Foo;
+export { CalendarProps };
+export default Calendar;

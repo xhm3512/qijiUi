@@ -2,7 +2,7 @@
 title: Modal 对话框
 group:
   title: 反馈
-  order: 11
+  order: 5
 ---
 
 ## Grid 珊格

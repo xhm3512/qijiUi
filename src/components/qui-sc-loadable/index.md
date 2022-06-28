@@ -1,8 +1,8 @@
 ---
 title: Loadable 组件懒加载
 group:
-  title: 其他
-  order: 19
+  title: 逻辑组件
+  order: 12
 ---
 
 ## Loadable 组件懒加载

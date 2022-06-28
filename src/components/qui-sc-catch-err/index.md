@@ -1,8 +1,8 @@
 ---
 title: CatchErr 异常捕获
 group:
-  title: 其他
-  order: 19
+  title: 逻辑组件
+  order: 12
 ---
 
 ## hook

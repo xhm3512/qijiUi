@@ -1,8 +1,8 @@
 ---
 title: Statistic 统计数值
 group:
-  title: 反馈
-  order: 11
+  title: 数据展示
+  order: 4
 ---
 
 ## Statistic 统计数值

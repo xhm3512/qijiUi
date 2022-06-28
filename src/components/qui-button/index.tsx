@@ -5,7 +5,7 @@ import { tuple } from '../_util/type';
 import './style/index.less';
 const ButtonHTMLTypes = tuple('submit', 'button', 'reset');
 type ButtonHTMLType = typeof ButtonHTMLTypes[number];
-interface ButtonProps {
+export interface ButtonProps {
   onClick?: React.MouseEventHandler<HTMLElement>;
   type?: 'primary' | 'secondary' | 'outline';
   disabled?: boolean;

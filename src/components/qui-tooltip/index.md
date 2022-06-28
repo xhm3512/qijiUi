@@ -1,8 +1,8 @@
 ---
 title: Tooltip 文字提示
 group:
-  title: 反馈
-  order: 11
+  title: 数据展示
+  order: 4
 ---
 
 ## Grid 珊格

@@ -1,8 +1,8 @@
 ---
 title: Image 图片懒加载
 group:
-  title: 其他
-  order: 19
+  title: 逻辑组件
+  order: 12
 ---
 
 ## Image 图片懒加载

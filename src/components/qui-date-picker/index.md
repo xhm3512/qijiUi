@@ -1,22 +1,22 @@
 ---
-title: demo 统计数值
+title: DatePicker日期选择框
 group:
-  title: 其他
-  order: 191
+  title: 数据录入
+  order: 4
 ---
 
-## Grid 珊格
+## DatePicker日期选择框
 
 Demo:
 
 ```tsx
 import React from 'react';
-import { QuiFoo } from 'qiji';
+import { QuiDatePicker } from 'qiji';
 
-export default () => <QuiFoo title="First Demo" />;
+export default () => <QuiDatePicker title="First Demo" />;
 ```
 属性说明如下：
 
 | 属性      |                                                                 说明                                                                 |                 类型                  |  默认值  | 版本 |
 | --------- | :----------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------: | :------: | ---: |
-| span      |       栅格占位格数，为 0 时相当于 display: none    | `number` \| `string` | -  |      |
+| 开发中。。。      |       栅格占位格数，为 0 时相当于 display: none    | `number` \| `string` | -  |      |

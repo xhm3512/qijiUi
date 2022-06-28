@@ -2,35 +2,21 @@
 title: Calendar日历
 group:
   title: 数据展示
-  order: 10
+  order: 4
 ---
 
-## Input 输入框
+## Calendar日历
 
-Demo:
+### 基本使用:
 
 ```tsx
 import React,{useRef} from 'react';
-import { QuiInput } from 'qiji';
+import { QuiCalendar } from 'qiji';
 
 
-const {QuiSearch}=QuiInput
 export default () => {
-   const inputRef = useRef<InputRef>(null);
-   const onFinish=(val)=>{
-     console.log(val)
-   }
-  return  <QuiSearch
-    ref={inputRef}
-    onChange={onFinish}
-    // className='tt' 
-    allowClear={true}
-    // loading={true}
-    // //  textErr='有特殊字符'
-    //  defaultValue='的方法'
-    placeholder='这里是描述'
-    //  disabled
-    />
+  
+  return  <QuiCalendar />
 };
 ```
 ## API
