@@ -11,6 +11,9 @@ export { default as QuiStatistic } from './components/qui-statistic';
 export { default as QuiInput } from './components/qui-input';
 export { default as QuiNoBorderSelect } from './components/qui-no-border-select';
 export { default as QuiRadio } from './components/qui-radio';
+export { default as QuiTooltip } from './components/qui-tooltip';
+export { default as QuiPopover } from './components/qui-popover';
+export { default as QuiTabs } from './components/qui-tabs';
 export { default as QuiFoo } from './components/demo';
 
 // script

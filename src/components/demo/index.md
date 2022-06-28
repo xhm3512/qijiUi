@@ -2,7 +2,7 @@
 title: demo 统计数值
 group:
   title: 反馈
-  order: 9
+  order: 11
 ---
 
 ## Grid 珊格
@@ -15,5 +15,8 @@ import { QuiFoo } from 'qiji';
 
 export default () => <QuiFoo title="First Demo" />;
 ```
+属性说明如下：
 
-More skills for writing demo: https://d.umijs.org/guide/basic#write-component-demo
+| 属性      |                                                                 说明                                                                 |                 类型                  |  默认值  | 版本 |
+| --------- | :----------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------: | :------: | ---: |
+| span      |       栅格占位格数，为 0 时相当于 display: none    | `number` \| `string` | -  |      |

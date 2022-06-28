@@ -2,7 +2,7 @@
 title: Statistic 统计数值
 group:
   title: 反馈
-  order: 9
+  order: 11
 ---
 
 ## Statistic 统计数值
@@ -25,4 +25,3 @@ export default () => (
 );
 ```
 
-More skills for writing demo: https://d.umijs.org/guide/basic#write-component-demo

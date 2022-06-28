@@ -76,4 +76,3 @@ export default () => {
 | errDisplay    | 图片加载失败时是否隐藏 | boolean    | -      |      |
 | errorCallback | 图片加载失败时回调函数 | () => void | -      |      |
 
-More skills for writing demo: https://d.umijs.org/guide/basic#write-component-demo
