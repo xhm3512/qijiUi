@@ -16,40 +16,40 @@ import { QuiRow, QuiCol } from 'qiji';
 export default () =>{
   return <>
    <QuiRow align="space-between" justify="center" style={{ background: '#f7f7f7', height: '200px' }} overflow="hidden">
-            <div style={{ background: '#0092ff', width: '100px', height: '100px'}}></div>
-            <div style={{ background: 'rgba(0,146,255,.6)', width: '100px', height: '100px'}}></div>
+            <div style={{ background: '#f95a58', width: '100px', height: '100px'}}></div>
+            <div style={{ background: 'rgba(249, 90, 88, 0.4)', width: '100px', height: '100px'}}></div>
         </QuiRow>
 
         <QuiRow align="space-around" justify="center" style={{ background: '#f7f7f7', height: '200px',marginTop:'20px' }} >
-            <div style={{ background: '#0092ff', width: '100px', height: '100px' }}></div>
-            <div style={{ background: 'rgba(0,146,255,.6)', width: '100px', height: '100px' }}></div>
+            <div style={{ background: '#f95a58', width: '100px', height: '100px' }}></div>
+            <div style={{ background: 'rgba(249, 90, 88, 0.4)', width: '100px', height: '100px' }}></div>
         </QuiRow>
 
         <QuiRow align="top" justify="center" style={{ background: '#f7f7f7', height: '200px', marginTop: '20px' }} >
-            <div style={{ background: '#0092ff', width: '100px', height: '100px' }}></div>
-            <div style={{ background: 'rgba(0,146,255,.6)', width: '100px', height: '100px' }}></div>
+            <div style={{ background: '#f95a58', width: '100px', height: '100px' }}></div>
+            <div style={{ background: 'rgba(249, 90, 88, 0.4)', width: '100px', height: '100px' }}></div>
         </QuiRow>
 
 
         <QuiRow align="middle" justify="center" style={{ background: '#f7f7f7', height: '200px', marginTop: '20px' }} >
-            <div style={{ background: '#0092ff', width: '100px', height: '100px' }}></div>
-            <div style={{ background: 'rgba(0,146,255,.6)', width: '100px', height: '100px' }}></div>
+            <div style={{ background: '#f95a58', width: '100px', height: '100px' }}></div>
+            <div style={{ background: 'rgba(249, 90, 88, 0.4)', width: '100px', height: '100px' }}></div>
         </QuiRow>
 
 
         <QuiRow align="bottom" justify="center" style={{ background: '#f7f7f7', height: '200px', marginTop: '20px' }} >
-            <div style={{ background: '#0092ff', width: '100px', height: '100px' }}></div>
-            <div style={{ background: 'rgba(0,146,255,.6)', width: '100px', height: '100px' }}></div>
+            <div style={{ background: '#f95a58', width: '100px', height: '100px' }}></div>
+            <div style={{ background: 'rgba(249, 90, 88, 0.4)', width: '100px', height: '100px' }}></div>
         </QuiRow>
 
         <QuiRow align="top" justify="start" style={{ background: '#f7f7f7', height: '200px', marginTop: '20px' }} >
-            <div style={{ background: '#0092ff', width: '100px', height: '100px' }}></div>
-            <div style={{ background: 'rgba(0,146,255,.6)', width: '100px', height: '100px' }}></div>
+            <div style={{ background: '#f95a58', width: '100px', height: '100px' }}></div>
+            <div style={{ background: 'rgba(249, 90, 88, 0.4)', width: '100px', height: '100px' }}></div>
         </QuiRow>
 
         <QuiRow align="top" justify="end" style={{ background: '#f7f7f7', height: '200px', marginTop: '20px' }} >
-            <div style={{ background: '#0092ff', width: '100px', height: '100px' }}></div>
-            <div style={{ background: 'rgba(0,146,255,.6)', width: '100px', height: '100px' }}></div>
+            <div style={{ background: '#f95a58', width: '100px', height: '100px' }}></div>
+            <div style={{ background: 'rgba(249, 90, 88, 0.4)', width: '100px', height: '100px' }}></div>
         </QuiRow>
  
   </>
