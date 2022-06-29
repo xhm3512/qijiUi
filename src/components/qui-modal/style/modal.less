@@ -1,0 +1,86 @@
+@dialog-prefix-cls: ~'qui-modal';
+
+.@{dialog-prefix-cls} {
+  .reset-component();
+  .modal-mask();
+  background: #fff;
+  position: relative;
+  top: 100px;
+  width: 424px;
+  height: 188px;
+  max-width: calc(100vw - 32px);
+  margin: 0 auto;
+  border-radius: 8px;
+  &-wrap {
+    z-index: 1000;
+  }
+
+
+  &-content {
+    position: relative;
+    background-clip: padding-box;
+    border: 0;
+  ;
+    // box-shadow: @shadow-2;
+    pointer-events: auto;
+  }
+
+  &-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    // z-index: @zindex-popup-close;
+    padding: 0;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &-x {
+      display: block;
+      font-size: 24px;
+      margin: 20px 20px 0 0;
+      font-style: normal;
+      text-align: center;
+      text-transform: none;
+      text-rendering: auto;
+    }
+
+    &:focus,
+    &:hover {
+      color:blue;
+      text-decoration: none;
+    }
+  }
+
+ 
+
+  &-open {
+    overflow: hidden;
+  }
+}
+
+.@{dialog-prefix-cls}-centered {
+  text-align: center;
+
+  &::before {
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+    content: '';
+  }
+  .@{dialog-prefix-cls} {
+    top: 0;
+    display: inline-block;
+    padding-bottom: 0;
+    text-align: left;
+    vertical-align: middle;
+  }
+}
+
+

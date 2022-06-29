@@ -26,7 +26,7 @@ className='box'
 dropdownClassName='dropdown-wrap'
 // labelInValue
 // allowClear={true}
-defaultOpen={true}
+// defaultOpen={true}
 // optionLabelProp="label"
 onChange={onChange}
 onBlur={onBlur}

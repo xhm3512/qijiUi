@@ -7,7 +7,7 @@ group:
 
 ## Grid 珊格
 
-Demo:
+### 基础用法:
 
 ```tsx
 import React from 'react';
@@ -16,7 +16,7 @@ import {Tooltip} from 'antd';
 
 export default () =><QuiPopover
 placement='bottomRight'
-defaultVisible={true}
+// defaultVisible={true}
  content={
    <div style={{padding:'0 10px'}}>
     <div style={{padding:'0 10px'}}>ww2</div>
