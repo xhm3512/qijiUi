@@ -10,13 +10,13 @@ export { default as QuiInput } from './components/qui-input';
 export { default as QuiNoBorderSelect } from './components/qui-no-border-select';
 export { default as QuiRadio } from './components/qui-radio';
 export { default as QuiSelect } from './components/qui-select';
-export { default as QuiDatePicker } from './components/qui-date-picker';
+export { default as QuiDatePicker } from './components/qui-date-picker';//未完成
 // 数据展示-4
 export { default as QuiPopover } from './components/qui-popover';
 export { default as QuiStatistic } from './components/qui-statistic';
 export { default as QuiTabs } from './components/qui-tabs';
 export { default as QuiTooltip } from './components/qui-tooltip';
-export { default as QuiCalendar } from './components/qui-calendar';
+export { default as QuiCalendar } from './components/qui-calendar'; //未完成
 
 // 反馈-5
 export { default as QuiDrawer } from './components/qui-drawer';
