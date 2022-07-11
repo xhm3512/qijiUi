@@ -1,0 +1,118 @@
+
+@import '../../style/themes/index';
+@import '../../style/themes/default.less';
+@import './position';
+@import './rtl.less';
+@import './level.less';
+@tab-prefix-cls: 'qui-tabs';
+@ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+@tab-prefix-cls: ~'qui-tabs';
+@border-radius-base: 2px;
+@tabs-card-gutter: 2px;
+
+.@{tab-prefix-cls} {
+
+  display: flex;
+  overflow: hidden;
+
+  // ========================== Navigation ==========================
+  > .@{tab-prefix-cls}-nav,
+  > div > .@{tab-prefix-cls}-nav {
+    position: relative;
+    display: flex;
+    flex: none;
+    align-items: center;
+
+    .@{tab-prefix-cls}-nav-wrap {
+      position: relative;
+      display: inline-block;
+      display: flex;
+      flex: auto;
+      align-self: stretch;
+      overflow: hidden;
+      white-space: nowrap;
+      transform: translate(0); // Fix chrome render bug
+
+      // >>>>> Ping shadow
+      &::before,
+      &::after {
+        position: absolute;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity @animation-duration-slow;
+        content: '';
+        pointer-events: none;
+      }
+    }
+
+    .@{tab-prefix-cls}-nav-list {
+      position: relative;
+      display: flex;
+      transition: transform @animation-duration-slow;
+    }
+  }
+
+  &-nav-operations{
+        display: none;
+      }
+  // &-nav-operations-hidden{
+  //   display: none;
+  // }
+
+  &-centered {
+    > .@{tab-prefix-cls}-nav,
+    > div > .@{tab-prefix-cls}-nav {
+      .@{tab-prefix-cls}-nav-wrap {
+        &:not([class*='@{tab-prefix-cls}-nav-wrap-ping']) {
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  
+
+  // ============================= Tabs =============================
+  &-tab {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    // padding: @tabs-horizontal-padding;
+    // font-size: @tabs-title-font-size;
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+  
+
+    &&-disabled {
+      color: #A7AAB1;
+      cursor: not-allowed;
+    }
+  }
+
+
+  // =========================== TabPanes ===========================
+  &-content {
+    &-holder {
+      flex: auto;
+      min-width: 0;
+      min-height: 0;
+    }
+
+    display: flex;
+    width: 100%;
+
+    &-animated {
+      transition: margin @animation-duration-slow;
+    }
+  }
+
+  &-tabpane {
+    flex: none;
+    width: 100%;
+    outline: none;
+  }
+}
+
+

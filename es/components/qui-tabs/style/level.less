@@ -1,0 +1,158 @@
+.@{tab-prefix-cls}{
+  // 一级tab（页头）
+  &-level-one{
+   
+     // ============================ InkBar ============================
+     .@{tab-prefix-cls}-ink-bar {
+      position: absolute;
+      background: #F95A58;
+      pointer-events: none;
+    }
+    .@{tab-prefix-cls}-tab{
+      font-size: 20px;
+      color: #5D5F64;
+      &-active{
+        font-weight: 500;
+        color: #1C1D20;
+      }
+    }
+  }
+  &-level-one:not(&-bottom):not(&-left):not(&-right){
+    .@{tab-prefix-cls}-tab{
+      padding-bottom: 14px;
+      margin-right: 40px;
+    }
+  }
+  &-level-one:not(&-top):not(&-left):not(&-right){
+    .@{tab-prefix-cls}-tab{
+      padding-top: 14px;
+      margin-right: 40px;
+    }
+  }
+  &-level-one:not(&-top):not(&-bottom):not(&-right){
+    .@{tab-prefix-cls}-tab{
+      padding-right:20px;
+      margin-bottom: 14px;
+    }
+  }
+  &-level-one:not(&-top):not(&-bottom):not(&-left){
+    .@{tab-prefix-cls}-tab{
+      padding-left:20px;
+      margin-bottom: 14px;
+    }
+  }
+  
+  // 一级tab（内容/卡片）
+  &-level-oneContent{
+    .@{tab-prefix-cls}-tab{
+      font-size: 14px;
+      color: #5D5F64;
+      &-active{
+        font-weight: 500;
+        color: #1C1D20;
+      }
+    }
+     // ============================ InkBar ============================
+     .@{tab-prefix-cls}-ink-bar {
+      position: absolute;
+      background: #F95A58;
+      pointer-events: none;
+    }
+  }
+  &-level-oneContent:not(&-bottom):not(&-left):not(&-right){
+    .@{tab-prefix-cls}-tab{
+      padding-bottom: 8px;
+      margin-right: 32px;
+    }
+  }
+  &-level-oneContent:not(&-top):not(&-left):not(&-right){
+    .@{tab-prefix-cls}-tab{
+      padding-top: 8px;
+      margin-right: 32px;
+    }
+  }
+  &-level-oneContent:not(&-top):not(&-bottom):not(&-right){
+    .@{tab-prefix-cls}-tab{
+      padding-right:15px;
+      margin-bottom: 14px;
+    }
+  }
+  &-level-oneContent:not(&-top):not(&-bottom):not(&-left){
+    .@{tab-prefix-cls}-tab{
+      padding-left:15px;
+      margin-bottom: 10px;
+    }
+  }
+  // 二级tab
+  &-level-two{
+    .@{tab-prefix-cls}-tab{
+      font-size: 14px;
+      color: #5D5F64;
+      &-active{
+        font-weight: 500;
+        color: #1C1D20;
+      }
+    }
+    
+  }
+  &-level-two:not(&-bottom):not(&-left):not(&-right){
+    .@{tab-prefix-cls}-tab{
+      padding-bottom: 8px;
+      margin-right: 24px;
+    }
+  }
+  &-level-two:not(&-top):not(&-left):not(&-right){
+    .@{tab-prefix-cls}-tab{
+      padding-top: 8px;
+      margin-right: 24px;
+    }
+  }
+  &-level-two:not(&-top):not(&-bottom):not(&-right){
+    .@{tab-prefix-cls}-tab{
+      padding-right:15px;
+      margin-bottom: 10px;
+    }
+  }
+  &-level-two:not(&-top):not(&-bottom):not(&-left){
+    .@{tab-prefix-cls}-tab{
+      padding-left:15px;
+      margin-bottom: 10px;
+    }
+  }
+  // 二级tab-小
+  &-level-twoSmall{
+    .@{tab-prefix-cls}-tab{
+      font-size: 12px;
+      color: #1C1D20;
+      &-active{
+        font-weight: 500;
+        color: #F95A58;
+      }
+    }
+    
+  }
+  &-level-twoSmall:not(&-bottom):not(&-left):not(&-right){
+    .@{tab-prefix-cls}-tab{
+      padding-bottom: 8px;
+      margin-right: 24px;
+    }
+  }
+  &-level-twoSmall:not(&-top):not(&-left):not(&-right){
+    .@{tab-prefix-cls}-tab{
+      padding-top: 8px;
+      margin-right: 24px;
+    }
+  }
+  &-level-twoSmall:not(&-top):not(&-bottom):not(&-right){
+    .@{tab-prefix-cls}-tab{
+      padding-right:15px;
+      margin-bottom: 20px;
+    }
+  }
+  &-level-twoSmall:not(&-top):not(&-bottom):not(&-left){
+    .@{tab-prefix-cls}-tab{
+      padding-left:15px;
+      margin-bottom: 20px;
+    }
+  }
+}

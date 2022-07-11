@@ -30,7 +30,7 @@ export type PickerProps<DateType> =
 function generatePicker<DateType>(generateConfig: GenerateConfig<DateType>) {
   // =========================== Picker ===========================
   const { DatePicker, WeekPicker, MonthPicker, YearPicker, TimePicker, QuarterPicker } =
-    generateSinglePicker(generateConfig);
+    generateSinglePicker(generateConfig as any) as any;
 
   // ======================== Range Picker ========================
   // const RangePicker = generateRangePicker(generateConfig);

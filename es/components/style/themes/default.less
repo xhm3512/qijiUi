@@ -1,0 +1,124 @@
+@import './compact.less';
+@qui-prefix: qui;
+
+
+@white: #fff;
+@black: #000;
+@component-background: #fff;
+@text-color: fade(@black, 85%);
+@padding-md: 16px; // small containers and buttons
+@font-variant-base: tabular-nums;
+@font-feature-settings-base: 'tnum';
+@font-size-base: 14px;
+@font-size-lg: @font-size-base + 2px;
+@font-size-sm: 12px;
+
+// vertical paddings
+@padding-lg: 24px; // containers
+@padding-md: 16px; // small containers and buttons
+@padding-sm: 12px; // Form controls and items
+@padding-xs: 8px; // small items
+@padding-xss: 4px; // more small
+// z-index list, order by `z-index`
+@zindex-badge: auto;
+@zindex-table-fixed: 2;
+@zindex-affix: 10;
+@zindex-back-top: 10;
+@zindex-picker-panel: 10;
+@zindex-popup-close: 10;
+@zindex-modal: 1000;
+@zindex-modal-mask: 1000;
+@zindex-message: 1010;
+@zindex-notification: 1010;
+@zindex-popover: 1030;
+@zindex-dropdown: 1050;
+@zindex-picker: 1050;
+@zindex-popoconfirm: 1060;
+@zindex-tooltip: 1070;
+@zindex-image: 1080;
+
+// Animation
+@animation-duration-slow: 0.3s; // Modal
+@animation-duration-base: 0.2s;
+@animation-duration-fast: 0.1s; // Tooltip
+
+// Tabs
+
+
+
+@text-color: fade(@white, 85%);
+@text-color-secondary: fade(@white, 45%);
+@text-color-inverse: @white;
+@icon-color-hover: fade(@white, 75%);
+@heading-color: fade(@white, 85%);
+
+// The background colors for active and hover states for things like
+// list items or table cells.
+@item-hover-bg: fade(@white, 8%);
+
+// Border color
+@border-color-base: #434343; // base border outline a component
+@border-color-split: #303030; // split border inside a component
+
+@background-color-light: fade(@white, 4%); // background of header and selected item
+@background-color-base: fade(@white, 8%); // Default grey background color
+
+// Disabled states
+@disabled-color: fade(@white, 30%);
+@disabled-bg: @background-color-base;
+@disabled-color-dark: fade(@white, 30%);
+
+// Shadow
+// ---
+@shadow-color: rgba(0, 0, 0, 0.45);
+@shadow-color-inverse: @component-background;
+@box-shadow-base: @shadow-2;
+@shadow-1-up: 0 -6px 16px -8px rgba(0, 0, 0, 0.32), 0 -9px 28px 0 rgba(0, 0, 0, 0.2),
+  0 -12px 48px 16px rgba(0, 0, 0, 0.12);
+@shadow-1-down: 0 6px 16px -8px rgba(0, 0, 0, 0.32), 0 9px 28px 0 rgba(0, 0, 0, 0.2),
+  0 12px 48px 16px rgba(0, 0, 0, 0.12);
+@shadow-1-right: 6px 0 16px -8px rgba(0, 0, 0, 0.32), 9px 0 28px 0 rgba(0, 0, 0, 0.2),
+  12px 0 48px 16px rgba(0, 0, 0, 0.12);
+@shadow-2: 0 3px 6px -4px rgba(0, 0, 0, 0.48), 0 6px 16px 0 rgba(0, 0, 0, 0.32),
+  0 9px 28px 8px rgba(0, 0, 0, 0.2);
+
+
+// vertical margins
+@margin-lg: 16px; // containers
+@margin-md: 8px; // small containers and buttons
+@margin-sm: 8px; // Form controls and items
+@margin-xs: 4px; // small items
+@margin-xss: 0px; // more small
+
+// Border color
+@border-color-base: hsv(0, 0, 85%); // base border outline a component
+@border-color-split: hsv(0, 0, 94%); // split border inside a component
+@border-color-inverse: @white;
+@border-width-base: 1px; // width of the border for a component
+@border-style-base: solid; // style of a components border
+
+@tabs-bar-margin: 0 0 @margin-md 0;
+@padding-sm: 12px; // Form controls and items
+@border-color-split: hsv(0, 0, 94%); // split border inside a component
+@heading-color: fade(@black, 85%);
+@text-color: fade(@black, 85%);
+@padding-md: 16px; // small containers and buttons
+@font-size-base: 14px;
+
+@modal-mask-bg: fade(@black, 50%);
+
+// Animation
+@ease-base-out: cubic-bezier(0.7, 0.3, 0.1, 1);
+@ease-base-in: cubic-bezier(0.9, 0, 0.3, 0.7);
+@ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+@ease-in: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+@ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+@ease-out-back: cubic-bezier(0.12, 0.4, 0.29, 1.46);
+@ease-in-back: cubic-bezier(0.71, -0.46, 0.88, 0.6);
+@ease-in-out-back: cubic-bezier(0.71, -0.46, 0.29, 1.46);
+@ease-out-circ: cubic-bezier(0.08, 0.82, 0.17, 1);
+@ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.34);
+@ease-in-out-circ: cubic-bezier(0.78, 0.14, 0.15, 0.86);
+@ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+@ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+@ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);

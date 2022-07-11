@@ -1,4 +1,4 @@
-var _excluded = ["getPopupContainer", "dropdownClassName", "showArrow", "virtual", "defaultOpen", "dropdownStyle", "style", "dropdownMatchSelectWidth", "optionLabelProp", "clearIcon", "prefixCls", "children"];
+var _excluded = ["getPopupContainer", "dropdownClassName", "showArrow", "virtual", "defaultOpen", "dropdownStyle", "style", "dropdownMatchSelectWidth", "optionLabelProp", "clearIcon", "placement", "prefixCls", "children"];
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
@@ -12,44 +12,51 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 import React from 'react';
 import RcSelect from 'rc-select';
+import { getTransitionName, getTransitionDirection } from '../_util/motion';
+import { ConfigContext } from '../config-provider/context';
 import './style/index.less';
 
-var InternalSelect = function InternalSelect(_ref) {
-  var getPopupContainer = _ref.getPopupContainer,
-      dropdownClassName = _ref.dropdownClassName,
-      _ref$showArrow = _ref.showArrow,
-      showArrow = _ref$showArrow === void 0 ? true : _ref$showArrow,
-      _ref$virtual = _ref.virtual,
-      virtual = _ref$virtual === void 0 ? true : _ref$virtual,
-      _ref$defaultOpen = _ref.defaultOpen,
-      defaultOpen = _ref$defaultOpen === void 0 ? false : _ref$defaultOpen,
-      _ref$dropdownStyle = _ref.dropdownStyle,
-      dropdownStyle = _ref$dropdownStyle === void 0 ? {
+var InternalSelect = function InternalSelect(props) {
+  var getPopupContainer = props.getPopupContainer,
+      dropdownClassName = props.dropdownClassName,
+      _props$showArrow = props.showArrow,
+      showArrow = _props$showArrow === void 0 ? true : _props$showArrow,
+      _props$virtual = props.virtual,
+      virtual = _props$virtual === void 0 ? true : _props$virtual,
+      _props$defaultOpen = props.defaultOpen,
+      defaultOpen = _props$defaultOpen === void 0 ? false : _props$defaultOpen,
+      _props$dropdownStyle = props.dropdownStyle,
+      dropdownStyle = _props$dropdownStyle === void 0 ? {
     maxHeight: 100,
     minHeight: 80,
-    overflow: "scroll"
-  } : _ref$dropdownStyle,
-      _ref$style = _ref.style,
-      style = _ref$style === void 0 ? {
+    overflowY: "auto"
+  } : _props$dropdownStyle,
+      _props$style = props.style,
+      style = _props$style === void 0 ? {
     width: 60
-  } : _ref$style,
-      _ref$dropdownMatchSel = _ref.dropdownMatchSelectWidth,
-      dropdownMatchSelectWidth = _ref$dropdownMatchSel === void 0 ? true : _ref$dropdownMatchSel,
-      _ref$optionLabelProp = _ref.optionLabelProp,
-      optionLabelProp = _ref$optionLabelProp === void 0 ? "children" : _ref$optionLabelProp,
-      _ref$clearIcon = _ref.clearIcon,
-      clearIcon = _ref$clearIcon === void 0 ? true : _ref$clearIcon,
-      _ref$prefixCls = _ref.prefixCls,
-      prefixCls = _ref$prefixCls === void 0 ? 'qui-no-border-select' : _ref$prefixCls,
-      children = _ref.children,
-      elseprops = _objectWithoutProperties(_ref, _excluded);
+  } : _props$style,
+      _props$dropdownMatchS = props.dropdownMatchSelectWidth,
+      dropdownMatchSelectWidth = _props$dropdownMatchS === void 0 ? true : _props$dropdownMatchS,
+      _props$optionLabelPro = props.optionLabelProp,
+      optionLabelProp = _props$optionLabelPro === void 0 ? "children" : _props$optionLabelPro,
+      _props$clearIcon = props.clearIcon,
+      clearIcon = _props$clearIcon === void 0 ? true : _props$clearIcon,
+      placement = props.placement,
+      customizePrefixCls = props.prefixCls,
+      children = props.children,
+      elseprops = _objectWithoutProperties(props, _excluded);
 
+  var _React$useContext = React.useContext(ConfigContext),
+      getPrefixCls = _React$useContext.getPrefixCls;
+
+  var prefixCls = getPrefixCls('no-border-select', customizePrefixCls);
+  var rootPrefixCls = getPrefixCls();
   return /*#__PURE__*/React.createElement(RcSelect, _objectSpread(_objectSpread({
     virtual: virtual,
     dropdownMatchSelectWidth: dropdownMatchSelectWidth
   }, elseprops), {}, {
     defaultOpen: defaultOpen,
-    // transitionName='223'
+    transitionName: getTransitionName(rootPrefixCls, getTransitionDirection(placement), props.transitionName),
     prefixCls: prefixCls,
     getPopupContainer: getPopupContainer,
     dropdownClassName: dropdownClassName,

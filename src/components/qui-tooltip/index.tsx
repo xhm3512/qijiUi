@@ -20,7 +20,7 @@ const Tooltip = forwardRef<unknown, TooltipProps>((props, ref) => {
   } = React.useContext(ConfigContext);
   const prefixCls = getPrefixCls('tooltip', customizePrefixCls);
   const rootPrefixCls = getPrefixCls();
-  const arrowContentStyle = { '--antd-arrow-background-color': 'rgba(0, 0, 0, 0.85)' };
+  const arrowContentStyle = { 'backgroundColor': 'rgba(0, 0, 0, 0.85)' };
   const getOverlay = () => {
     const { title, overlay } = props;
     if (title === 0) return title;

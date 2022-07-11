@@ -2,7 +2,7 @@ import React, { FC, ReactNode } from 'react';
 import './style/index.less';
 declare const ButtonHTMLTypes: ["submit", "button", "reset"];
 declare type ButtonHTMLType = typeof ButtonHTMLTypes[number];
-interface ButtonProps {
+export interface ButtonProps {
     onClick?: React.MouseEventHandler<HTMLElement>;
     type?: 'primary' | 'secondary' | 'outline';
     disabled?: boolean;

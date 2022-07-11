@@ -1,3 +1,8 @@
+@import '../../style/mixins/index.less';
+@import '../../style/themes/default.less';
+@import '../../style/mixins/modal-mask.less';
+@import '../../style/motion/slide.less';
+
 @select-prefix: ~'qui-no-border-select';
 
 * {
@@ -66,6 +71,10 @@
   }
   &-selection-item{
     width: 60%;
+    color: #A7AAB1;
+  }
+  &-item-option-content{
+    text-align: center;
   }
   // ============== Selector ===============
   .@{select-prefix}-selection-placeholder {

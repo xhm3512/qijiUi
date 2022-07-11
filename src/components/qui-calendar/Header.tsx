@@ -132,8 +132,8 @@ function ModeSwitch<DateType>(props: ModeSwitchProps<DateType>) {
       value={mode}
       className={`${prefixCls}-mode-switch`}
     >
-      <div value="month">{locale.month}</div>
-      <div value="year">{locale.year}</div>
+      {/* <div value="month">{locale.month}</div>
+      <div value="year">{locale.year}</div> */}
     </Group>
   );
 }
