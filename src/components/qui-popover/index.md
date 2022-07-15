@@ -12,19 +12,20 @@ group:
 ```tsx
 import React from 'react';
 import { QuiPopover } from 'qiji';
-import {Tooltip} from 'antd';
+import {Row,Tooltip} from 'antd';
 
 export default () =><QuiPopover
+// arrowPointAtCenter
 placement='bottomRight'
 // defaultVisible={true}
  content={
-   <div style={{padding:'0 10px'}}>
+   <div style={{padding:'0 10px',width:'703px'}}>
     <div style={{padding:'0 10px'}}>ww2</div>
      <div style={{padding:'0 10px'}}>ww2</div>
       <div style={{padding:'0 10px'}}>ww2</div>
    </div>
  } >
-<span style={{padding:'0 10px'}}>popover</span>
+<Row justify='end'>popoverpopoverpopoverpopover</Row>
 </QuiPopover>;
 ```
 ## API

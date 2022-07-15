@@ -50,7 +50,7 @@ export default () => (
     &nbsp;
     <br />
     <br />
-    <QuiButton type="primary" size="large" icon={<Icon />} loading>
+    <QuiButton type="primary" size="large"  loading>
       text
     </QuiButton>
     &nbsp;
@@ -158,7 +158,7 @@ export default () => (
       icon
     </QuiButton>{' '}
     &nbsp;
-    <QuiButton type="secondary" size="small" icon={<Icon />}>
+    <QuiButton type="secondary" size="small" icon={<Icon />} loading>
       icon
     </QuiButton> &nbsp;
     <QuiButton type="secondary" size="small" disabled icon={<Icon />}>

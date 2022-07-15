@@ -55,7 +55,7 @@ const Button: FC<ButtonProps> = ({
       disabled={disabled}
       type={htmlType}
     >
-      {icon && <span className="icon">{iconNode}</span>}
+      {<span className="icon">{iconNode}</span>}
       {children}
     </button>
   );
