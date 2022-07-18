@@ -35,7 +35,8 @@ const CheckedBoxGroup = React.forwardRef<HTMLDivElement, CheckedGroupProps>((pro
     style,
     ...restProps
   } = props;
-  const domProps = omit(restProps, ['value', 'disabled']);
+  // const domProps = omit(restProps, ['value', 'disabled']);
+  const domProps = omit(restProps, ['value']);
   React.useEffect(() => {
     if ('value' in restProps) {
       setValue(restProps.value || []);

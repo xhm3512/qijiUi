@@ -14,7 +14,10 @@ import React from 'react';
 import { QuiTooltip } from 'qiji';
 import {Tooltip} from 'antd';
 
-export default () =><QuiTooltip title="First Demo" >
+export default () =><QuiTooltip 
+title="First Demo" 
+defaultVisible={true}
+>
 <span style={{padding:'0 10px'}}>tooltip</span>
 </QuiTooltip>;
 ```

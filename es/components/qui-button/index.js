@@ -35,7 +35,7 @@ var Button = function Button(_ref) {
     onClick: onClick,
     disabled: disabled,
     type: htmlType
-  }, icon && /*#__PURE__*/React.createElement("span", {
+  }, /*#__PURE__*/React.createElement("span", {
     className: "icon"
   }, iconNode), children);
 };
