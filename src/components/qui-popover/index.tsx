@@ -2,13 +2,12 @@ import React from 'react';
 import QuiTooltip, { TooltipProps } from '../qui-tooltip'
 import { RenderFunction } from '../_util/getRenderPropValue';
 import { ConfigContext } from '../config-provider/context';
-import { getTransitionName,getTransitionDirection } from '../_util/motion';
+import { getTransitionName } from '../_util/motion';
 import './style/index.less'
 export interface PopoverProps extends TooltipProps {
   content?: React.ReactNode | RenderFunction;
 }
 const Popover = React.forwardRef<unknown, PopoverProps>(({
-  children,
   content,
   prefixCls: customizePrefixCls,
   overlay,
@@ -27,10 +26,7 @@ const Popover = React.forwardRef<unknown, PopoverProps>(({
     overlay={getOverlay(prefixCls)}
     transitionName={getTransitionName(rootPrefixCls, 'zoom-big', elseProps?.transitionName)}
     {...elseProps}
-  >
-  {children}
-  </QuiTooltip>;
-  
+  />
 })
 
 

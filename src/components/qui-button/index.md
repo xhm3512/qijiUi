@@ -5,9 +5,22 @@ group:
   order: 1
 ---
 
-## primary
+# Button按钮
+按钮用于开始一个即时操作。
+## 何时使用
+标记了一个（或封装一组）操作命令，响应用户点击行为，触发相应的业务逻辑。
 
-Demo:
+我们提供了五种按钮。
+
+primary：用于主行动点，一个操作区域只能有一个主按钮。
+
+outline：用于没有主次之分的一组行动点。
+
+secondary：常用于添加操作。
+
+## 代码演示
+
+#### primary
 
 ```tsx
 import React from 'react';
@@ -75,8 +88,6 @@ export default () => (
 
 ## outline
 
-Demo:
-
 ```tsx
 import React from 'react';
 import { QuiButton } from 'qiji';
@@ -123,8 +134,6 @@ export default () => (
 ```
 
 ## secondary
-
-Demo:
 
 ```tsx
 import React from 'react';

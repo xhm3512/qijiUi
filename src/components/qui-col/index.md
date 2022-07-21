@@ -5,10 +5,10 @@ group:
   order: 2
 ---
 
-## Col 珊格
+# Col 珊格
 
-Demo:
 
+## 代码演示
 ```tsx
 import React from 'react';
 import { QuiRow, QuiCol } from 'qiji';
