@@ -79,6 +79,7 @@
     "moment": "^2.29.3",
     "rc-checkbox": "^2.3.2",
     "rc-dialog": "^8.9.0",
+    "rc-drawer": "~4.4.2",
     "rc-input": "0.0.1-alpha.7",
     "rc-motion": "^2.6.0",
     "rc-picker": "^2.6.10",
