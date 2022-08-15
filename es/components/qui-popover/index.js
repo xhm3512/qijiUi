@@ -1,4 +1,4 @@
-var _excluded = ["children", "content", "prefixCls", "overlay"];
+var _excluded = ["content", "prefixCls", "overlay"];
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
@@ -16,8 +16,7 @@ import { ConfigContext } from '../config-provider/context';
 import { getTransitionName } from '../_util/motion';
 import './style/index.less';
 var Popover = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
-  var children = _ref.children,
-      content = _ref.content,
+  var content = _ref.content,
       customizePrefixCls = _ref.prefixCls,
       overlay = _ref.overlay,
       elseProps = _objectWithoutProperties(_ref, _excluded);
@@ -40,6 +39,6 @@ var Popover = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
     ref: ref,
     overlay: getOverlay(prefixCls),
     transitionName: getTransitionName(rootPrefixCls, 'zoom-big', elseProps === null || elseProps === void 0 ? void 0 : elseProps.transitionName)
-  }, elseProps), children);
+  }, elseProps));
 });
 export default Popover;

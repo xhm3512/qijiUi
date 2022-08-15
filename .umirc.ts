@@ -4,9 +4,35 @@ import { defineConfig } from 'dumi';
 //   title: 'Library Name',
 //   // more config: https://d.umijs.org/config
 // });
+const { url, api } = {
+  url: 'http://authorapi.qijizuopin.com',
+  api: '/authorapi'
+};
 export default defineConfig({
   // mfsu: {},
-  webpack5: {},
+  webpack5: {
+   
+  },
+  proxy: {
+    '/authorapi': {
+      target: url,
+      changeOrigin: true,
+      bypass: function (req, res, proxyOptions) {
+        req.headers['origin'] = url;
+        req.headers['host'] = url;
+        req.headers['referer'] = url;
+      },
+    },
+    '/upload': {
+      target: url,
+      changeOrigin: true,
+      bypass: function (req, res, proxyOptions) {
+        req.headers['origin'] = url;
+        req.headers['host'] = url;
+        req.headers['referer'] = url;
+      },
+    },
+  },
   dynamicImport: {},
   title: 'qiji',
   theme: {
