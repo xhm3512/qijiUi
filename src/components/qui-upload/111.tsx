@@ -81,7 +81,7 @@ const InternalUpload: React.ForwardRefRenderFunction<unknown, UploadProps> = (pr
       }
     });
   }, [fileList]);
-// 上传数据发生改变处理
+
   const onInternalChange = (
     file: UploadFile,
     changedFileList: UploadFile[],
@@ -320,50 +320,43 @@ const InternalUpload: React.ForwardRefRenderFunction<unknown, UploadProps> = (pr
     delete rcUploadProps.id;
   }
 
-  const renderUploadList = (button?: React.ReactNode, buttonVisible?: boolean) =>
-    showUploadList ? (
-      <div>
-        {
-          () => {
-            const {
-              showRemoveIcon,
-              showPreviewIcon,
-              showDownloadIcon,
-              removeIcon,
-              previewIcon,
-              downloadIcon,
-            } =
-              typeof showUploadList === 'boolean' ? ({} as ShowUploadListInterface) : showUploadList;
-            return (
-              <UploadList
-                listType={listType}
-                items={mergedFileList}
-                previewFile={previewFile}
-                onPreview={onPreview}
-                onDownload={onDownload}
-                onRemove={handleRemove}
-                showRemoveIcon={!disabled && showRemoveIcon}
-                showPreviewIcon={showPreviewIcon}
-                showDownloadIcon={showDownloadIcon}
-                removeIcon={removeIcon}
-                previewIcon={previewIcon}
-                downloadIcon={downloadIcon}
-                iconRender={iconRender}
-                locale={{ ...propLocale }}
-                isImageUrl={isImageUrl}
-                progress={progress}
-                appendAction={button}
-                appendActionVisible={buttonVisible}
-                itemRender={itemRender}
-              />
-            )
-          }
-        }
+  const renderUploadList = (button?: React.ReactNode, buttonVisible?: boolean) => {
+    if (showUploadList) {
+      const {
+        showRemoveIcon,
+        showPreviewIcon,
+        showDownloadIcon,
+        removeIcon,
+        previewIcon,
+        downloadIcon,
+      } =
+        typeof showUploadList === 'boolean' ? ({} as ShowUploadListInterface) : showUploadList;
+      return <div>
+        <UploadList
+          listType={listType}
+          items={mergedFileList}
+          previewFile={previewFile}
+          onPreview={onPreview}
+          onDownload={onDownload}
+          onRemove={handleRemove}
+          showRemoveIcon={!disabled && showRemoveIcon}
+          showPreviewIcon={showPreviewIcon}
+          showDownloadIcon={showDownloadIcon}
+          removeIcon={removeIcon}
+          previewIcon={previewIcon}
+          downloadIcon={downloadIcon}
+          iconRender={iconRender}
+          locale={{ ...propLocale }}
+          isImageUrl={isImageUrl}
+          progress={progress}
+          appendAction={button}
+          appendActionVisible={buttonVisible}
+          itemRender={itemRender}
+        />
       </div>
-    ) : (
-      button
-    );
-
+    }
+    return button;
+  }
   if (type === 'drag') {
     const dragCls = classNames(
       prefixCls,
@@ -442,7 +435,7 @@ Upload.Dragger = Dragger;
 
 Upload.LIST_IGNORE = LIST_IGNORE;
 
-Upload.displayName = 'Upload';
+// Upload.displayName = 'Upload';
 
 Upload.defaultProps = {
   type: 'select' as UploadType,

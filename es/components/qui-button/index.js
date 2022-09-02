@@ -24,20 +24,22 @@ var Button = function Button(_ref) {
       className = _ref.className,
       _ref$hover = _ref.hover,
       hover = _ref$hover === void 0 ? false : _ref$hover;
-  var iconNode = icon && !loading ? icon : /*#__PURE__*/React.createElement(LoadingIcon, {
+  var iconNode = icon && !loading ? /*#__PURE__*/React.createElement("span", {
+    className: "icon"
+  }, " icon") : icon ? /*#__PURE__*/React.createElement("span", {
+    className: "icon"
+  }, /*#__PURE__*/React.createElement(LoadingIcon, {
     existIcon: !!icon,
     prefixCls: prefixCls,
     loading: !!loading
-  });
+  })) : /*#__PURE__*/React.createElement("span", null);
   var classes = classNames("".concat(prefixCls, " ").concat(prefixCls, "-button"), "".concat(prefixCls, "-").concat(type), "".concat(prefixCls, "-").concat(type, "-").concat(size), className, _defineProperty({}, "".concat(prefixCls, "-").concat(type, "-hover"), hover));
   return /*#__PURE__*/React.createElement("button", {
     className: classes,
     onClick: onClick,
     disabled: disabled,
     type: htmlType
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "icon"
-  }, iconNode), children);
+  }, iconNode, children);
 };
 
 export default Button;

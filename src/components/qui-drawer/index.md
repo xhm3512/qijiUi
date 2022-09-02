@@ -11,10 +11,11 @@ group:
 ```tsx
 import React, { useState } from 'react';
 import { QuiDrawer,QuiButton } from 'qiji';
+import Drawer from 'rc-drawer';
 export default () => {
   const [visible, setVisible] = useState(false); // 弹窗是否可见,默认不可见,点击按钮后弹窗出现
   const onClick = () => {
-    setVisible(true);
+    setVisible(!visible);
   };
   const onClose=()=>{
     setVisible(false)
@@ -25,11 +26,13 @@ export default () => {
       open
     </QuiButton>
       <QuiDrawer
+      handler={false}
+      keyboard={true}
         // maskClosable={true}
         // placement='right'
         visible={visible}
         onClose={onClose}
-        width={'calc(100vw - 256px)'}
+        width={'200px'}
       >
         <div>content</div>
       </QuiDrawer>

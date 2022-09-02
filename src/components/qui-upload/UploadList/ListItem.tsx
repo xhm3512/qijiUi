@@ -5,7 +5,7 @@ import EyeOutlined from '@ant-design/icons/EyeOutlined';
 import DeleteOutlined from '@ant-design/icons/DeleteOutlined';
 import DownloadOutlined from '@ant-design/icons/DownloadOutlined';
 import Tooltip from '../../qui-tooltip';
-import Progress from '../../progress';
+// import Progress from '../../progress';
 import { ConfigContext } from '../../config-provider/context';
 
 import {
@@ -249,14 +249,14 @@ const ListItem = React.forwardRef(
           >
             {({ className: motionClassName }) => {
               // show loading icon if upload progress listener is disabled
-              const loadingProgress =
-                'percent' in file ? (
-                  <div {...progressProps} type="line" percent={file.percent} />
-                ) : null;
+              // const loadingProgress =
+              //   'percent' in file ? (
+              //     <div {...progressProps} type="line" percent={file.percent} />
+              //   ) : null;
 
               return (
                 <div className={classNames(`${prefixCls}-list-item-progress`, motionClassName)}>
-                  {loadingProgress}
+                  {/* {loadingProgress} */}
                 </div>
               );
             }}
@@ -265,24 +265,24 @@ const ListItem = React.forwardRef(
       </div>
     );
     const listContainerNameClass = classNames(`${prefixCls}-list-${listType}-container`, className);
-    const item =
-      file.status === 'error' ? (
-        <Tooltip title={message} getPopupContainer={node => node.parentNode as HTMLElement}>
-          {dom}
-        </Tooltip>
-      ) : (
-        dom
-      );
+    // const item =
+    //   file.status === 'error' ? (
+    //     <Tooltip title={message} getPopupContainer={node => node.parentNode as HTMLElement}>
+    //       {dom}
+    //     </Tooltip>
+    //   ) : (
+    //     dom
+    //   );
 
     return (
       <div className={listContainerNameClass} style={style} ref={ref}>
-        {itemRender
+        {/* {itemRender
           ? itemRender(item, file, items, {
               download: onDownload.bind(null, file),
-              preview: onPreview.bind(null, file),
+              // preview: onPreview.bind(null, file),
               remove: onClose.bind(null, file),
             })
-          : item}
+          : item} */}
       </div>
     );
   },
