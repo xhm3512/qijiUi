@@ -10,6 +10,7 @@ group:
 语义化的矢量图形
 
 ### 图标列表
+#### 网站通用图标
 
 ```tsx
 import React from 'react';
@@ -20,11 +21,13 @@ const {
   WorksManagerCustom,
   DataCustom,
   SalaryCustom,
-  UserCustom,
   NewsCustom,
-  ArrowCustom,
   ToolTipCustom,
   SwitchCustom,
+  EditorCustom,
+  PreviewCustom,
+  PreviewHiddenCustom,
+  SoundCustom,
 } = QuiIcons;
 const arr = [
   {
@@ -40,16 +43,8 @@ const arr = [
     components: <SalaryCustom />,
   },
   {
-    id: 'UserCustom',
-    components: <UserCustom />,
-  },
-  {
     id: 'NewsCustom',
     components: <NewsCustom />,
-  },
-  {
-    id: 'ArrowCustom',
-    components: <ArrowCustom />,
   },
   // {
   //   id: 'ToolTipCustom',
@@ -58,6 +53,18 @@ const arr = [
   {
     id: 'SwitchCustom',
     components: <SwitchCustom />,
+  },
+  {
+    id: 'PreviewCustom',
+    components: <PreviewCustom />,
+  },
+  {
+    id: 'PreviewHiddenCustom',
+    components: <PreviewHiddenCustom />,
+  },
+   {
+    id: 'SoundCustom',
+    components: <SoundCustom />,
   },
 ];
 export default () => (
@@ -71,7 +78,79 @@ export default () => (
   </Row>
 );
 ```
+#### 编辑类图标
 
+```tsx
+import React from 'react';
+import { QuiIcons } from 'qiji';
+import { Row, Col, Divider } from 'antd';
+import './md.less';
+const {
+  UserCustom,
+  DeleteCustom,
+  EditorCustom,
+  
+} = QuiIcons;
+const arr = [
+  {
+    id: 'UserCustom',
+    components: <UserCustom />,
+  },
+
+   {
+    id: 'DeleteCustom',
+    components: <DeleteCustom />,
+  },
+ 
+  {
+    id: 'EditorCustom',
+    components: <EditorCustom />,
+  },
+];
+export default () => (
+  <Row style={{ fontSize: '30px' }}>
+    {arr.map(item => (
+      <div className="item-box" key={item.id}>
+        <div className="icon">{item.components}</div>
+        <div className="icon-name">{item.id}</div>
+      </div>
+    ))}
+  </Row>
+);
+```
+#### 方向性图标
+
+```tsx
+import React from 'react';
+import { QuiIcons } from 'qiji';
+import { Row, Col, Divider } from 'antd';
+import './md.less';
+const {
+  BottomCustom,
+  ArrowCustom,
+} = QuiIcons;
+const arr = [
+  {
+    id: 'BottomCustom',
+    components: <BottomCustom />,
+  },
+  {
+    id: 'ArrowCustom',
+    components: <ArrowCustom />,
+  },
+ 
+];
+export default () => (
+  <Row style={{ fontSize: '30px' }}>
+    {arr.map(item => (
+      <div className="item-box" key={item.id}>
+        <div className="icon">{item.components}</div>
+        <div className="icon-name">{item.id}</div>
+      </div>
+    ))}
+  </Row>
+);
+```
 ## API
 
 `Icon` 中的 `component` 组件的接受的属性如下：

@@ -9,6 +9,12 @@ import NewsSvg from './NewsSvg';
 import ToolTipCustom from './ToolTip';
 import SwitchSvg from './Switch';
 import ArrowSvg from './Arrow';
+import EditorSvg from './Editor2';
+import PreviewSvg from './Preview';
+import PreviewHiddenSvg from './PreviewHidden';
+import DeleteSvg from './Delete';
+import SoundSvg from './Sound';
+import BottomSvg from './Bottom';
 import './style/index.less'
 export interface CustomIconComponentProps {
   width: string | number;
@@ -32,6 +38,12 @@ const UserCustom = CustomIcon(UserSvg);
 const NewsCustom = CustomIcon(NewsSvg);
 const ArrowCustom = CustomIcon(ArrowSvg);
 const SwitchCustom = CustomIcon(SwitchSvg);
+const EditorCustom = CustomIcon(EditorSvg);
+const PreviewCustom = CustomIcon(PreviewSvg);
+const PreviewHiddenCustom = CustomIcon(PreviewHiddenSvg);
+const DeleteCustom = CustomIcon(DeleteSvg);
+const SoundCustom = CustomIcon(SoundSvg);
+const BottomCustom = CustomIcon(BottomSvg);
 
 // const ToolTipCustom = CustomIcon(ToolTipDiv);
 
@@ -45,4 +57,10 @@ export default {
   ArrowCustom,
   ToolTipCustom,
   SwitchCustom,
+  EditorCustom,
+  PreviewCustom,
+  PreviewHiddenCustom,
+  DeleteCustom,
+  SoundCustom,
+  BottomCustom,
 };

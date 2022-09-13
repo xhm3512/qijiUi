@@ -67,18 +67,18 @@ export default () => (
       text
     </QuiButton>
     &nbsp;
-    <QuiButton type="primary" size="middle" icon={<Icon />} loading>
+    <QuiButton type="primary" size="middle" loading>
       text
     </QuiButton>
     &nbsp;
-    <QuiButton type="primary" size="small" icon={<Icon />} loading>
+    <QuiButton type="primary" size="small"  loading>
       text
     </QuiButton>
     &nbsp;
-    <QuiButton type="primary" size="small" icon={<Icon />} loading>
+    <QuiButton type="primary" size="small"  loading>
       text
     </QuiButton>&nbsp;
-    <QuiButton type="primary" size="small" icon={<Icon />} loading disabled>
+    <QuiButton type="primary" size="small" loading disabled>
       text
     </QuiButton>
     &nbsp;

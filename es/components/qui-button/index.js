@@ -26,7 +26,7 @@ var Button = function Button(_ref) {
       hover = _ref$hover === void 0 ? false : _ref$hover;
   var iconNode = icon && !loading ? /*#__PURE__*/React.createElement("span", {
     className: "icon"
-  }, " icon") : icon ? /*#__PURE__*/React.createElement("span", {
+  }, icon) : icon || loading ? /*#__PURE__*/React.createElement("span", {
     className: "icon"
   }, /*#__PURE__*/React.createElement(LoadingIcon, {
     existIcon: !!icon,

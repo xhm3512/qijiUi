@@ -31,9 +31,9 @@ const Button: FC<ButtonProps> = ({
 }) => {
   const iconNode =
     icon && !loading ? (
-      <span className="icon"> icon</span>
+      <span className="icon">{icon}</span>
     ) : (
-      icon ? <span className="icon">
+      (icon || loading) ? <span className="icon">
         <LoadingIcon
           existIcon={!!icon}
           prefixCls={prefixCls}
