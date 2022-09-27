@@ -21,10 +21,9 @@ export default () => {
   const onChange=(e,checked)=>{
   }
   return <QuiRadio 
-      style={{minWidth:80}}
-   checked
+      checked
       onChange={onChange}
-      value='1' >1</QuiRadio>
+      value='radio' >radio</QuiRadio>
 
 };
 ```
@@ -38,24 +37,21 @@ const {QuiGroup}=QuiRadio;
 export default () => {
   const onChange=(e,checked)=>{
   }
-  return <QuiGroup value='1' >
+  return <QuiGroup value='apple' >
        <QuiRadio 
-      style={{minWidth:80}}
    
       onChange={onChange}
-      value='1' >1</QuiRadio>
+      value='apple' >apple</QuiRadio>
       <QuiRadio 
-      style={{minWidth:80}}
    
       // disabled
       onChange={onChange}
-      value='2' >1</QuiRadio>
+      value='pear'>pear</QuiRadio>
        <QuiRadio 
-      style={{minWidth:80}}
    
-      // disabled
+      disabled
       onChange={onChange}
-      value='3' >1</QuiRadio>
+      value='orange' >orange</QuiRadio>
 
   </QuiGroup>
 

@@ -1,9 +1,11 @@
 @btn-prefix-cls: ~'qiji-oni-btn';
+@import url(../../style//themes//default.less);
 .@{btn-prefix-cls} {
   &-button {
     border-radius: 4px;
     // padding: 6px 16px;
     // min-width: 64px;
+    color: #fff;
     border: none;
     // font-weight: 600;
     font-size: 15px;
@@ -74,26 +76,47 @@
     border: 0.7px solid rgba(249, 90, 88, 0.4);
     color: #f95a58;
   }
-  .icon {
-    margin-right: 8px;
-  }
+  // .icon {
+  //   margin-right: 8px;
+  // }
 
   &-primary-large,
   &-outline-large,
   &-secondary-large {
     padding: 9px 40px;
-    line-height: 22px;
+    // line-height: 22px;
   }
   &-primary-middle,
   &-outline-middle,
   &-secondary-middle {
     padding: 6px 32px;
-    line-height: 20px;
+    // line-height: 20px;
   }
   &-primary-small,
   &-outline-small,
   &-secondary-small {
-    padding: 5px 16px;
-    line-height: 18px;
+    padding: 5px 12px;
+    // line-height: 18px;
+  }
+  > span + .anticon,> .anticon + span, > span + img ,> img + span{
+    margin-left: 8px;
+  }
+  & > &-loading-icon {
+    transition: width  .3s cubic-bezier(.645,.045,.355,1);;
+
+    .@{iconfont-css-prefix} {
+      padding-right: @padding-xs;
+      animation: none;
+      // for smooth button padding transition
+      svg {
+        animation: loadingCircle 1s infinite linear;
+      }
+    }
+
+    &:only-child {
+      .@{iconfont-css-prefix} {
+        padding-right: 0;
+      }
+    }
   }
 }

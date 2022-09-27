@@ -24,10 +24,12 @@ secondary：常用于添加操作。
 
 ```tsx
 import React from 'react';
-import { QuiButton } from 'qiji';
+import { QuiButton,QuiIcons } from 'qiji';
+const { EditorCustom }=QuiIcons;
 const Icon = () => {
-  return <span type="primary">+</span>;
+  return <EditorCustom/>;
 };
+
 export default () => (
   <>
     <QuiButton type="primary" size="large">

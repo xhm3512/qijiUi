@@ -1,9 +1,8 @@
 @radio-prefix: ~'qui-radio';
+@radio-size:8px;
 .@{radio-prefix}-wrapper:not(.@{radio-prefix}-wrapper-disabled){
   height: 30px;
-  min-width: 80px;
   line-height: 30px;
-  padding:0 12px;
   margin-right: 14px;
   display: inline-block;
   position: relative;
@@ -17,7 +16,7 @@
   .@{radio-prefix}-text{
     font-size: 14px;
     letter-spacing: -0.856px;
-    margin-left: 7px;
+    padding: 0 8px;
   }
 }
 .@{radio-prefix}{
@@ -40,7 +39,7 @@
 }
 
 .@{radio-prefix}-wrapper:not(.@{radio-prefix}-wrapper-checked):not(.@{radio-prefix}-wrapper-disabled){
-  background: #FBFBFB;
+  // background: #FBFBFB;
 
   .@{radio-prefix}-inner{
     width: 16px;
@@ -51,6 +50,13 @@
     height: 16px;
     border: 1px solid #D2D4D9;
     border-radius: 50%;
+    
+  }
+  &:hover{
+    .@{radio-prefix}-inner{
+      border: 1px solid #FC9C75;
+
+    }
   }
   .@{radio-prefix}-text{
     color: #161823;
@@ -58,7 +64,7 @@
 }
 // 已选中
 .@{radio-prefix}-wrapper-checked{
-  background: rgba(249, 90, 88, 0.1);
+  // background: rgba(249, 90, 88, 0.1);
   .@{radio-prefix}-inner{
     width: 16px;
     height: 16px;
@@ -66,26 +72,43 @@
     position: relative;
     width: 16px;
     height: 16px;
-    border: 5px solid #F95A58;
+    border: 1px solid #FC9C75;
     display: inline-block;
     border-radius: 50%;
-   
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: @radio-size;
+      height: @radio-size;
+      margin-top: -(@radio-size / 2);
+      margin-left: -(@radio-size / 2);
+      background-color: #F86543;
+      border-top: 0;
+      border-left: 0;
+      border-radius: @radio-size;
+      // transform: scale(0);
+      // opacity: 0;
+      transition: all .3s cubic-bezier(.78,.14,.15,.86);
+      content: ' ';
+    }
   }
+ 
   .@{radio-prefix}-text{
-    color: #F95A58;
+    // color: #F86543;
   }
 }
   
 // 禁止点击状态-已选中
 .@{radio-prefix}-wrapper-disabled{
   height: 30px;
-  min-width: 80px;
   line-height: 30px;
   padding:0 12px;
   margin-right: 14px;
   display: inline-block;
   position: relative;
-  background: #FBFBFB;
+  // background: #FBFBFB;
   cursor:not-allowed;
   input[type='radio'] {
     width: 16px;
@@ -106,9 +129,27 @@
     position: relative;
     width: 16px;
     height: 16px;
-    border: 5px solid #D2D4D9;
+    border: 1px solid #d9d9d9;
     display: inline-block;
     border-radius: 50%;
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: @radio-size;
+      height: @radio-size;
+      margin-top: -(@radio-size / 2);
+      margin-left: -(@radio-size / 2);
+      background-color: #0003;
+      border-top: 0;
+      border-left: 0;
+      border-radius: @radio-size;
+      // transform: scale(0);
+      // opacity: 0;
+      transition: all .3s cubic-bezier(.78,.14,.15,.86);
+      content: ' ';
+    }
    
   }
   .@{radio-prefix}-text{
@@ -129,7 +170,26 @@
     position: relative;
     width: 16px;
     height: 16px;
-    border: 1px solid #D2D4D9;
+    border: 1px solid #d9d9d9;
+    background-color: #f5f5f5;
     border-radius: 50%;
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: 16px;
+      height:16px;
+      margin-top: -(16px / 2);
+      margin-left: -(16px / 2);
+      background-color: transparent;
+      border-top: 0;
+      border-left: 0;
+      border-radius: 16px;
+      // transform: scale(0);
+      // opacity: 0;
+      transition: all .3s cubic-bezier(.78,.14,.15,.86);
+      content: ' ';
+    }
   }
 }

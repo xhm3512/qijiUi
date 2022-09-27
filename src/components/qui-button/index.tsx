@@ -31,15 +31,13 @@ const Button: FC<ButtonProps> = ({
 }) => {
   const iconNode =
     icon && !loading ? (
-      <span className="icon">{icon}</span>
+      icon
     ) : (
-      (icon || loading) ? <span className="icon">
-        <LoadingIcon
-          existIcon={!!icon}
-          prefixCls={prefixCls}
-          loading={!!loading}
-        />
-      </span> : <span></span>
+      (icon || loading) ?  <LoadingIcon
+      existIcon={!!icon}
+      prefixCls={prefixCls}
+      loading={!!loading}
+    /> : <span></span>
     );
   const classes = classNames(
     `${prefixCls} ${prefixCls}-button`,
@@ -58,7 +56,7 @@ const Button: FC<ButtonProps> = ({
       type={htmlType}
     >
       {iconNode}
-      {children}
+      <span>{children}</span>
     </button>
   );
 };
