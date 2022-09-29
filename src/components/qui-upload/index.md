@@ -18,38 +18,76 @@ group:
 当需要使用拖拽交互时。
 
 ## 代码演示
-#### 经典款式
+
+#### 点击上传
 用户点击按钮弹出文件选择框。
 ```tsx
-import React,{useState} from 'react';
-import { QuiUpload ,QuiButton} from 'qiji';
-
-const {Dragger}=QuiUpload;
+import React, { useState } from 'react';
+import { QuiUpload, QuiButton } from 'qiji';
+const { UploadList } = QuiUpload;
+const { Dragger } = QuiUpload;
 
 export default () => {
+    const [list, setList] = useState([])
+    const props: UploadProps = {
+        multiple: true,
+        beforeUpload(file){
+          // 上传前格式校验
+          return file.type === 'image/png'
+        },
+        onChange(file) {
+            setList(file.fileList)
+        },
+        onSuccess(info, file, list) {
+            console.log('onSuccess', list)
+        },
+    };
+    return <>
+        <QuiUpload {...props} multiple={false} accept='.png,.jpg'>
+            <QuiButton>Click to Upload</QuiButton>
+           
+        </QuiUpload>
 
-const props: UploadProps = {
-  name: 'file',
-  action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
-  headers: {
-    authorization: 'authorization-text',
-  },
-  multiple:true,
-  onChange(info) {
-    console.log(info)
-    // if (info.file.status !== 'uploading') {
-    //   console.log(info.file, info.fileList);
-    // }
-    // if (info.file.status === 'done') {
-    //   message.success(`${info.file.name} file uploaded successfully`);
-    // } else if (info.file.status === 'error') {
-    //   message.error(`${info.file.name} file upload failed.`);
-    // }
-  },
+    </>
 };
-return <QuiUpload {...props}>
-    <QuiButton>Click to Upload</QuiButton>
-  </QuiUpload>
+```
+
+#### 自定义上传列表展示
+用户点击按钮弹出文件选择框。
+```tsx
+import React, { useState } from 'react';
+import { QuiUpload, QuiButton } from 'qiji';
+const { UploadList } = QuiUpload;
+const { Dragger } = QuiUpload;
+
+export default () => {
+    const [list, setList] = useState([])
+    const props: UploadProps = {
+        multiple: true,
+        onChange(file) {
+            setList(file.fileList)
+        },
+        fileList: list,
+        onRemove() {
+          
+        },
+        onSuccess(info, file, list) {
+            console.log('onSuccess', list)
+        },
+    };
+    return <>
+        <QuiUpload {...props}>
+            <QuiButton>Click to Upload</QuiButton>
+            <UploadList>
+                {
+                    list.map(item => {
+                        return <div key={item.uid} itemfile={item} className='item-box'>333</div>
+                    })
+                }
+            </UploadList>
+        </QuiUpload>
+
+    </>
 };
 ```
 

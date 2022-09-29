@@ -165,31 +165,3 @@ export interface UploadProps<T = any> extends Pick<RcUploadProps, 'capture'> {
   /** Config max count of `fileList`. Will replace current one when `maxCount` is 1 */
   maxCount?: number;
 }
-
-export interface UploadState<T = any> {
-  fileList: UploadFile<T>[];
-  dragState: string;
-}
-
-export interface UploadListProps<T = any> {
-  listType?: UploadListType;
-  onPreview?: (file: UploadFile<T>) => void;
-  onDownload?: (file: UploadFile<T>) => void;
-  onRemove?: (file: UploadFile<T>) => void | boolean;
-  items?: Array<UploadFile<T>>;
-  progress?: UploadListProgressProps;
-  prefixCls?: string;
-  showRemoveIcon?: boolean;
-  showDownloadIcon?: boolean;
-  showPreviewIcon?: boolean;
-  removeIcon?: React.ReactNode | ((file: UploadFile) => React.ReactNode);
-  downloadIcon?: React.ReactNode | ((file: UploadFile) => React.ReactNode);
-  previewIcon?: React.ReactNode | ((file: UploadFile) => React.ReactNode);
-  locale: UploadLocale;
-  previewFile?: PreviewFileHandler;
-  iconRender?: (file: UploadFile<T>, listType?: UploadListType) => React.ReactNode;
-  isImageUrl?: (file: UploadFile) => boolean;
-  appendAction?: React.ReactNode;
-  appendActionVisible?: boolean;
-  itemRender?: ItemRender<T>;
-}
