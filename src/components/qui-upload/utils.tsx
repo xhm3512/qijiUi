@@ -28,8 +28,6 @@ export function updateFileList(file: UploadFile<any>, fileList: UploadFile<any>[
 
 export function getFileItem(file: RcFile, fileList: UploadFile[]) {
   const matchKey = file.uid !== undefined ? 'uid' : 'name';
-  console.log(34511,file,matchKey,fileList);
-  
   return fileList.filter(item => item[matchKey] === file[matchKey])[0];
 }
 

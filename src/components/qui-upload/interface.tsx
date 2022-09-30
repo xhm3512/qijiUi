@@ -1,46 +1,10 @@
 import * as React from 'react';
-import { tuple } from '../_util/type';
 import {
   RcFile as OriRcFile,
   UploadRequestOption as RcCustomRequestOptions,
   UploadProps as RcUploadProps,
 } from 'rc-upload/lib/interface';
-// import { ProgressProps } from '../progress';
-const ProgressTypes = tuple('line', 'circle', 'dashboard');
-export type ProgressType = typeof ProgressTypes[number];
-const ProgressStatuses = tuple('normal', 'exception', 'active', 'success');
-export type ProgressSize = 'default' | 'small';
-export interface SuccessProps {
-  percent?: number;
-  /** @deprecated Use `percent` instead */
-  progress?: number;
-  strokeColor?: string;
-}
-export type StringGradients = { [percentage: string]: string };
-type FromToGradients = { from: string; to: string };
-export type ProgressGradient = { direction?: string } & (StringGradients | FromToGradients);
-export interface ProgressProps {
-  prefixCls?: string;
-  className?: string;
-  type?: ProgressType;
-  percent?: number;
-  format?: (percent?: number, successPercent?: number) => React.ReactNode;
-  status?: typeof ProgressStatuses[number];
-  showInfo?: boolean;
-  strokeWidth?: number;
-  strokeLinecap?: 'butt' | 'square' | 'round';
-  strokeColor?: string | ProgressGradient;
-  trailColor?: string;
-  width?: number;
-  success?: SuccessProps;
-  style?: React.CSSProperties;
-  gapDegree?: number;
-  gapPosition?: 'top' | 'bottom' | 'left' | 'right';
-  size?: ProgressSize;
-  steps?: number;
-  /** @deprecated Use `success` instead */
-  successPercent?: number;
-}
+
 export interface RcFile extends OriRcFile {
   readonly lastModifiedDate: Date;
 }
@@ -101,7 +65,7 @@ export interface UploadLocale {
 
 export type UploadType = 'drag' | 'select';
 export type UploadListType = 'text' | 'picture' | 'picture-card';
-export type UploadListProgressProps = Omit<ProgressProps, 'percent' | 'type'>;
+export type UploadListProgressProps = Omit<any, 'percent' | 'type'>;
 
 export type ItemRender<T = any> = (
   originNode: React.ReactElement,
@@ -164,4 +128,32 @@ export interface UploadProps<T = any> extends Pick<RcUploadProps, 'capture'> {
   itemRender?: ItemRender<T>;
   /** Config max count of `fileList`. Will replace current one when `maxCount` is 1 */
   maxCount?: number;
+}
+
+export interface UploadState<T = any> {
+  fileList: UploadFile<T>[];
+  dragState: string;
+}
+
+export interface UploadListProps<T = any> {
+  listType?: UploadListType;
+  onPreview?: (file: UploadFile<T>) => void;
+  onDownload?: (file: UploadFile<T>) => void;
+  onRemove?: (file: UploadFile<T>) => void | boolean;
+  items?: Array<UploadFile<T>>;
+  progress?: UploadListProgressProps;
+  prefixCls?: string;
+  showRemoveIcon?: boolean;
+  showDownloadIcon?: boolean;
+  showPreviewIcon?: boolean;
+  removeIcon?: React.ReactNode | ((file: UploadFile) => React.ReactNode);
+  downloadIcon?: React.ReactNode | ((file: UploadFile) => React.ReactNode);
+  previewIcon?: React.ReactNode | ((file: UploadFile) => React.ReactNode);
+  locale: UploadLocale;
+  previewFile?: PreviewFileHandler;
+  iconRender?: (file: UploadFile<T>, listType?: UploadListType) => React.ReactNode;
+  isImageUrl?: (file: UploadFile) => boolean;
+  appendAction?: React.ReactNode;
+  appendActionVisible?: boolean;
+  itemRender?: ItemRender<T>;
 }
