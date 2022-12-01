@@ -15,6 +15,12 @@ import NewsSvg from './NewsSvg';
 import ToolTipCustom from './ToolTip';
 import SwitchSvg from './Switch';
 import ArrowSvg from './Arrow';
+import EditorSvg from './Editor2';
+import PreviewSvg from './Preview';
+import PreviewHiddenSvg from './PreviewHidden';
+import DeleteSvg from './Delete';
+import SoundSvg from './Sound';
+import BottomSvg from './Bottom';
 import './style/index.less';
 
 var CustomIcon = function CustomIcon(Component) {
@@ -32,7 +38,13 @@ var SalaryCustom = CustomIcon(SalarySvg);
 var UserCustom = CustomIcon(UserSvg);
 var NewsCustom = CustomIcon(NewsSvg);
 var ArrowCustom = CustomIcon(ArrowSvg);
-var SwitchCustom = CustomIcon(SwitchSvg); // const ToolTipCustom = CustomIcon(ToolTipDiv);
+var SwitchCustom = CustomIcon(SwitchSvg);
+var EditorCustom = CustomIcon(EditorSvg);
+var PreviewCustom = CustomIcon(PreviewSvg);
+var PreviewHiddenCustom = CustomIcon(PreviewHiddenSvg);
+var DeleteCustom = CustomIcon(DeleteSvg);
+var SoundCustom = CustomIcon(SoundSvg);
+var BottomCustom = CustomIcon(BottomSvg); // const ToolTipCustom = CustomIcon(ToolTipDiv);
 
 export default {
   HomeCustom: HomeCustom,
@@ -43,5 +55,11 @@ export default {
   NewsCustom: NewsCustom,
   ArrowCustom: ArrowCustom,
   ToolTipCustom: ToolTipCustom,
-  SwitchCustom: SwitchCustom
+  SwitchCustom: SwitchCustom,
+  EditorCustom: EditorCustom,
+  PreviewCustom: PreviewCustom,
+  PreviewHiddenCustom: PreviewHiddenCustom,
+  DeleteCustom: DeleteCustom,
+  SoundCustom: SoundCustom,
+  BottomCustom: BottomCustom
 };

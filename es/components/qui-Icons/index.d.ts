@@ -20,5 +20,11 @@ declare const _default: {
         active: boolean;
     }>;
     SwitchCustom: (props: any) => JSX.Element;
+    EditorCustom: (props: any) => JSX.Element;
+    PreviewCustom: (props: any) => JSX.Element;
+    PreviewHiddenCustom: (props: any) => JSX.Element;
+    DeleteCustom: (props: any) => JSX.Element;
+    SoundCustom: (props: any) => JSX.Element;
+    BottomCustom: (props: any) => JSX.Element;
 };
 export default _default;

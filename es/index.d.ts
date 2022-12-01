@@ -9,7 +9,6 @@ export { default as QuiRadio } from './components/qui-radio';
 export { default as QuiSelect } from './components/qui-select';
 export { default as QuiCheckbox } from './components/qui-checkbox';
 export { default as QuiDatePicker } from './components/qui-date-picker';
-export { default as QuiUpload } from './components/qui-upload';
 export { default as QuiPopover } from './components/qui-popover';
 export { default as QuiStatistic } from './components/qui-statistic';
 export { default as QuiTabs } from './components/qui-tabs';
