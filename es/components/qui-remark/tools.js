@@ -1,18 +1,15 @@
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 import { colorRgbHight } from './constants';
-
 var clearSelection = function clearSelection() {
   var _document$getSelectio;
-
   (_document$getSelectio = document.getSelection()) === null || _document$getSelectio === void 0 ? void 0 : _document$getSelectio.empty();
-}; // 获取鼠标在页面的位置
-
-
+};
+// 获取鼠标在页面的位置
 var getMouseLOcal = function getMouseLOcal(_e) {
   var e = _e || window.event;
   return {
@@ -26,14 +23,11 @@ var getMouseLOcal = function getMouseLOcal(_e) {
  * @param {*} attr  当前后去属性
  * @returns
  */
-
-
 function getStyle(obj, attr) {
   if (obj.currentStyle) {
     // 兼容IE
     return obj.currentStyle[attr];
   }
-
   return getComputedStyle(obj, null)[attr];
 }
 /**
@@ -41,43 +35,35 @@ function getStyle(obj, attr) {
  * @param {*} item  dom
  * @returns  样式
  */
-
-
 var getDomBgColor = function getDomBgColor(item) {
   var styleBack = item.nodeName && item.nodeName !== '#text' && (item.getAttribute('style') || item.nodeName === 'STRIKE');
-
   if (styleBack) {
     return {
       backColor: colorRgbHight[getStyle(item, 'background-color')],
       styleLineThrough: getStyle(item, 'text-decoration-line') === 'line-through' || item.nodeName === 'STRIKE' ? 'STRIKE' : ''
     };
   }
-
   return {};
 };
-
 var domRecursion = function domRecursion(item, tempArr) {
   var _getDomBgColor = getDomBgColor(item),
-      backColor = _getDomBgColor.backColor,
-      styleLineThrough = _getDomBgColor.styleLineThrough;
-
+    backColor = _getDomBgColor.backColor,
+    styleLineThrough = _getDomBgColor.styleLineThrough;
   var offsetLeft = item.offsetLeft,
-      offsetWidth = item.offsetWidth,
-      innerText = item.innerText,
-      offsetTop = item.offsetTop;
+    offsetWidth = item.offsetWidth,
+    innerText = item.innerText,
+    offsetTop = item.offsetTop;
   var tempPush = {
     offsetLeft: offsetLeft,
     offsetWidth: offsetWidth,
     innerText: innerText,
     offsetTop: offsetTop
   };
-
   if (backColor) {
     tempArr.push(_objectSpread(_objectSpread({}, tempPush), {}, {
       type: backColor
     }));
   }
-
   if (styleLineThrough) {
     tempArr.push(_objectSpread(_objectSpread({}, tempPush), {}, {
       type: styleLineThrough
@@ -89,20 +75,15 @@ var domRecursion = function domRecursion(item, tempArr) {
  * @param {*} dom :获取到的所有标签
  * @returns
  */
-
-
 var filterDomFunc = function filterDomFunc(dom) {
   var tempArr = [];
-
   try {
     [].slice.call(dom).forEach(function (item) {
       var dataCheck = item.getAttribute('data-check');
-
       var _getDomBgColor2 = getDomBgColor(item),
-          backColor = _getDomBgColor2.backColor,
-          styleLineThrough = _getDomBgColor2.styleLineThrough; // 过滤标注节点
-
-
+        backColor = _getDomBgColor2.backColor,
+        styleLineThrough = _getDomBgColor2.styleLineThrough;
+      // 过滤标注节点
       if (item.nodeName !== 'P' && dataCheck !== '1' && (backColor || item.nodeName === 'STRIKE' || styleLineThrough === 'line-through')) {
         domRecursion(item, tempArr);
       }
@@ -110,24 +91,19 @@ var filterDomFunc = function filterDomFunc(dom) {
   } catch (error) {
     console.log('filterDomFunc异常', error);
   }
-
   return tempArr;
-}; // 兼容性处理
-
-
+};
+// 兼容性处理
 function selectDetail() {
   if (window.getSelection) {
     // 一般浏览器
     return window.getSelection();
   }
-
   var _docment = document;
-
   if (_docment.selection) {
     // IE浏览器、Opera
     return _docment.selection.createRange();
   }
-
   return null;
 }
 /**
@@ -136,8 +112,6 @@ function selectDetail() {
  * @param {*} string  当前需要匹配的字符串
  * @returns
  */
-
-
 var isContainSpecial = function isContainSpecial(i, string) {
   var colorAll = {
     high: 'rgb(217, 0, 27)',
@@ -152,12 +126,9 @@ var isContainSpecial = function isContainSpecial(i, string) {
   var regFour = "<font style=\"background-color: ".concat(color, ";\" color=\"#ffffff\"><font</font>|<span</span></font>");
   var regFive = '<p></p>';
   var regSix = '<strike></strike>';
-
   if (regOne.match(string) || regTwo.match(string) || regThree.match(string) || regFour.match(string) || regFive.match(string) || regSix.match(string)) {
     return false;
   }
-
   return true;
 };
-
 export { clearSelection, getMouseLOcal, filterDomFunc, getStyle, selectDetail, isContainSpecial };

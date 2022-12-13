@@ -8,8 +8,8 @@ interface PuiColProps {
     children?: ReactNode;
     style?: CSSProperties;
 }
-declare type NativeDivProps = PuiColProps;
-export declare type PuiBasicColProps = Partial<NativeDivProps>;
+type NativeDivProps = PuiColProps;
+export type PuiBasicColProps = Partial<NativeDivProps>;
 /**
  * 页面中最常用的的按钮元素他是最基础的组件，没有样式，只是生成 span 和 a dom节点
  * ### 引用方法

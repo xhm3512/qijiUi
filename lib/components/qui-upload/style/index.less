@@ -1,0 +1,90 @@
+@import '../../style/themes/index';
+@import '../../style/mixins/index';
+
+@upload-prefix-cls: ~'qui-upload';
+@upload-item: ~'qui-upload-list-item';
+@upload-picture-card-size: 104px;
+@upload-picture-card-border-style: @border-style-base;
+
+.@{upload-prefix-cls} {
+  .reset-component();
+
+  outline: 0;
+
+  p {
+    margin: 0;
+  }
+
+  &-btn {
+    display: block;
+    width: 100%;
+    outline: none;
+  }
+
+  input[type='file'] {
+    cursor: pointer;
+  }
+
+  &&-select {
+    display: inline-block;
+  }
+
+  &&-disabled {
+    cursor: not-allowed;
+  }
+
+
+
+  &-picture-card-wrapper {
+    .clearfix();
+
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+.@{upload-prefix-cls}-list {
+  .reset-component();
+  .clearfix();
+  line-height: @line-height-base;
+
+
+  // =========================== Motion ===========================
+  .@{upload-prefix-cls}-animate-inline-appear,
+  .@{upload-prefix-cls}-animate-inline-enter,
+  .@{upload-prefix-cls}-animate-inline-leave {
+    animation-duration: @animation-duration-slow;
+    animation-fill-mode: @ease-in-out-circ;
+  }
+
+  .@{upload-prefix-cls}-animate-inline-appear,
+  .@{upload-prefix-cls}-animate-inline-enter {
+    animation-name: uploadAnimateInlineIn;
+  }
+
+  .@{upload-prefix-cls}-animate-inline-leave {
+    animation-name: uploadAnimateInlineOut;
+  }
+}
+
+@keyframes uploadAnimateInlineIn {
+  from {
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes uploadAnimateInlineOut {
+  to {
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+  }
+}
+
+@import './rtl';

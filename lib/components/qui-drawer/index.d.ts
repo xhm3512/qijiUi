@@ -1,17 +1,17 @@
 import React from 'react';
 import './style/index.less';
-declare type DrawerRef = {
+type DrawerRef = {
     push(): void;
     pull(): void;
 };
 export interface PushState {
     distance: string | number;
 }
-declare type getContainerFunc = () => HTMLElement;
+type getContainerFunc = () => HTMLElement;
 declare const SizeTypes: ["default", "large"];
-declare type sizeType = typeof SizeTypes[number];
-declare type ILevelMove = number | [number, number];
-declare type EventType = React.KeyboardEvent<HTMLDivElement> | React.MouseEvent<HTMLDivElement | HTMLButtonElement>;
+type sizeType = typeof SizeTypes[number];
+type ILevelMove = number | [number, number];
+type EventType = React.KeyboardEvent<HTMLDivElement> | React.MouseEvent<HTMLDivElement | HTMLButtonElement>;
 export interface DrawerProps {
     autoFocus?: boolean;
     closable?: boolean;
@@ -53,6 +53,6 @@ export interface DrawerProps {
     children?: React.ReactNode;
 }
 declare const PlacementTypes: ["top", "right", "bottom", "left"];
-declare type placementType = typeof PlacementTypes[number];
+type placementType = typeof PlacementTypes[number];
 declare const Drawer: React.ForwardRefExoticComponent<DrawerProps & React.RefAttributes<DrawerRef>>;
 export default Drawer;

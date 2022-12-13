@@ -1,5 +1,5 @@
 import { TabPane, TabsProps as RcTabsProps } from 'rc-tabs';
-export declare type TabLevels = 'one' | 'oneContent' | 'two' | 'twoSmall';
+export type TabLevels = 'one' | 'oneContent' | 'two' | 'twoSmall';
 export interface CustomRcTabsProps extends RcTabsProps {
     level: TabLevels;
 }

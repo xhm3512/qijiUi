@@ -1,56 +1,43 @@
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0) { ; } } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
 import React, { useEffect, useState, useRef } from 'react';
 import shortCutKeySet from './shortCutKeySet';
 import { colorHight, colorHight16 } from './constants';
 import './style/index.less';
 import { clearSelection, getMouseLOcal, filterDomFunc, selectDetail, isContainSpecial } from './tools';
-
 var RemarkText = function RemarkText(props) {
   var text = props.text,
-      manSpamWords = props.manSpamWords,
-      machineWords = props.machineWords,
-      onSubmitHtml = props.onSubmitHtml,
-      manSpamHtml = props.manSpamHtml;
+    manSpamWords = props.manSpamWords,
+    machineWords = props.machineWords,
+    onSubmitHtml = props.onSubmitHtml,
+    manSpamHtml = props.manSpamHtml;
   var highlighRef = useRef(null); //MouseEvent<HTMLDivElement, MouseEvent>
-
   var _useState = useState('0'),
-      _useState2 = _slicedToArray(_useState, 2),
-      boxTop = _useState2[0],
-      setBoxTop = _useState2[1];
-
+    _useState2 = _slicedToArray(_useState, 2),
+    boxTop = _useState2[0],
+    setBoxTop = _useState2[1];
   var _useState3 = useState('0'),
-      _useState4 = _slicedToArray(_useState3, 2),
-      boxLeft = _useState4[0],
-      setBoxLeft = _useState4[1];
-
+    _useState4 = _slicedToArray(_useState3, 2),
+    boxLeft = _useState4[0],
+    setBoxLeft = _useState4[1];
   var _useState5 = useState('0'),
-      _useState6 = _slicedToArray(_useState5, 2),
-      boxOpacity = _useState6[0],
-      setopacity = _useState6[1]; // 人审样式处理
-
-
+    _useState6 = _slicedToArray(_useState5, 2),
+    boxOpacity = _useState6[0],
+    setopacity = _useState6[1];
+  // 人审样式处理
   var poppleWordsDetail = function poppleWordsDetail() {
     var tempText = text;
     if (!manSpamWords) return tempText;
     Object.keys(manSpamWords).map(function (key) {
       var words = manSpamWords[key];
-
       if ((words === null || words === void 0 ? void 0 : words.length) > 0) {
         words.forEach(function (item) {
           if (!isContainSpecial(key, item)) return;
           var reg = new RegExp(item, 'g');
-
           if (key === 'line') {
             tempText = tempText.replace(reg, "<strike>".concat(item, "</strike>"));
           } else {
@@ -60,22 +47,18 @@ var RemarkText = function RemarkText(props) {
       }
     });
     return tempText;
-  }; // poppleWordsDetail
+  };
+  // poppleWordsDetail
   //  机审样式处理
-
-
   var machineWordsDetail = function machineWordsDetail(text) {
     var tempText = text;
-
     if (machineWords) {
       Object.keys(machineWords).map(function (key) {
         var words = machineWords[key];
-
         if ((words === null || words === void 0 ? void 0 : words.length) > 0) {
           words.forEach(function (item) {
             if (!isContainSpecial(key, item)) return;
             var reg = new RegExp(item, 'g');
-
             if (key === 'line') {
               tempText = tempText.replace(reg, "<strike  data-check='1'>".concat(item, "</strike>"));
             } else {
@@ -86,7 +69,6 @@ var RemarkText = function RemarkText(props) {
       });
       return tempText;
     }
-
     return tempText;
   };
   /**
@@ -94,8 +76,6 @@ var RemarkText = function RemarkText(props) {
    * @param {*} tempWordsArr  处理后的所有敏感词
    * @returns
    */
-
-
   var classifyWords = function classifyWords(tempWordsArr) {
     var words = {
       high: [],
@@ -106,8 +86,7 @@ var RemarkText = function RemarkText(props) {
     };
     tempWordsArr.forEach(function (item) {
       var tempText = item.text,
-          type = item.type;
-
+        type = item.type;
       if (type === 'STRIKE') {
         // 是人审划线标注
         var tempLine = words.line;
@@ -115,7 +94,6 @@ var RemarkText = function RemarkText(props) {
       } else {
         // 是人审高亮标注
         var tempBackArr = words[type];
-
         if (tempBackArr) {
           // 去重
           if (tempBackArr.indexOf(tempText) < 0) tempBackArr.push(tempText);
@@ -123,9 +101,8 @@ var RemarkText = function RemarkText(props) {
       }
     });
     return words;
-  }; // 找出敏感词
-
-
+  };
+  // 找出敏感词
   var getWords = function getWords() {
     var current = highlighRef.current;
     var dom = current && current.getElementsByTagName('*');
@@ -133,10 +110,10 @@ var RemarkText = function RemarkText(props) {
     var tempWordsArr = [];
     filterDom.forEach(function (item) {
       var text1 = item.innerText,
-          offsetLeft = item.offsetLeft,
-          offsetWidth = item.offsetWidth,
-          type = item.type,
-          offsetTop = item.offsetTop;
+        offsetLeft = item.offsetLeft,
+        offsetWidth = item.offsetWidth,
+        type = item.type,
+        offsetTop = item.offsetTop;
       var flag = true;
       tempWordsArr.forEach(function (tempWords, i) {
         if (offsetLeft === tempWords.offsetEnd && offsetTop === tempWords.offsetTop && tempWords.type === type) {
@@ -152,7 +129,6 @@ var RemarkText = function RemarkText(props) {
           flag = false;
         }
       });
-
       if (flag) {
         tempWordsArr[tempWordsArr.length] = {
           text: text1,
@@ -172,16 +148,12 @@ var RemarkText = function RemarkText(props) {
    * @param {*} oldDomHtml
    * flag:是否是清楚操作
    */
-
-
   var onHightChange = function onHightChange(oldDomHtml) {
     var _highlighRef$current;
-
     var _oldDomHtml = oldDomHtml;
-    var newDomHtml = (highlighRef === null || highlighRef === void 0 ? void 0 : (_highlighRef$current = highlighRef.current) === null || _highlighRef$current === void 0 ? void 0 : _highlighRef$current.innerHTML) || ''; // 人审高危
-
+    var newDomHtml = (highlighRef === null || highlighRef === void 0 ? void 0 : (_highlighRef$current = highlighRef.current) === null || _highlighRef$current === void 0 ? void 0 : _highlighRef$current.innerHTML) || '';
+    // 人审高危
     var highwordsArr = getWords();
-
     if (typeof onSubmitHtml === 'function') {
       onSubmitHtml({
         newDomHtml: newDomHtml,
@@ -189,79 +161,62 @@ var RemarkText = function RemarkText(props) {
         machineWords: machineWords
       });
     }
-
     _oldDomHtml = newDomHtml;
-  }; // 划线
-
-
+  };
+  // 划线
   function strikeThrough() {
     var _highlighRef$current2;
-
     var current = highlighRef.current;
     if (current) current.contentEditable = 'true'; // 禁止输入设置
-
     var tempOldDomHtml = highlighRef === null || highlighRef === void 0 ? void 0 : (_highlighRef$current2 = highlighRef.current) === null || _highlighRef$current2 === void 0 ? void 0 : _highlighRef$current2.innerHTML;
     document.execCommand('strikeThrough', false);
     if (current) current.contentEditable = 'false';
     clearSelection();
     onHightChange(tempOldDomHtml);
-  } // 清除样式
-
-
+  }
+  // 清除样式
   function removeFormat() {
     var _highlighRef$current3;
-
     var current = highlighRef.current;
     if (current) current.contentEditable = 'true'; // 禁止输入设置
-
-    var tempOldDomHtml = highlighRef === null || highlighRef === void 0 ? void 0 : (_highlighRef$current3 = highlighRef.current) === null || _highlighRef$current3 === void 0 ? void 0 : _highlighRef$current3.innerHTML; // 执行两次
-
+    var tempOldDomHtml = highlighRef === null || highlighRef === void 0 ? void 0 : (_highlighRef$current3 = highlighRef.current) === null || _highlighRef$current3 === void 0 ? void 0 : _highlighRef$current3.innerHTML;
+    // 执行两次
     document.execCommand('removeFormat', false);
     document.execCommand('removeFormat', false);
     if (current) current.contentEditable = 'false';
     clearSelection();
     onHightChange(tempOldDomHtml);
-  } // 设置颜色
-
-
+  }
+  // 设置颜色
   function setFontColor(value) {
     var _highlighRef$current4;
-
     var current = highlighRef.current;
     if (current) current.contentEditable = 'true'; // 禁止输入设置
-
-    var tempOldDomHtml = highlighRef === null || highlighRef === void 0 ? void 0 : (_highlighRef$current4 = highlighRef.current) === null || _highlighRef$current4 === void 0 ? void 0 : _highlighRef$current4.innerHTML; // document.execCommand("forecolor", false, value);
-
+    var tempOldDomHtml = highlighRef === null || highlighRef === void 0 ? void 0 : (_highlighRef$current4 = highlighRef.current) === null || _highlighRef$current4 === void 0 ? void 0 : _highlighRef$current4.innerHTML;
+    // document.execCommand("forecolor", false, value);
     document.execCommand('forecolor', false, '#ffffff');
     document.execCommand('backColor', false, value);
     if (current) current.contentEditable = 'false';
     clearSelection();
     onHightChange(tempOldDomHtml);
-  } // 鼠标回弹，获取元素选中位置
-
-
+  }
+  // 鼠标回弹，获取元素选中位置
   function getDomSelectLOcal(e) {
     var _highlighRef$current5;
-
     var _ref = (highlighRef === null || highlighRef === void 0 ? void 0 : (_highlighRef$current5 = highlighRef.current) === null || _highlighRef$current5 === void 0 ? void 0 : _highlighRef$current5.getBoundingClientRect()) || {},
-        width = _ref.width;
-
+      width = _ref.width;
     try {
       var range = selectDetail().getRangeAt(0);
-
       if (range.toString() && width) {
         var _getMouseLOcal = getMouseLOcal(e),
-            x = _getMouseLOcal.x,
-            y = _getMouseLOcal.y;
-
+          x = _getMouseLOcal.x,
+          y = _getMouseLOcal.y;
         setBoxTop("".concat(y - 54, "px"));
-
         if (x < width && x > width - 160) {
           setBoxLeft("".concat(x - 160, "px"));
         } else {
           setBoxLeft("".concat(x + 10, "px"));
         }
-
         setopacity('1');
       } else {
         setopacity('0');
@@ -269,21 +224,18 @@ var RemarkText = function RemarkText(props) {
     } catch (error) {
       setopacity('0');
     }
-  } // 失去焦点弹窗隐藏
-
-
+  }
+  // 失去焦点弹窗隐藏
   var onMouseOutHandle = function onMouseOutHandle() {
     setTimeout(function () {
       setopacity('0');
     }, 400);
-  }; // 快捷键设置
-
-
+  };
+  // 快捷键设置
   var setShortCutKeyFunc = function setShortCutKeyFunc(e) {
     shortCutKeySet(e, function (obj) {
       var type = obj.type,
-          color = obj.color;
-
+        color = obj.color;
       switch (type) {
         case 'high':
         case 'middle':
@@ -291,15 +243,12 @@ var RemarkText = function RemarkText(props) {
         case 'risk':
           setFontColor(color);
           break;
-
         case 'line':
           strikeThrough();
           break;
-
         case 'clear':
           removeFormat();
           break;
-
         default:
       }
     }); // 设置快捷键
@@ -308,10 +257,10 @@ var RemarkText = function RemarkText(props) {
   useEffect(function () {
     var current = highlighRef.current;
     if (!current) return;
-    var detailHtml = machineWordsDetail(poppleWordsDetail()); // 初始化内容
-
-    current.innerHTML = manSpamHtml || detailHtml; // 禁止输入设置
-
+    var detailHtml = machineWordsDetail(poppleWordsDetail());
+    // 初始化内容
+    current.innerHTML = manSpamHtml || detailHtml;
+    // 禁止输入设置
     current.addEventListener('keydown', function (e) {
       setShortCutKeyFunc(e); // 高亮快捷键设置
       // e.preventDefault();
@@ -406,5 +355,4 @@ var RemarkText = function RemarkText(props) {
     "data-test": "box"
   }));
 };
-
 export default RemarkText;

@@ -1,7 +1,6 @@
 // 操作快捷键设置（https://www.cnblogs.com/starksoft/p/5844551.html）
 var shortCutKeySet = function shortCutKeySet(e, callback) {
   var keyType = {};
-
   if (e.ctrlKey && e.shiftKey) {
     // 设置 ctrl+shift
     var keycode = e.keyCode;
@@ -44,5 +43,4 @@ var shortCutKeySet = function shortCutKeySet(e, callback) {
     if (keyType[+keycode]) callback(keyType[+keycode]);
   }
 };
-
 export default shortCutKeySet;

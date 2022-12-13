@@ -1,0 +1,10 @@
+import Upload from './Upload';
+import Dragger from './Dragger';
+import UploadList from './UploadList';
+import ListItem from './UploadList/ListItem';
+import ListItemDelete from './UploadList/ListItemDelete';
+Upload.Dragger = Dragger;
+Upload.UploadList = UploadList;
+Upload.ListItem = ListItem;
+Upload.ListItemDelete = ListItemDelete;
+export default Upload;

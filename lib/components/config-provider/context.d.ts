@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { RenderEmptyHandler } from './renderEmpty';
 import { SizeType } from './SizeContext';
-export declare type RequiredMark = boolean | 'optional';
+export type RequiredMark = boolean | 'optional';
 export interface Theme {
     primaryColor?: string;
     infoColor?: string;
@@ -13,7 +13,7 @@ export interface Theme {
 export interface CSPConfig {
     nonce?: string;
 }
-export declare type DirectionType = 'ltr' | 'rtl' | undefined;
+export type DirectionType = 'ltr' | 'rtl' | undefined;
 export interface ConfigConsumerProps {
     getTargetContainer?: () => HTMLElement;
     getPopupContainer?: (triggerNode?: HTMLElement) => HTMLElement;
@@ -42,7 +42,7 @@ export interface ConfigConsumerProps {
 }
 export declare const ConfigContext: React.Context<ConfigConsumerProps>;
 export declare const ConfigConsumer: React.Consumer<ConfigConsumerProps>;
-declare type IReactComponent<P = any> = React.FC<P> | React.ComponentClass<P> | React.ClassicComponentClass<P>;
+type IReactComponent<P = any> = React.FC<P> | React.ComponentClass<P> | React.ClassicComponentClass<P>;
 interface BasicExportProps {
     prefixCls?: string;
 }
