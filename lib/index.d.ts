@@ -3,6 +3,7 @@ export { default as QuiIcons } from './components/qui-icons';
 export { default as QuiImgIcons } from './components/qui-img-icons';
 export { default as QuiCol } from './components/qui-col';
 export { default as QuiRow } from './components/qui-row';
+export { default as QuiDropdown } from './components/qiji-dropdown';
 export { default as QuiInput } from './components/qui-input';
 export { default as QuiNoBorderSelect } from './components/qui-no-border-select';
 export { default as QuiRadio } from './components/qui-radio';

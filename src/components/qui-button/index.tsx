@@ -27,7 +27,8 @@ const Button: FC<ButtonProps> = ({
   size = 'middle',
   htmlType = 'button' as ButtonProps['htmlType'],
   className,
-  hover = false,
+  hover = true,
+  ...rest
 }) => {
   const iconNode =
     icon && !loading ? (
@@ -54,6 +55,7 @@ const Button: FC<ButtonProps> = ({
       onClick={onClick}
       disabled={disabled}
       type={htmlType}
+      {...rest}
     >
       {iconNode}
       <span>{children}</span>

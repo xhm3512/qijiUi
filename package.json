@@ -1,6 +1,6 @@
 {
   "name": "qiji",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "author": {
     "name": "红99",
     "email": "xhm3512@163.com",
@@ -80,7 +80,9 @@
     "rc-checkbox": "^2.3.2",
     "rc-dialog": "^8.9.0",
     "rc-drawer": "~4.4.2",
+    "rc-dropdown": "^4.0.1",
     "rc-input": "0.0.1-alpha.7",
+    "rc-menu": "^9.8.2",
     "rc-motion": "^2.6.0",
     "rc-picker": "^2.6.10",
     "rc-select": "^14.1.5",

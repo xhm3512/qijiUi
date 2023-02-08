@@ -5,6 +5,8 @@ export { default as QuiImgIcons } from './components/qui-img-icons';
 // 布局-2
 export { default as QuiCol} from './components/qui-col';
 export { default as QuiRow } from './components/qui-row';
+// 导航
+export { default as QuiDropdown } from './components/qiji-dropdown';
 // 数据录入-3
 export { default as QuiInput } from './components/qui-input';
 export { default as QuiNoBorderSelect } from './components/qui-no-border-select';
